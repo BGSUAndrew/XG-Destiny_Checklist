@@ -120,12 +120,25 @@ html {
 }
 
 .destiny_image {
-  width: 450px;
+  max-width: 100%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   display: block;
   padding-top: 25px;
+}
+
+.data_button {
+  display: block;
+margin-left: auto;
+margin-right: auto;
+padding: 10px;
+border-radius: 15px;
+margin-top: 20px;
+background-color: rgba(0, 0, 0, 0.137);
+border: 2px solid #006064;
+color: #fff;
+font-size: 1rem;
 }
 
 @media screen and (max-width: 500px) {

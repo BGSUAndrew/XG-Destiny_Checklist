@@ -5,6 +5,7 @@ class AndrewData extends Component {
         state = {
             loading: true,
             checklist: [],
+            visible: true
         }
 
       async componentDidMount() {
@@ -41,8 +42,19 @@ class AndrewData extends Component {
         const europa = checklist["2540726600"]
         const wayfinder = checklist["337814587"]
         const shattered = checklist["3789620084"]
+        const button = this.state.visible ? "Hide player data" : "Show player data";
+
         return (
-        
+            <div>
+            <button 
+                onClick={() => {
+                    this.setState({visible: !this.state.visible});
+                }}
+                className='data_button'
+            >
+                {button}
+            </button>
+            {this.state.visible ? 
             <div className='container'>
                 {this.state.loading || !this.state.checklist ? (
                     <div>loading...</div>
@@ -239,6 +251,8 @@ class AndrewData extends Component {
                     </div>
                     </div>
                 )}
+            </div>
+             : null  }
             </div>
           )
       }

@@ -5,17 +5,24 @@ import JoeData from './components/joe-data';
 import Menu from './components/menu';
 import About from './components/about'
 import Key from './components/key'
+import React from 'react';
+import { Component } from 'react/cjs/react.production.min';
 
 
-function App() {
+class App extends Component {
+  state = {
+    visible: true,
+  }
+  
+  render() {
+
   return (
     <div className="App">
             <h1>XG Weekly Destiny Checklist</h1>
             <Key/>
       <div className='data_container'>
         <Menu/>
-
-        <AndrewData />
+        <AndrewData /> 
         <IanData />
         <JoeData />
     </div>
@@ -23,5 +30,5 @@ function App() {
     </div>
   );
 }
-
+}
 export default App;
