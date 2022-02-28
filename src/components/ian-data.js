@@ -34,15 +34,12 @@ class IanData extends Component {
         const dares = checklist["295129163"]
         const grasp = checklist["973171461"]
         const gunsmith = checklist["3899487295"]
-        const salvation = checklist["2712317338"]
-        const dsc = checklist["541780856"]
         const vog = checklist["1888320892"]
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
-        const europa = checklist["2540726600"]
-        const wayfinder = checklist["337814587"]
-        const shattered = checklist["3789620084"]
+        const battlegrounds = checklist["400869111"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
+
         return (
             <div>
             <button 
@@ -70,7 +67,9 @@ class IanData extends Component {
                            <p>Vanguard Bounties: Need to complete <span className='powerful-1'></span></p>
                            </div>
                        ) : (
-                           <p>Vanguard Bounties: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <div className='completed'>
+                           <p>Vanguard Bounties: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
                        )}
                        </div>
                        <div>
@@ -85,10 +84,10 @@ class IanData extends Component {
                        <div>
                        {vanguardBurn ? (
                            <div className='needToComplete'>
-                           <p>Vanguard Burn Strikes: Need to complete <span className='powerful-1'></span></p>
+                           <p>Vanguard Operations Burn: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
-                           <p>Vanguard Burn Strikes: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Vanguard Operations Burn: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                        </div>
                        </section>
@@ -189,16 +188,6 @@ class IanData extends Component {
                            <p>Vault of Glass: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
-                        <section className='challenge'>
-                        <h2>Deep Stone Crypt</h2>
-                       {dsc ? (
-                           <div className='needToComplete'>
-                           <p>Deep Stone Crypt: Need to complete <span className='powerful-3'></span></p>
-                           </div>
-                       ) : (
-                           <p>Deep Stone Crypt: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
                     </div>
                     <div className='trials card'>
                     <h2>Trials of Osiris</h2>
@@ -226,30 +215,21 @@ class IanData extends Component {
                     <div className='seasonal card'>
                     <h2>Seasonal</h2>
                         <section className='challenge'>
-                        <h2>Wayfinder Compass Bounties</h2>
-                       {wayfinder ? (
+                        <h2>Battleground Playlist Runs</h2>
+                       {battlegrounds ? (
                            <div className='needToComplete'>
-                           <p>8 Wayfinder Bounties: Need to complete <span className='powerful-1'></span></p>
+                           <p>2 Battleground Runs: Need to complete <span className='powerful-1'></span></p>
                            </div>
                        ) : (
-                           <p>8 Wayfinder Bounties: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>2 Battleground Runs: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
-                        <section className='challenge'>
-                        <h2>Shattered Realm Champions</h2>
-                       {shattered ? (
-                           <div className='needToComplete'>
-                           <p>4 Shattered Realm Champions: Need to complete <span className='pinnacle'></span></p>
-                           </div>
-                       ) : (
-                           <p>4 Shattered Realm Champions: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
+   
                     </div>
                     </div>
                 )}
             </div>
-            : null  }
+             : null  }
             </div>
           )
       }
