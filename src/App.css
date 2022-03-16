@@ -55,7 +55,6 @@ html {
   font-weight: normal;
 }
 
-
 .card {
   padding: 10px;
     border-radius: 25px;
@@ -77,6 +76,20 @@ html {
 .menu a {
   color: #fff;
   font-size: 2rem;
+}
+
+.nightfall_info {
+  text-align: center;
+  color:#fff;
+}
+
+.nightfall_info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.nightfallTitle {
+  font-size: 1.75rem;
 }
 
 .pinnacle {
@@ -139,6 +152,11 @@ background-color: rgba(0, 0, 0, 0.137);
 border: 2px solid #006064;
 color: #fff;
 font-size: 1rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 500px) {
