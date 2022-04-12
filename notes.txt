@@ -18,3 +18,16 @@ https://www.bungie.net/Platform/Destiny2/-1/Profile/4611686018430407175/
 
 GetCharacter 
 https://www.bungie.net/Platform/Destiny2/1/Profile/4611686018430407175/Character/2305843009263048442/?components=202
+
+Weekly Reset 
+
+
+
+
+
+
+Reset Info 
+Nightfall: 1942283261, then look up the Activity ID (i.e. The Scarlet Keep 1495545952)
+Vanguard Burn: milestone, 1437935813 burn, 3215384520(arc) 644078431(stasis) 3362074814(void) 2558957669(solar)
+Crucible Rotator 3312774044 then lookup Activity ID (i.e. Momentum Control )
+

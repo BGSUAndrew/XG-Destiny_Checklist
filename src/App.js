@@ -6,6 +6,7 @@ import Menu from './components/menu';
 import About from './components/about'
 import Key from './components/key'
 import Nightfall from './components/nightfall';
+import VanguardBurn from './components/vanguardburn';
 import Crucible from './components/crucible';
 import React from 'react';
 import { Component } from 'react/cjs/react.production.min';
@@ -29,6 +30,7 @@ class App extends Component {
         <JoeData />
     </div>
     <Nightfall/>
+    <VanguardBurn/>
       <About/>
 
     </div>
