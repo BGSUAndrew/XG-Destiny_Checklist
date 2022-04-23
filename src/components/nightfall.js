@@ -44,7 +44,6 @@ class Nightfall extends Component {
                     <div>loading...</div>
                 )  : (
                     <div>
-                        <h1 id='nightfall'>Reset Info</h1>
                         <div className='rituals card'>
                         <section className='nightfall_info'>
                         <h2>Nightfall</h2>

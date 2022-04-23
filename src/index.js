@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import NotFound from "./routes/notfound";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import WeeklyReset from "./routes/weeklyreset";
+import ActivityReport from "./routes/activitydata";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes>
+      <Route exact path="/" index element={<App />} />
+      <Route path="weeklyreset" element={<WeeklyReset />} />
+      <Route path="activityreport" element={<ActivityReport />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

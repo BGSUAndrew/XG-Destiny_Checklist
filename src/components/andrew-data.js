@@ -35,6 +35,7 @@ class AndrewData extends Component {
         const grasp = checklist["973171461"]
         const gunsmith = checklist["3899487295"]
         const vog = checklist["1888320892"]
+        const vow = checklist["2136320298"]
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
         const battlegrounds = checklist["400869111"]
@@ -179,13 +180,13 @@ class AndrewData extends Component {
                     <div className='raids card'>
                     <h2>Raids</h2>
                         <section className='challenge'>
-                        <h2>Vault of Glass</h2>
-                       {vog ? (
+                        <h2>Vow of the Disciple</h2>
+                       {vow ? (
                            <div className='needToComplete'>
-                           <p>Vault of Glass: Need to complete <span className='pinnacle'></span></p>
+                           <p>Vow of the Disciple: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
-                           <p>Vault of Glass: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Vow of the Disciple: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
                     </div>

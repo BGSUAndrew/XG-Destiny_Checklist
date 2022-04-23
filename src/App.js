@@ -5,11 +5,11 @@ import JoeData from './components/joe-data';
 import Menu from './components/menu';
 import About from './components/about'
 import Key from './components/key'
-import Nightfall from './components/nightfall';
-import VanguardBurn from './components/vanguardburn';
-import Crucible from './components/crucible';
+
 import React from 'react';
 import { Component } from 'react/cjs/react.production.min';
+import Sidebar from './components/Sidebar';
+import Seasonal from './components/seasonal';
 
 
 class App extends Component {
@@ -20,7 +20,9 @@ class App extends Component {
   render() {
 
   return (
-    <div className="App">
+    <div className="App" id="outer-container">
+      <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+      <Seasonal/>
             <h1>XG Weekly Destiny Checklist</h1>
             <Key/>
       <div className='data_container'>
@@ -29,8 +31,6 @@ class App extends Component {
         <IanData />
         <JoeData />
     </div>
-    <Nightfall/>
-    <VanguardBurn/>
       <About/>
 
     </div>
