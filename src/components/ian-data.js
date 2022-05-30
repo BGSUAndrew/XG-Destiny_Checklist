@@ -38,7 +38,9 @@ class IanData extends Component {
         const vow = checklist["2136320298"]
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
-        const battlegrounds = checklist["400869111"]
+        const containment_one = checklist["1018585205"]
+        const containment_two = checklist["1830402470"]
+        const containment_three = checklist["1755625435"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
 
         return (
@@ -164,19 +166,7 @@ class IanData extends Component {
                        )}
                         </section>
                     </div>
-                    <div className='dungeons card'>
-                    <h2>Dungeons</h2>
-                        <section className='challenge'>
-                        <h2>Grasp of Avarice</h2>
-                       {grasp ? (
-                           <div className='needToComplete'>
-                           <p>Grasp of Avarice: Need to complete <span className='pinnacle'></span></p>
-                           </div>
-                       ) : (
-                           <p>Grasp of Avarice: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
-                    </div>
+
                     <div className='raids card'>
                     <h2>Raids</h2>
                         <section className='challenge'>
@@ -215,15 +205,31 @@ class IanData extends Component {
                     </div>
                     <div className='seasonal card'>
                     <h2>Seasonal</h2>
-                        <section className='challenge'>
-                        <h2>Battleground Playlist Runs</h2>
-                       {battlegrounds ? (
+                    <section className='challenge'>
+                        <h2>Nightmare Containment</h2>
+                       {containment_one ? (
                            <div className='needToComplete'>
-                           <p>2 Battleground Runs: Need to complete <span className='powerful-1'></span></p>
+                           <p>Nightmare Containment Tier One: Need to complete <span className='powerful-1'></span></p>
                            </div>
                        ) : (
-                           <p>2 Battleground Runs: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Nightmare Containment Tier One: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
+                         {containment_two ? (
+                           <div className='needToComplete'>
+                           <p>Nightmare Containment Tier Two: Need to complete <span className='powerful-1'></span></p>
+                           </div>
+                       ) : (
+                           <p>Nightmare Containment Tier Two: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                         {containment_three ? (
+                           <div className='needToComplete'>
+                           <p>Nightmare Containment Tier Three: Need to complete <span className='powerful-1'></span></p>
+                           </div>
+                       ) : (
+                           <p>Nightmare Containment Tier Three: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+
+                       
                         </section>
    
                     </div>

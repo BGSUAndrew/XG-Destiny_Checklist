@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Sidebar from '../components/Sidebar';
 import Nightfall from '../components/nightfall';
 import VanguardBurn from '../components/vanguardburn';
+import Dungeon from '../components/dungeons';
 
 class WeeklyReset extends Component {
     render() {
@@ -13,7 +14,7 @@ class WeeklyReset extends Component {
             <div className='flex_container'>
             <Nightfall />
             <VanguardBurn />
-
+            <Dungeon />
             </div>
             </div>
         );
