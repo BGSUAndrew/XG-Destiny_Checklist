@@ -11,10 +11,9 @@ class WeeklyReset extends Component {
             <div id="outer-container">
       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
             <h1 className='page_title'>Weekly Reset Info</h1>
-            <div className='flex_container'>
+            <div className='data_container'>
             <Nightfall />
             <VanguardBurn />
-            <Dungeon />
             </div>
             </div>
         );
