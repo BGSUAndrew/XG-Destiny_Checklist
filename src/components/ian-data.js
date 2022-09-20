@@ -203,36 +203,6 @@ class IanData extends Component {
                        )}
                         </section>
                     </div>
-                    <div className='seasonal card'>
-                    <h2>Seasonal</h2>
-                    <section className='challenge'>
-                        <h2>Nightmare Containment</h2>
-                       {containment_one ? (
-                           <div className='needToComplete'>
-                           <p>Nightmare Containment Tier One: Need to complete <span className='powerful-1'></span></p>
-                           </div>
-                       ) : (
-                           <p>Nightmare Containment Tier One: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                         {containment_two ? (
-                           <div className='needToComplete'>
-                           <p>Nightmare Containment Tier Two: Need to complete <span className='powerful-1'></span></p>
-                           </div>
-                       ) : (
-                           <p>Nightmare Containment Tier Two: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                         {containment_three ? (
-                           <div className='needToComplete'>
-                           <p>Nightmare Containment Tier Three: Need to complete <span className='powerful-1'></span></p>
-                           </div>
-                       ) : (
-                           <p>Nightmare Containment Tier Three: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-
-                       
-                        </section>
-   
-                    </div>
                     </div>
                 )}
             </div>

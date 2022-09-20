@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  background-image: radial-gradient(circle, #b46a3d,#231512);
+  background-image: radial-gradient(circle, #06afd8,#08394a);
 }
 
 .data_container {
@@ -75,7 +75,7 @@ html {
     border-radius: 25px;
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.137);
-    border: 2px solid #37315d;
+    border: 2px solid #142129;
 }
 
 .menu ul {
@@ -194,7 +194,7 @@ font-size: 1rem;
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #b46a3d;
+  background: #06afd8;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -223,14 +223,14 @@ Sidebar wrapper styles
 
 /* General sidebar styles */
 .bm-menu {
-  background: #37315d;
+  background: #142129;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #37315d;
+  fill: #142129;
 }
 
 /* Wrapper for item list */
