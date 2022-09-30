@@ -11,6 +11,8 @@ import {
 } from "react-router-dom";
 import WeeklyReset from "./routes/weeklyreset";
 import ActivityReport from "./routes/activitydata";
+import Triumphs from "./routes/triumphs"
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,6 +20,7 @@ ReactDOM.render(
       <Route exact path="/" index element={<App />} />
       <Route path="weeklyreset" element={<WeeklyReset />} />
       <Route path="activityreport" element={<ActivityReport />} />
+      <Route path="triumphs" element={<Triumphs />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>,

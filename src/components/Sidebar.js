@@ -18,6 +18,10 @@ export default props => {
       <Link to ="/activityreport" className="menu-item">
         Activity Report
       </Link>
+      <Link to ="/triumphs" className="menu-item">
+        Triumphs
+      </Link>
+
     </Menu>
 
   );

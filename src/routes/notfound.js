@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-class WeeklyReset extends Component {
+class NotFound extends Component {
     render() {
         return (
             <p>Busted</p>
@@ -9,6 +9,6 @@ class WeeklyReset extends Component {
     }
 }
 
-export default WeeklyReset;
+export default NotFound;
 
 
