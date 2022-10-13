@@ -32,15 +32,16 @@ class AndrewData extends Component {
         const gambitMatches = checklist["3448738070"]
         const gambitBounties = checklist["3802603984"]
         const dares = checklist["295129163"]
-        const grasp = checklist["973171461"]
+        const preservation = ["4081841674"]
         const gunsmith = checklist["3899487295"]
-        const vog = checklist["1888320892"]
-        const vow = checklist["2136320298"]
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
-        const containment_one = checklist["1018585205"]
-        const containment_two = checklist["1830402470"]
-        const containment_three = checklist["1755625435"]
+        const kingsfall = checklist["292102995"]
+        const duality = checklist["3618845105"]
+        const astral = checklist["1194402836"]
+        const ketch = checklist["359638817"]
+        const ketchmaster = checklist["1598092513"]
+        const expedition = checklist["1381445680"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
 
 
@@ -61,6 +62,49 @@ class AndrewData extends Component {
                 )  : (
                     <div>
                         <h1 id='andrew'>Andrew</h1>
+                    <div className='seasonal card'>
+                    <h2>Seasonal Activities</h2>
+                        <section className='challenge'>
+                        <h2>Star Chart Bounties</h2>
+                       {astral ? (
+                           <div className='needToComplete'>
+                           <p>Starchart Bounties: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <p>Starchart Bounties: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
+                        <section className='challenge'>
+                        <h2>Ketchcrash Runs</h2>
+                       {ketch ? (
+                           <div className='needToComplete'>
+                           <p>3 Ketchcrash runs: Need to complete <span className='powerful-3'></span></p>
+                           </div>
+                       ) : (
+                           <p>3 Ketchcrash runs: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
+                        <section className='challenge'>
+                        <h2>Master Ketchcrash</h2>
+                       {ketchmaster ? (
+                           <div className='needToComplete'>
+                           <p>Master Ketchcrash: Need to complete <span className='powerful-2'></span></p>
+                           </div>
+                       ) : (
+                           <p>Master Ketchcrash: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
+                        <section className='challenge'>
+                        <h2>Expedition Treasure</h2>
+                       {expedition ? (
+                           <div className='needToComplete'>
+                           <p>Expedition Treasure: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <p>Expedition Treasure: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
+                    </div>
                         <div className='rituals card'>
                         <h2>Ritual Activities</h2>
                         <section className='challenge'>
@@ -166,18 +210,38 @@ class AndrewData extends Component {
                            <p>8 Gunsmith Bounties: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
+                        <section className='challenge'>
+                       <h2>Preservation</h2>
+                       {preservation ? (
+                           <div className='needToComplete'>
+                           <p>Preservation Mission: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <p>Preservation Mission: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
                     </div>
                    
                     <div className='raids card'>
-                    <h2>Raids</h2>
+                    <h2>Raids & Dungeons</h2>
                         <section className='challenge'>
-                        <h2>Vow of the Disciple</h2>
-                       {vow ? (
+                        <h2>King's Fall</h2>
+                       {kingsfall ? (
                            <div className='needToComplete'>
-                           <p>Vow of the Disciple: Need to complete <span className='pinnacle'></span></p>
+                           <p>King's Fall: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
-                           <p>Vow of the Disciple: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>King's Fall: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
+                        <section className='challenge'>
+                        <h2>Duality</h2>
+                       {duality ? (
+                           <div className='needToComplete'>
+                           <p>Duality: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <p>Duality: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
                     </div>

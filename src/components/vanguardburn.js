@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-
-
-
 class VanguardBurn extends Component {
     state = {
         loading: true,
