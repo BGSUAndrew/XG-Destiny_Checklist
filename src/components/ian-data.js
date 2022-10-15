@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import IanName from './iannameplate';
 
 class IanData extends Component {
     
@@ -60,7 +61,7 @@ class IanData extends Component {
                     <div>loading...</div>
                 )  : (
                     <div>
-                        <h1 id='ian'>Ian</h1>
+                        <IanName></IanName>
                         <div className='seasonal card'>
                     <h2>Seasonal Activities</h2>
                         <section className='challenge'>

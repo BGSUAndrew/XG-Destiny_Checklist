@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import IanName from './iannameplate';
 
 class IanTriumphData extends Component {
     
@@ -88,7 +89,7 @@ class IanTriumphData extends Component {
     </button>
     {this.state.visible ?
         <div className='container'>
-                                    <h1 id='ian' className='text-center'>Ian</h1>
+                    <IanName></IanName>
                     <div className='rituals card'>
 
             <h1>Triumphs</h1>
