@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import crucible from '../images/crucible.png'
 
 class Crucible extends Component {
     state = {
@@ -15,7 +16,7 @@ class Crucible extends Component {
         })
         const data = await response.json();
         this.setState({crucible: data.Response[3312774044].activities[3].activityHash, loading: false});
-       console.log(this.state.crucible)
+       //console.log(this.state.crucible)
        
       }
     
@@ -30,13 +31,55 @@ class Crucible extends Component {
                 )  : (
                     <div>
                         <div className='rituals card'>
-                        <section className='challenge'>
+                        <section className='nightfall_info'>
                         <h2>Crucible Rotator</h2>
                         <div>
-                       {this.state.crucible == "3847433434" ? <p>Mayhem</p> : null }
-                       {this.state.crucible == "935998519" ? <p>Momentum Control</p> : null }
-                       {this.state.crucible == "2303927902" ? <p>Clash</p> : null }
-                       {this.state.crucible == "3787302650" ? <p>Team Scorched</p> : null }
+                            {this.state.crucible == "142028034" ?
+                            <div className='crucible_info'>
+                                <p>Showdown</p>
+                                <img className='img-fluid' src={crucible} alt='crucible art'></img>
+                            </div>
+                           : null }
+                       </div>
+                       <div>
+                            {this.state.crucible == "3847433434" ?
+                            <div className='crucible_info'>
+                                <p>Mayhem</p>
+                                <img className='img-fluid' src={crucible} alt='crucible art'></img>
+                            </div>
+                           : null }
+                       </div>
+                       <div>
+                            {this.state.crucible == "3787302650" ?
+                            <div className='crucible_info'>
+                                <p>Team Scorched</p>
+                                <img className='img-fluid' src={crucible} alt='crucible art'></img>
+                            </div>
+                           : null }
+                       </div>
+                       <div>
+                            {this.state.crucible == "2056796644" ?
+                            <div className='crucible_info'>
+                                <p>Rift</p>
+                                <img className='img-fluid' src={crucible} alt='crucible art'></img>
+                            </div>
+                           : null }
+                       </div>
+                       <div>
+                            {this.state.crucible == "1108887474" ?
+                            <div className='crucible_info'>
+                                <p>Clash</p>
+                                <img className='img-fluid' src={crucible} alt='crucible art'></img>
+                            </div>
+                           : null }
+                       </div>
+                       <div>
+                            {this.state.crucible == "952904835" ?
+                            <div className='crucible_info'>
+                                <p>Momentum Control</p>
+                                <img className='img-fluid' src={crucible} alt='crucible art'></img>
+                            </div>
+                           : null }
                        </div>
                        <div>
              
