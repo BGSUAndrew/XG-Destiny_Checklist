@@ -15,7 +15,7 @@ class Crucible extends Component {
             }
         })
         const data = await response.json();
-        this.setState({crucible: data.Response[3312774044].activities[3].activityHash, loading: false});
+        this.setState({crucible: data.Response[3312774044].activities[2].activityHash, loading: false});
        //console.log(this.state.crucible)
        
       }
@@ -74,7 +74,7 @@ class Crucible extends Component {
                            : null }
                        </div>
                        <div>
-                            {this.state.crucible == "952904835" ?
+                            {this.state.crucible == "935998519" ?
                             <div className='crucible_info'>
                                 <p>Momentum Control</p>
                                 <img className='img-fluid' src={crucible} alt='crucible art'></img>

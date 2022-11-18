@@ -38,35 +38,35 @@ class Raid extends Component {
                         <section className='nightfall_info'>
                         <h2>Raid Rotator</h2>
                         <div>
-                        {this.state.garden == 1 ? 
+                        {this.state.garden === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Garden of Salvation</p>
                         <p>Defeat the Sanctified Mind.</p>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.vault == 1 ? 
+                        {this.state.vault === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Vault of Glass</p>
                        <p>Beneath Venus, evil stirs…</p>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.vow == 1 ? 
+                        {this.state.vow === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Vow of the Disciple</p>
                        <p>The disciple beckons…</p>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.deep == 1 ? 
+                        {this.state.deep === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Deep Stone Crypt</p>
                        <p>The chains of legacy must be broken.</p>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.last == 1 ? 
+                        {this.state.last === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Last Wish</p>
                        </div> : null }
