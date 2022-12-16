@@ -27,7 +27,6 @@ class JoeData extends Component {
         const vanguardBounties =  checklist["2709491520"]
         const vanguardNightfall = checklist["1942283261"]
         const vanguardBurn = checklist["1437935813"]
-        const gloryPlaylist = checklist["1368032265"]
         const crucibleMatches = checklist["3312774044"]
         const crucibleBounties = checklist["2594202463"]
         const gambitMatches = checklist["3448738070"]
@@ -38,11 +37,7 @@ class JoeData extends Component {
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
         const kingsfall = checklist["292102995"]
-        const duality = checklist["3618845105"]
-        const astral = checklist["1194402836"]
-        const ketch = checklist["359638817"]
-        const ketchmaster = checklist["1598092513"]
-        const expedition = checklist["1381445680"]
+        const spire = checklist["526718853"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
 
         return (
@@ -64,46 +59,7 @@ class JoeData extends Component {
                         <JoeName></JoeName>
                         <div className='seasonal card'>
                     <h2>Seasonal Activities</h2>
-                        <section className='challenge'>
-                        <h2>Star Chart Bounties</h2>
-                       {astral ? (
-                           <div className='needToComplete'>
-                           <p>Starchart Bounties: Need to complete <span className='pinnacle'></span></p>
-                           </div>
-                       ) : (
-                           <p>Starchart Bounties: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
-                        <section className='challenge'>
-                        <h2>Ketchcrash Runs</h2>
-                       {ketch ? (
-                           <div className='needToComplete'>
-                           <p>3 Ketchcrash runs: Need to complete <span className='powerful-3'></span></p>
-                           </div>
-                       ) : (
-                           <p>3 Ketchcrash runs: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
-                        <section className='challenge'>
-                        <h2>Master Ketchcrash</h2>
-                       {ketchmaster ? (
-                           <div className='needToComplete'>
-                           <p>Master Ketchcrash: Need to complete <span className='powerful-2'></span></p>
-                           </div>
-                       ) : (
-                           <p>Master Ketchcrash: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
-                        <section className='challenge'>
-                        <h2>Expedition Treasure</h2>
-                       {expedition ? (
-                           <div className='needToComplete'>
-                           <p>Expedition Treasure: Need to complete <span className='pinnacle'></span></p>
-                           </div>
-                       ) : (
-                           <p>Expedition Treasure: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
+                      
                     </div>
                         <div className='rituals card'>
                         <h2>Ritual Activities</h2>
@@ -141,15 +97,6 @@ class JoeData extends Component {
                        </section>
                        <section className='challenge'>
                        <h2>Crucible</h2>
-                       <div>
-                       {gloryPlaylist ? (
-                           <div className='needToComplete'>
-                           <p>Glory Playlist Wins: Need to complete <span className='powerful-1'></span></p>
-                           </div>
-                       ) : (
-                           <p>Glory Playlist Wins: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                       </div>
                        <div>
                        {crucibleMatches ? (
                            <div className='needToComplete'>
@@ -234,13 +181,13 @@ class JoeData extends Component {
                        )}
                         </section>
                         <section className='challenge'>
-                        <h2>Duality</h2>
-                       {duality ? (
+                        <h2>Spire of the Watcher</h2>
+                       {spire ? (
                            <div className='needToComplete'>
-                           <p>Duality: Need to complete <span className='pinnacle'></span></p>
+                           <p>Spire of the Watcher: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
-                           <p>Duality: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Spire of the Watcher: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
                     </div>
