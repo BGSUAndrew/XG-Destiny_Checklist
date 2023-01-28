@@ -4,6 +4,7 @@ import Nightfall from '../components/nightfall';
 import VanguardBurn from '../components/vanguardburn';
 import Crucible from '../components/crucible';
 import Raid from '../components/raid';
+import Dungeon from '../components/dungeons';
 class WeeklyReset extends Component {
     render() {
         return (
@@ -14,12 +15,14 @@ class WeeklyReset extends Component {
             <div className='data_container'>
             <section>
             <Nightfall />
+            <Raid />
+            <Dungeon />
             </section>
             <section>
             <VanguardBurn />
             <Crucible />
-            <Raid />
             </section>
+
             </div>
             </div>
         );
