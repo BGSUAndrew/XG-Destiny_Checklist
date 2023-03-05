@@ -32,12 +32,12 @@ class JoeData extends Component {
         const gambitMatches = checklist["3448738070"]
         const gambitBounties = checklist["3802603984"]
         const dares = checklist["295129163"]
-        const preservation = ["4081841674"]
         const gunsmith = checklist["3899487295"]
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
-        const kingsfall = checklist["292102995"]
         const spire = checklist["526718853"]
+        const defiant = checklist["1235829702"]
+        const lightfallCampaign = checklist["793110320"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
 
         return (
@@ -59,7 +59,34 @@ class JoeData extends Component {
                         <JoeName></JoeName>
                         <div className='seasonal card'>
                     <h2>Seasonal Activities</h2>
-                      
+                    <section className='challenge'>
+                        <h2>Season of Defiance</h2>
+                        <div>
+                       {defiant ? (
+                           <div className='needToComplete'>
+                           <p>Defiant Battlegrounds: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Defiant Battlegrounds: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                       </section>
+                       <section className='challenge'>
+                        <h2>Lightfall</h2>
+                        <div>
+                       {lightfallCampaign ? (
+                           <div className='needToComplete'>
+                           <p>Weekly Campaign Mission: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Weekly Campaign Mission: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                       </section>
                     </div>
                         <div className='rituals card'>
                         <h2>Ritual Activities</h2>
@@ -79,7 +106,7 @@ class JoeData extends Component {
                        <div>
                        {vanguardNightfall ? (
                            <div className='needToComplete'>
-                           <p>Vanguard Nightfall: Need to complete <span className='powerful-1'></span></p>
+                           <p>Vanguard Nightfall: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
                            <p>Vanguard Nightfall: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
@@ -157,29 +184,10 @@ class JoeData extends Component {
                            <p>8 Gunsmith Bounties: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
-                        <section className='challenge'>
-                       <h2>Preservation</h2>
-                       {preservation ? (
-                           <div className='needToComplete'>
-                           <p>Preservation Mission: Need to complete <span className='pinnacle'></span></p>
-                           </div>
-                       ) : (
-                           <p>Preservation Mission: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
                     </div>
                     <div className='raids card'>
                     <h2>Raids & Dungeons</h2>
-                        <section className='challenge'>
-                        <h2>King's Fall</h2>
-                       {kingsfall ? (
-                           <div className='needToComplete'>
-                           <p>King's Fall: Need to complete <span className='pinnacle'></span></p>
-                           </div>
-                       ) : (
-                           <p>King's Fall: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
+
                         <section className='challenge'>
                         <h2>Spire of the Watcher</h2>
                        {spire ? (

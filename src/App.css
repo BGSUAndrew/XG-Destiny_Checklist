@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  background-image: radial-gradient(circle, #e12c37,#0e1626);
+  background-image: radial-gradient(circle, #b92992,#1d3367);
 }
 
 .data_container {
@@ -161,6 +161,7 @@ html {
   margin-right: auto;
   padding-top: 10px;
 
+
 }
 
 .data_button {
@@ -198,7 +199,7 @@ font-size: 1rem;
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #e12c37;
+  background: #b92992;
 }
 
 /* Color/shape of burger icon bars on hover*/

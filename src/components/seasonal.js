@@ -1,5 +1,5 @@
 import React from 'react';
-import season_logo from '../images/d2_s19_logo_LOC_vertical_EN.png';
+import season_logo from '../images/d2_s20_logo_LOC_horizontal_EN.png';
 
 export default props => {
     return (
