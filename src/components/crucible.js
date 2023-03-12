@@ -15,8 +15,8 @@ class Crucible extends Component {
             }
         })
         const data = await response.json();
-        this.setState({crucible: data.Response[3312774044].activities[2].activityHash, loading: false});
-       //console.log(this.state.crucible)
+        this.setState({crucible: data.Response[3312774044].activities[1].activityHash, loading: false});
+       console.log(this.state.crucible)
        
       }
     

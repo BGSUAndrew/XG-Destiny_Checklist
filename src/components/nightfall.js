@@ -14,6 +14,18 @@ import inverted from '../images/strike_inverted_spire.webp'
 import shadows from '../images/strike_lake_of_shadows.webp'
 import arms from '../images/strike_the_arms_dealer.webp'
 import scarlet from '../images/strike_the_scarlet_keep.webp'
+import hypernet from '../images/placeholder.webp'
+import psiOps_bg_edz from '../images/battleground_chainsaw_s16.jpg'
+import heist_bg_europa from '../images/season_19_battleground_europa.jpg'
+import bg_hailstone from '../images/europa_battleground_hailstone.jpg'
+import psiOps_bg_cosmo from '../images/battleground_nestegg_s16.jpg'
+import bg_foothold from '../images/cosmodrome_battleground_foothold.jpg'
+import psiOps_bg_moon from '../images/battleground_trespass_s16.jpg'
+import heist_bg_moon from '../images/season_19_battleground_luna.jpg'
+import heist_bg_mars from '../images/season_19_battleground_polaris.webp'
+import bg_behemoth from '../images/nessus_battleground_behemoth.jpg'
+import bg_oracle from '../images/nessus_battleground_oracle.jpg'
+
 
 class Nightfall extends Component {
     state = {
@@ -29,7 +41,7 @@ class Nightfall extends Component {
             }
         })
         const data = await response.json();
-        this.setState({nightfall: data.Response[1942283261].activities[0].activityHash, loading: false});
+        this.setState({nightfall: data.Response[1942283261].activities[1].activityHash, loading: false});
        console.log(this.state.nightfall)
        
       }
@@ -142,6 +154,61 @@ class Nightfall extends Component {
                        <p className='nightfallTitle'>Birthplace of the Vile</p> 
                        <p>An uneasy ally asks for a favor…</p>
                        <img className='img-fluid w-500' src={birthplace} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "2039642505" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Hypernet Current</p> 
+                       <img className='img-fluid w-500' src={hypernet} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "4283638880" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>PsiOps Battleground: EDZ</p> 
+                       <img className='img-fluid w-500' src={psiOps_bg_edz} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "3458527565" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Heist Battleground: Europa</p> 
+                       <img className='img-fluid w-500' src={heist_bg_europa} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "881943178" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Battleground: Hailstone</p> 
+                       <img className='img-fluid w-500' src={bg_hailstone} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "968118624" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Legend PsiOps Battleground: Cosmodrome</p> 
+                       <img className='img-fluid w-500' src={psiOps_bg_cosmo} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "1593674947" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Battleground: Foothold</p> 
+                       <img className='img-fluid w-500' src={bg_foothold} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "1764280968" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>PsiOps Battleground: Moon</p> 
+                       <img className='img-fluid w-500' src={psiOps_bg_moon} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "1639515814" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Heist Battleground: Moon</p> 
+                       <img className='img-fluid w-500' src={heist_bg_moon} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "507866985" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Heist Battleground: Mars</p> 
+                       <img className='img-fluid w-500' src={heist_bg_mars} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "3982925799" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Battleground: Behemoth</p> 
+                       <img className='img-fluid w-500' src={bg_behemoth} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "2969419387" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Battleground: Oracle</p> 
+                       <img className='img-fluid w-500' src={bg_oracle} alt='strike art'></img>
                        </div>: null }
                        </div>
                        <div>
