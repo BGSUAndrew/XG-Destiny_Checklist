@@ -4,9 +4,6 @@ class JoeName extends Component {
     
         state = {
             loading: true,
-            nameplate: [],
-            dateLastPlayed: [],
-            gamertag: []
         }
 
       async componentDidMount() {
@@ -19,8 +16,13 @@ class JoeName extends Component {
         const data = await response.json();
         this.setState({nameplate: data.Response.characters.data["2305843009889894407"].emblemBackgroundPath});
         this.setState({dateLastPlayed:data.Response.profile.data.dateLastPlayed});
-        this.setState({gamertag:data.Response.profile.data.userInfo.displayName})
-        console.log(data.Response.profile.data.userInfo.displayName) 
+        this.setState({gamertag:data.Response.profile.data.userInfo.displayName});
+        this.setState({guardianRank:data.Response.profile.data.currentGuardianRank}) 
+        this.setState({ally:data.Response.profileCommendations.data.commendationNodeScoresByHash["154475713"]});
+        this.setState({fun:data.Response.profileCommendations.data.commendationNodeScoresByHash["1341823550"]});
+        this.setState({mastery:data.Response.profileCommendations.data.commendationNodeScoresByHash["4180748446"]});
+        this.setState({leadership:data.Response.profileCommendations.data.commendationNodeScoresByHash["1390663518"]});
+        //console.log(data.Response.profile.data.userInfo.displayName) 
        
       }
     
@@ -29,11 +31,17 @@ class JoeName extends Component {
         const bungie = "https://bungie.net"
         const dateLastPlayed = this.state.dateLastPlayed
         const gamertag = this.state.gamertag
+        const guardianRank = this.state.guardianRank
+        const ally = this.state.ally
+        const fun = this.state.fun
+        const mastery = this.state.mastery
+        const leadership = this.state.leadership
         return (
             <div>
                 <h1 id='joe' className='text-center'>{gamertag}</h1>
                <img className='img-fluid' src={bungie + nameplate} alt='Image' />
-               <p>Last logged in: {dateLastPlayed}</p>
+               <p className='text-center'>Last logged in: {dateLastPlayed}</p>
+               <p className='text-center'>Guardian Rank: {guardianRank}</p>
             </div>
           )
       }
