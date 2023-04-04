@@ -103,8 +103,6 @@ html {
   margin-bottom: 0.5rem;
 }
 
-
-
 .nightfallTitle {
   font-size: 1.75rem;
 }
@@ -160,8 +158,6 @@ html {
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
-
-
 }
 
 .data_button {
@@ -259,6 +255,13 @@ a.menu-item {
   padding-top: 1rem;
 }
 
+.tenpx_gap {
+  gap: 10px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
 
 @media screen and (max-width: 500px) {
   .data_container {

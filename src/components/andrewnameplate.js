@@ -43,7 +43,13 @@ class AndrewName extends Component {
                 <h1 id='andrew' className='text-center'>{gamertag}</h1>
                <img className='img-fluid' src={bungie + nameplate} alt='Image' />
                <p className='text-center'>Last logged in: {dateLastPlayed}</p>
-               <p className='text-center'>Guardian Rank: {guardianRank}</p>
+               <p className='text-center'>Guardian Rank: <span className='font-bold'>{guardianRank}</span></p>
+            </div>
+            <div className='data_container tenpx_gap'>
+              <p className='text-center '>Ally: <span className='font-bold'>{ally}</span></p>
+              <p className='text-center'>Fun: <span className='font-bold'>{fun}</span></p>
+              <p className='text-center'>Mastery: <span className='font-bold'>{mastery}</span></p>
+              <p className='text-center'>leadership: <span className='font-bold'>{leadership}</span></p>
             </div>
 
           </section>
