@@ -97,7 +97,7 @@ class Nightfall extends Component {
                             <img className='img-fluid w-500' src={arms} alt='strike art'></img>
                         </div>
                        : null }
-                       {this.state.nightfall == "3109193572" ? 
+                       {this.state.nightfall == "3109193575" ? 
                         <div className='nightfall_info'>
                         <p className='nightfallTitle'>Lake of Shadows</p> 
                         <p>Stem the tide of Taken flowing into the European Dead Zone from beneath the waves.</p>

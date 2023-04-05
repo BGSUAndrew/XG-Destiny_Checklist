@@ -4,6 +4,7 @@ import raid_vault from '../images/raid_vault.webp'
 import raid_vow from '../images/raid_vow.jpg'
 import raid_last from '../images/raid_last.jpg'
 import raid_garden from '../images/raid_garden.webp'
+import raid_king from '../images/raid_kings_fall.webp'
 
 
 class Raid extends Component {
@@ -25,6 +26,7 @@ class Raid extends Component {
         this.setState({vow: data.Response[2136320298].activities[0].challengeObjectiveHashes.length, loading: false});
         this.setState({deep: data.Response[541780856].activities[0].challengeObjectiveHashes.length, loading: false});
         this.setState({last: data.Response[3181387331].activities[0].challengeObjectiveHashes.length, loading: false});
+        this.setState({king: data.Response[292102995].activities[0].challengeObjectiveHashes.length, loading: false});
        //onsole.log(this.state.garden)
        //console.log(this.state.vault)
        
@@ -79,6 +81,13 @@ class Raid extends Component {
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Last Wish</p>
                        <img className='img-fluid w-500' src={raid_last} alt='last wish art'></img>
+                       </div> : null }
+                       </div>
+                       <div>
+                        {this.state.king === 1 ? 
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>King's Fall</p>
+                       <img className='img-fluid w-500' src={raid_king} alt='Kings Fall art'></img>
                        </div> : null }
                        </div>
                        <div>
