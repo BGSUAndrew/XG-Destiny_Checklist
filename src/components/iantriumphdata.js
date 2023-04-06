@@ -23,7 +23,7 @@ class IanTriumphData extends Component {
     this.setState({kingSlayerProgress: data.Response.profileRecords.data.records[3910736783].objectives[0].progress});
     this.setState({revelerProgress: data.Response.profileRecords.data.records[1228693527].objectives[0].progress});
     this.setState({discerptorProgress: data.Response.profileRecords.data.records[3097916612].objectives[0].progress});
-    this.setState({ironLordProgress: data.Response.profileRecords.data.records[1564001702].objectives[0].progress});
+    this.setState({ironLordProgress: data.Response.profileRecords.data.records[2561695992].objectives[0].progress});
     this.setState({gumshowProgress: data.Response.profileRecords.data.records[2489106733].objectives[0].progress});
     this.setState({discipleSlayerProgress: data.Response.profileRecords.data.records[1971228746].objectives[0].progress});
     this.setState({vidmasterProgress: data.Response.profileRecords.data.records[3588818798].objectives[0].progress});
@@ -42,7 +42,7 @@ class IanTriumphData extends Component {
     this.setState({reaperProgress: data.Response.profileRecords.data.records[3947410852].objectives[0].progress});
     this.setState({risenProgress: data.Response.profileRecords.data.records[1710217127].objectives[0].progress});
     this.setState({flameKeeperProgress: data.Response.profileRecords.data.records[3056675381].objectives[0].progress});
-
+    this.setState({gloriousProgress: data.Response.profileRecords.data.records[969142496].objectives[0].progress});
   }
 
   render() {
@@ -71,6 +71,7 @@ class IanTriumphData extends Component {
     const rivensbaneProgress = this.state.rivensbaneProgress
     const reaperProgress = this.state.reaperProgress
     const risenProgress = this.state.risenProgress
+    const gloriousProgress = this.state.gloriousProgress
     
 
 
@@ -118,6 +119,7 @@ class IanTriumphData extends Component {
             <p>Reaper Progress: {reaperProgress} / 10</p>
             <p>Risen Progress: {risenProgress} / 10</p>
             <p>Flamekeeper Progress: {flameKeeperProgress} / 28</p>
+            <p>Glorious Progress: {gloriousProgress} / 9</p>
         </div>
         </div>
         : null }
