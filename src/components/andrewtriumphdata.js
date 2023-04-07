@@ -43,6 +43,12 @@ class AndrewTriumphData extends Component {
     this.setState({risenProgress: data.Response.profileRecords.data.records[1710217127].objectives[0].progress});
     this.setState({flameKeeperProgress: data.Response.profileRecords.data.records[3056675381].objectives[0].progress});
     this.setState({gloriousProgress: data.Response.profileRecords.data.records[969142496].objectives[0].progress});
+    this.setState({ghostWriterProgress: data.Response.profileRecords.data.records[1089543274].objectives[0].progress});
+    this.setState({wantedProgress: data.Response.profileRecords.data.records[2302993504].objectives[0].progress});
+    this.setState({starbakerProgress: data.Response.profileRecords.data.records[2907042883].objectives[0].progress});
+    this.setState({dreamwarriorProgress: data.Response.profileRecords.data.records[2889189256].objectives[0].progress});
+    this.setState({virtualfighterProgress: data.Response.profileRecords.data.records[3906538939].objectives[0].progress});
+    this.setState({queensguardProgress: data.Response.profileRecords.data.records[1722592950].objectives[0].progress});
 
   }
 
@@ -73,6 +79,12 @@ class AndrewTriumphData extends Component {
     const reaperProgress = this.state.reaperProgress
     const risenProgress = this.state.risenProgress
     const gloriousProgress = this.state.gloriousProgress
+    const ghostWriterProgress = this.state.ghostWriterProgress
+    const wantedProgress = this.state.wantedProgress
+    const starbakerProgress = this.state.starbakerProgress
+    const dreamwarriorProgress = this.state.dreamwarriorProgress
+    const virtualfighterProgress = this.state.virtualfighterProgress
+    const queensguardProgress = this.state.queensguardProgress
     
 
 
@@ -121,6 +133,12 @@ class AndrewTriumphData extends Component {
             <p>Risen Progress: {risenProgress} / 10</p>
             <p>Flamekeeper Progress: {flameKeeperProgress} / 28</p>
             <p>Glorious Progress: {gloriousProgress} / 9</p>
+            <p>Ghost Writer Progress: {ghostWriterProgress} / 16</p>
+            <p>Wanted Progress: {wantedProgress} / 10</p>
+            <p>Star Baker Progress: {starbakerProgress} / 16</p>
+            <p>Dream Warrior Progress: {dreamwarriorProgress} / 20</p>
+            <p>Virtual Fighter Progress: {virtualfighterProgress} / 9</p>
+            <p>Queensguard Progress: {queensguardProgress} / 12</p>
         </div>
         </div>
         : null }
