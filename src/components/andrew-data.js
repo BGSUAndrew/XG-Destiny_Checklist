@@ -38,6 +38,7 @@ class AndrewData extends Component {
         const Spire = checklist["526718853"]
         const defiant = checklist["1235829702"]
         const lightfallCampaign = checklist["793110320"]
+        const rootOfNightmares = checklist["3699252268"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
 
 
@@ -198,6 +199,16 @@ class AndrewData extends Component {
                            </div>
                        ) : (
                            <p>Spire of the Watcher: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
+                        <section className='challenge'>
+                        <h2>Root of Nightmares</h2>
+                       {rootOfNightmares ? (
+                           <div className='needToComplete'>
+                           <p>Root of Nightmares: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <p>Root of Nightmares: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
                     </div>
