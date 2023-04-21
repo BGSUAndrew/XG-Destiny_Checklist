@@ -29,19 +29,22 @@ class IanName extends Component {
       render() {
         const nameplate = this.state.nameplate
         const bungie = "https://bungie.net"
-        const dateLastPlayed = this.state.dateLastPlayed
         const gamertag = this.state.gamertag
         const guardianRank = this.state.guardianRank
         const ally = this.state.ally
         const fun = this.state.fun
         const mastery = this.state.mastery
         const leadership = this.state.leadership
+        const lastPlayed = this.state.dateLastPlayed;
+        const newDate = new Date(lastPlayed);
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const lastPlayedDate = newDate.toLocaleDateString(undefined, options);
         return (
           <section>
             <div>
                 <h1 id='ian' className='text-center'>{gamertag}</h1>
                <img className='img-fluid' src={bungie + nameplate} alt='Image' />
-               <p className='text-center'>Last logged in: {dateLastPlayed}</p>
+               <p className='text-center'>Last logged in: {lastPlayedDate}</p>
                <p className='text-center'>Guardian Rank: <span className='font-bold'>{guardianRank}</span></p>
             </div>
             <div className='data_container tenpx_gap'>
