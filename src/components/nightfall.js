@@ -90,7 +90,7 @@ class Nightfall extends Component {
                        <p>Hunt down one of Queen Mara's most trusted advisors and free her from Taken possession.</p>
                        <img className='img-fluid w-500' src={corrupted} alt='strike art'></img>
                        </div> : null }
-                       {this.state.nightfall == "1753547897" ? 
+                       {this.state.nightfall == "1753547898" ? 
                         <div className='nightfall_info'>
                             <p className='nightfallTitle'>The Arms Dealer</p> 
                             <p>Shut down the operations of an ironmonger providing weapons to the Red Legion.</p>

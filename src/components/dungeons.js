@@ -22,12 +22,13 @@ class Dungeon extends Component {
             }
         })
         const data = await response.json();
-        this.setState({dungeonShattered: data.Response[422102671].activities[0].challengeObjectiveHashes[0]});
-        this.setState({pitOfHeresy: data.Response[1742973996].activities[0].challengeObjectiveHashes[0]});
+        this.setState({dungeonShattered: data.Response[1742973996].activities[0].challengeObjectiveHashes[0]});
+        this.setState({pitOfHeresy: data.Response[422102671].activities[0].challengeObjectiveHashes[0]});
         this.setState({prophecy: data.Response[478604913].activities[0].challengeObjectiveHashes[0]});
         this.setState({grasp: data.Response[1092691445]});
+        this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
        //console.log(this.state.dungeonShattered)
-       //console.log(this.state.pitOfHeresy)
+       console.log(this.state.pitOfHeresy)
        //console.log(this.state.prophecy)
        //console.log(this.state.grasp)
       }
@@ -44,21 +45,21 @@ class Dungeon extends Component {
                         <section className='nightfall_info'>
                         <h2>Raid Rotator</h2>
                         <div>
-                        {this.state.dungeonShattered === 2039792527 ? 
+                        {this.state.dungeonShattered === 1283234589 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Shattered Throne</p>
                        <img className='img-fluid w-500' src={dungeon_shattered} alt='shattered art'></img>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.pitOfHeresy === 2039792527 ? 
+                        {this.state.pitOfHeresy === 1283234589 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Pit of Heresy</p>
                        <img className='img-fluid w-500' src={dungeon_pit} alt='pit art'></img>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.prophecy = 2039792527 ? 
+                        {this.state.prophecy === 1283234589 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Prophecy</p>
                        <img className='img-fluid w-500' src={dungeon_prophecy} alt='prophecy art'></img>
@@ -69,6 +70,12 @@ class Dungeon extends Component {
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Grasp of Avarice</p>
                        <img className='img-fluid w-500' src={dungeon_grasp} alt='grasp art'></img>
+                       </div> : null }
+                       </div>
+                       <div>
+                        {this.state.grasp === null ? 
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Duality</p>
                        </div> : null }
                        </div>
                        <div>
