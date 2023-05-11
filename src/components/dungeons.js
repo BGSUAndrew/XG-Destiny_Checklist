@@ -28,8 +28,8 @@ class Dungeon extends Component {
         this.setState({grasp: data.Response[1092691445]});
         this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
        //console.log(this.state.dungeonShattered)
-       console.log(this.state.pitOfHeresy)
-       //console.log(this.state.prophecy)
+       //console.log(this.state.pitOfHeresy)
+       console.log(this.state.prophecy)
        //console.log(this.state.grasp)
       }
     
@@ -43,23 +43,23 @@ class Dungeon extends Component {
                     <div>
                         <div className='rituals card'>
                         <section className='nightfall_info'>
-                        <h2>Raid Rotator</h2>
+                        <h2>Dungeon Rotator</h2>
                         <div>
-                        {this.state.dungeonShattered === 1283234589 ? 
+                        {this.state.dungeonShattered === 2039792527 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Shattered Throne</p>
                        <img className='img-fluid w-500' src={dungeon_shattered} alt='shattered art'></img>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.pitOfHeresy === 1283234589 ? 
+                        {this.state.pitOfHeresy === 2039792527 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Pit of Heresy</p>
                        <img className='img-fluid w-500' src={dungeon_pit} alt='pit art'></img>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.prophecy === 1283234589 ? 
+                        {this.state.prophecy === 2039792527 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Prophecy</p>
                        <img className='img-fluid w-500' src={dungeon_prophecy} alt='prophecy art'></img>

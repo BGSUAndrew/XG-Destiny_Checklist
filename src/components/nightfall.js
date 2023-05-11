@@ -104,7 +104,7 @@ class Nightfall extends Component {
                         <img className='img-fluid w-500' src={shadows} alt='strike art'></img>
                         </div>
                         : null }
-                       {this.state.nightfall == "3812135455" ? 
+                       {this.state.nightfall == "3812135452" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Glassway</p> 
                        <p>Prevent ancient and powerful Vex from escaping the Glassway on Europa.</p>
