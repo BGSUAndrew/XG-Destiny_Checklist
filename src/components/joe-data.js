@@ -35,8 +35,9 @@ class JoeData extends Component {
         const gunsmith = checklist["3899487295"]
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
-        const spire = checklist["526718853"]
-        const defiant = checklist["1235829702"]
+
+        const Salvage = checklist["1437564680"]
+        const DeepDives = checklist["413772374"]
         const lightfallCampaign = checklist["793110320"]
         const rootOfNightmares = checklist["3699252268"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
@@ -61,15 +62,28 @@ class JoeData extends Component {
                         <div className='seasonal card'>
                     <h2>Seasonal Activities</h2>
                     <section className='challenge'>
-                        <h2>Season of Defiance</h2>
+                        <h2>Season of the Deep</h2>
                         <div>
-                       {defiant ? (
+                       {Salvage ? (
                            <div className='needToComplete'>
-                           <p>Defiant Battlegrounds: Need to complete <span className='pinnacle'></span></p>
+                           <p>Salvage activities: Need to complete <span className='powerful-3'></span></p>
                            </div>
                        ) : (
                            <div className='completed'>
-                           <p>Defiant Battlegrounds: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Salvage activities: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                       </section>
+                       <section className='challenge'>
+                        <div>
+                       {DeepDives ? (
+                           <div className='needToComplete'>
+                           <p>Deep Dives: Need to complete <span className='powerful-1'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Deep Dives: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                            </div>
                        )}
                        </div>
@@ -107,7 +121,7 @@ class JoeData extends Component {
                        <div>
                        {vanguardNightfall ? (
                            <div className='needToComplete'>
-                           <p>Vanguard Nightfall: Need to complete <span className='pinnacle'></span></p>
+                           <p>Vanguard Nightfall: Need to complete <span className='exotic'></span></p>
                            </div>
                        ) : (
                            <p>Vanguard Nightfall: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
@@ -116,7 +130,7 @@ class JoeData extends Component {
                        <div>
                        {vanguardBurn ? (
                            <div className='needToComplete'>
-                           <p>Vanguard Operations Burn: Need to complete <span className='pinnacle'></span></p>
+                           <p>Vanguard Operations Burn: Need to complete <span className='exotic'></span></p>
                            </div>
                        ) : (
                            <p>Vanguard Operations Burn: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
@@ -128,7 +142,7 @@ class JoeData extends Component {
                        <div>
                        {crucibleMatches ? (
                            <div className='needToComplete'>
-                           <p>3 Crucible Matches: Need to complete <span className='pinnacle'></span></p>
+                           <p>3 Crucible Matches: Need to complete <span className='exotic'></span></p>
                            </div>
                        ) : (
                            <p>3 Crucible Matches: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
@@ -149,7 +163,7 @@ class JoeData extends Component {
                        <div>
                        {gambitMatches ? (
                            <div className='needToComplete'>
-                           <p>Gambit Matches: Need to complete <span className='pinnacle'></span></p>
+                           <p>Gambit Matches: Need to complete <span className='exotic'></span></p>
                            </div>
                        ) : (
                            <p>Gambit Matches: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
@@ -189,16 +203,6 @@ class JoeData extends Component {
                     <div className='raids card'>
                     <h2>Raids & Dungeons</h2>
 
-                        <section className='challenge'>
-                        <h2>Spire of the Watcher</h2>
-                       {spire ? (
-                           <div className='needToComplete'>
-                           <p>Spire of the Watcher: Need to complete <span className='pinnacle'></span></p>
-                           </div>
-                       ) : (
-                           <p>Spire of the Watcher: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
                         <section className='challenge'>
                         <h2>Root of Nightmares</h2>
                        {rootOfNightmares ? (
