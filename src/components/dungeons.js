@@ -29,7 +29,7 @@ class Dungeon extends Component {
         this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
        //console.log(this.state.dungeonShattered)
        //console.log(this.state.pitOfHeresy)
-       console.log(this.state.prophecy)
+       //console.log(this.state.prophecy)
        //console.log(this.state.grasp)
       }
     
@@ -73,7 +73,7 @@ class Dungeon extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.grasp === null ? 
+                        {this.state.duality === null ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Duality</p>
                        </div> : null }

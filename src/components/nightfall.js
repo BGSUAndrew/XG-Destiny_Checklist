@@ -78,7 +78,7 @@ class Nightfall extends Component {
                        <p>Enter into the Devils' Lair and weaken the Fallen presence within the Cosmodrome.</p>
                        <img className='img-fluid w-500' src={devils} alt='strike art'></img>
                        </div> : null }
-                       {this.state.nightfall == "3293630128" ? 
+                       {this.state.nightfall == "3293630131" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Fallen S.A.B.E.R.</p>
                        <p>Enter Rasputin's bunker in the Cosmodrome and discover the source of the security breach.</p>
