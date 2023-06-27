@@ -5,7 +5,10 @@ class AndrewActivity extends Component {
     
         state = {
             loading: true,
-            visible: true
+            visible: true,
+            dungeonKills: [],
+            bestSingleGameKills: []
+
         }
 
       async componentDidMount() {
@@ -17,12 +20,12 @@ class AndrewActivity extends Component {
         })
         const data = await response.json();
         this.setState({dungeonClears: data.Response.dungeon.allTime.activitiesCleared.basic.displayValue});
-        this.setState({dungeonKills: data.Response.dungeon.allTime.kills.basic.displayValue});
+        this.setState({dungeonKills: data.Response.dungeon.allTime.kills.basic.value});
         this.setState({dungeonKillsAverage: data.Response.dungeon.allTime.kills.pga.displayValue});
         this.setState({dungeonDeaths: data.Response.dungeon.allTime.deaths.basic.displayValue});
         this.setState({dungeonDeathsAverage: data.Response.dungeon.allTime.deaths.pga.displayValue});
         this.setState({dungeonSecondsPlayed: data.Response.dungeon.allTime.secondsPlayed.basic.displayValue});
-        this.setState({bestSingleGameKills: data.Response.dungeon.allTime.bestSingleGameKills.basic.displayValue});
+        this.setState({bestSingleGameKills: data.Response.dungeon.allTime.bestSingleGameKills.basic.value});
         this.setState({averageSuperKills: data.Response.dungeon.allTime.weaponKillsSuper.pga.displayValue});
 
        this.setState({strikeClears: data.Response.strike.allTime.activitiesCleared.basic.displayValue});
@@ -55,20 +58,22 @@ class AndrewActivity extends Component {
         this.setState({GambitSecondsPlayed: data.Response.pvecomp_gambit.allTime.secondsPlayed.basic.displayValue});
         this.setState({bestSingleGambitGameKills: data.Response.pvecomp_gambit.allTime.bestSingleGameKills.basic.displayValue});
         this.setState({averageGambitSuperKills: data.Response.pvecomp_gambit.allTime.weaponKillsSuper.pga.displayValue});
-
-
        //console.log(data.Response.allPvP.allTime.activitiesEntered.basic.displayValue);
+       
       }
     
       render() {
         const dungeonClears = this.state.dungeonClears
         const dungeonKills = this.state.dungeonKills
+        const dungeonKillsConvert = dungeonKills.toLocaleString();
         const dungeonKillsAverage = this.state.dungeonKillsAverage
         const dungeonDeaths = this.state.dungeonDeaths
         const dungeonDeathsAverage = this.state.dungeonDeathsAverage
         const dungeonSecondsPlayed = this.state.dungeonSecondsPlayed
         const bestSingleGameKills = this.state.bestSingleGameKills
+        const bestSingleGameKillsConvert = bestSingleGameKills.toLocaleString();
         const averageSuperKills = this.state.averageSuperKills  
+
         
         const strikeClears = this.state.strikeClears
         const strikeKills = this.state.strikeKills
@@ -103,7 +108,6 @@ class AndrewActivity extends Component {
         const averageGambitSuperKills = this.state.averageGambitSuperKills
         const button = this.state.visible ? "Hide player data" : "Show player data";
 
-
         return (
             <div>
             <button 
@@ -121,12 +125,12 @@ class AndrewActivity extends Component {
 
                 <h1>Dungeons</h1>
                 <p>Dungeon Clears: {dungeonClears}</p>
-                <p>Dungeon Kills: {dungeonKills}</p>
+                <p>Dungeon Kills: {dungeonKillsConvert}</p>
                 <p>Dungeon Kills per Run: {dungeonKillsAverage}</p>
                 <p>Dungeon Deaths: {dungeonDeaths}</p>
                 <p>Dungeon Deaths per Run: {dungeonDeathsAverage}</p>
                 <p>Total time in Dungeons: {dungeonSecondsPlayed}</p>
-                <p>Most kills in a single run: {bestSingleGameKills}</p>
+                <p>Most kills in a single run: {bestSingleGameKillsConvert}</p>
                 <p>Average Super kills per run: {averageSuperKills}</p>
 
    
