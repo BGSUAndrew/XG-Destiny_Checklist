@@ -1,6 +1,10 @@
 html {
   scroll-behavior: smooth;
-  background-image: radial-gradient(circle,#C02885,#3393AB);
+  /*background-image: radial-gradient(circle,#C02885,#3393AB);*/
+  background-image:radial-gradient(circle,#C02885FA,#3393AB82), url('images/2023_Season_of_the_Deep_PressKit_Cinematics_Compressed_001.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;;
 }
 
 .data_container {

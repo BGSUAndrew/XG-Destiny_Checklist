@@ -7,7 +7,12 @@ class AndrewActivity extends Component {
             loading: true,
             visible: true,
             dungeonKills: [],
-            bestSingleGameKills: []
+            bestSingleGameKills: [],
+            strikeKills: [],
+            CrucibleGames: [],
+            CrucibleKills:[],
+            CrucibleDeaths: [],
+            GambitKills: []
 
         }
 
@@ -29,7 +34,7 @@ class AndrewActivity extends Component {
         this.setState({averageSuperKills: data.Response.dungeon.allTime.weaponKillsSuper.pga.displayValue});
 
        this.setState({strikeClears: data.Response.strike.allTime.activitiesCleared.basic.displayValue});
-       this.setState({strikeKills: data.Response.strike.allTime.kills.basic.displayValue});
+       this.setState({strikeKills: data.Response.strike.allTime.kills.basic.value});
        this.setState({strikeKillsAverage: data.Response.strike.allTime.kills.pga.displayValue});
        this.setState({strikeDeaths: data.Response.strike.allTime.deaths.basic.displayValue});
        this.setState({strikeDeathsAverage: data.Response.strike.allTime.deaths.pga.displayValue});
@@ -37,12 +42,12 @@ class AndrewActivity extends Component {
        this.setState({bestSingleStrikeGameKills: data.Response.strike.allTime.bestSingleGameKills.basic.displayValue});
        this.setState({averageStrikeSuperKills: data.Response.strike.allTime.weaponKillsSuper.pga.displayValue});
 
-       this.setState({CrucibleGames: data.Response.allPvP.allTime.activitiesEntered.basic.displayValue});
+       this.setState({CrucibleGames: data.Response.allPvP.allTime.activitiesEntered.basic.value});
         this.setState({CrucibleWins: data.Response.allPvP.allTime.activitiesWon.basic.displayValue});
         this.setState({CruciblekillsDeathsRatio: data.Response.allPvP.allTime.killsDeathsRatio.basic.displayValue});
-        this.setState({CrucibleKills: data.Response.allPvP.allTime.kills.basic.displayValue});
+        this.setState({CrucibleKills: data.Response.allPvP.allTime.kills.basic.value});
         this.setState({CrucibleKillsAverage: data.Response.allPvP.allTime.kills.pga.displayValue});
-        this.setState({CrucibleDeaths: data.Response.allPvP.allTime.deaths.basic.displayValue});
+        this.setState({CrucibleDeaths: data.Response.allPvP.allTime.deaths.basic.value});
         this.setState({CrucibleDeathsAverage: data.Response.allPvP.allTime.deaths.pga.displayValue});
         this.setState({CrucibleSecondsPlayed: data.Response.allPvP.allTime.secondsPlayed.basic.displayValue});
         this.setState({bestSingleCrucibleGameKills: data.Response.allPvP.allTime.bestSingleGameKills.basic.displayValue});
@@ -51,7 +56,7 @@ class AndrewActivity extends Component {
         this.setState({GambitGames: data.Response.pvecomp_gambit.allTime.activitiesEntered.basic.displayValue});
         this.setState({GambitWins: data.Response.pvecomp_gambit.allTime.activitiesWon.basic.displayValue});
         this.setState({GambitkillsDeathsRatio: data.Response.pvecomp_gambit.allTime.killsDeathsRatio.basic.displayValue});
-        this.setState({GambitKills: data.Response.pvecomp_gambit.allTime.kills.basic.displayValue});
+        this.setState({GambitKills: data.Response.pvecomp_gambit.allTime.kills.basic.value});
         this.setState({GambitKillsAverage: data.Response.pvecomp_gambit.allTime.kills.pga.displayValue});
         this.setState({GambitDeaths: data.Response.pvecomp_gambit.allTime.deaths.basic.displayValue});
         this.setState({GambitDeathsAverage: data.Response.pvecomp_gambit.allTime.deaths.pga.displayValue});
@@ -77,6 +82,7 @@ class AndrewActivity extends Component {
         
         const strikeClears = this.state.strikeClears
         const strikeKills = this.state.strikeKills
+        const strikeKillsConvert = strikeKills.toLocaleString();
         const strikeKillsAverage = this.state.strikeKillsAverage
         const strikeDeaths = this.state.strikeDeaths
         const strikeDeathsAverage = this.state.strikeDeathsAverage
@@ -85,11 +91,14 @@ class AndrewActivity extends Component {
         const averageStrikeSuperKills = this.state.averageStrikeSuperKills
 
         const CrucibleGames = this.state.CrucibleGames
+        const CrucibleGamesConvert = CrucibleGames.toLocaleString();
         const CrucibleWins = this.state.CrucibleWins
         const CruciblekillsDeathsRatio = this.state.CruciblekillsDeathsRatio
         const CrucibleKills = this.state.CrucibleKills
+        const CrucibleKillsConvert = CrucibleKills.toLocaleString();
         const CrucibleKillsAverage = this.state.CrucibleKillsAverage
         const CrucibleDeaths = this.state.CrucibleDeaths
+        const CrucibleDeathsConvert = CrucibleDeaths.toLocaleString();
         const CrucibleDeathsAverage = this.state.CrucibleDeathsAverage
         const CrucibleSecondsPlayed = this.state.CrucibleSecondsPlayed
         const bestSingleCrucibleGameKills = this.state.bestSingleCrucibleGameKills
@@ -100,6 +109,7 @@ class AndrewActivity extends Component {
         const GambitWins = this.state.GambitWins
         const GambitkillsDeathsRatio = this.state.GambitkillsDeathsRatio
         const GambitKills = this.state.GambitKills
+        const GambitKillsConvert = GambitKills.toLocaleString()
         const GambitKillsAverage = this.state.GambitKillsAverage
         const GambitDeaths = this.state.GambitDeaths
         const GambitDeathsAverage = this.state.GambitDeathsAverage
@@ -136,7 +146,7 @@ class AndrewActivity extends Component {
    
                 <h1>Strikes</h1>
                 <p>Strike Clears: {strikeClears}</p>
-                <p>Strike Kills: {strikeKills}</p>
+                <p>Strike Kills: {strikeKillsConvert}</p>
                 <p>Strike Kills per Run: {strikeKillsAverage}</p>
                 <p>Strike Deaths: {strikeDeaths}</p>
                 <p>Strike Deaths per Run: {strikeDeathsAverage}</p>
@@ -146,12 +156,12 @@ class AndrewActivity extends Component {
 
 
                 <h1>Crucible</h1>
-                <p>Crucible Matches Played: {CrucibleGames}</p>
+                <p>Crucible Matches Played: {CrucibleGamesConvert}</p>
                 <p>Crucible Matches Won: {CrucibleWins}</p>
                 <p>Crucible KDR: {CruciblekillsDeathsRatio}</p>
-                <p>Crucible Kills: {CrucibleKills}</p>
+                <p>Crucible Kills: {CrucibleKillsConvert}</p>
                 <p>Crucible Kills per Game: {CrucibleKillsAverage}</p>
-                <p>Crucible Deaths: {CrucibleDeaths}</p>
+                <p>Crucible Deaths: {CrucibleDeathsConvert}</p>
                 <p>Crucible Deaths per Game: {CrucibleDeathsAverage}</p>
                 <p>Total time in the Crucible: {CrucibleSecondsPlayed}</p>
                 <p>Most kills in a single Crucible match: {bestSingleCrucibleGameKills}</p>
@@ -162,7 +172,7 @@ class AndrewActivity extends Component {
                 <p>Gambit Matches Played: {GambitGames}</p>
                 <p>Gambit Matches Won: {GambitWins}</p>
                 <p>Gambit KDR: {GambitkillsDeathsRatio}</p>
-                <p>Gambit Kills: {GambitKills}</p>
+                <p>Gambit Kills: {GambitKillsConvert}</p>
                 <p>Gambit Kills per Game: {GambitKillsAverage}</p>
                 <p>Gambit Deaths: {GambitDeaths}</p>
                 <p>Gambit Deaths per Game: {GambitDeathsAverage}</p>
