@@ -3,6 +3,9 @@ import dungeon_shattered from '../images/dungeon_shattered.webp'
 import dungeon_pit from '../images/dungeon_pit_of_heresy.webp'
 import dungeon_prophecy from '../images/dungeon_prophecy.webp'
 import dungeon_grasp from '../images/dungeon_grasp.webp'
+import dungeon_duality from '../images/dungeon_duality.webp'
+
+
 
 class Dungeon extends Component {
     state = {
@@ -12,6 +15,7 @@ class Dungeon extends Component {
         pitOfHeresy: [],
         prophecy: [],
         grasp: [],
+        duality: []
 
     }
       async componentDidMount() {
@@ -26,11 +30,12 @@ class Dungeon extends Component {
         this.setState({pitOfHeresy: data.Response[422102671].activities[0].challengeObjectiveHashes[0]});
         this.setState({prophecy: data.Response[478604913].activities[0].challengeObjectiveHashes[0]});
         this.setState({grasp: data.Response[1092691445]});
-        this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
+        this.setState({duality: data.Response[3618845105].activities[0].activityHash});
        //console.log(this.state.dungeonShattered)
        //console.log(this.state.pitOfHeresy)
        //console.log(this.state.prophecy)
        //console.log(this.state.grasp)
+       //console.log(this.state.duality);
       }
     
       render() {
@@ -73,9 +78,10 @@ class Dungeon extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.duality === null ? 
+                        {this.state.duality === 2823159265 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Duality</p>
+                       <img className='img-fluid w-500' src={dungeon_duality} alt='duality art'></img>
                        </div> : null }
                        </div>
                        <div>

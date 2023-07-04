@@ -72,7 +72,7 @@ class Nightfall extends Component {
                            <p>Defeat the shamed Hive Wizard Navôta in the Cosmodrome.</p>
                            <img className='img-fluid w-500' src={disgraced} alt='strike art'></img>
                         </div> : null }
-                       {this.state.nightfall == "1203950596" ? 
+                       {this.state.nightfall == "1203950599" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Devils' Lair</p>
                        <p>Enter into the Devils' Lair and weaken the Fallen presence within the Cosmodrome.</p>
