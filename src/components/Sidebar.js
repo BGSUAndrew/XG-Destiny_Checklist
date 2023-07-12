@@ -21,6 +21,9 @@ export default props => {
       <Link to ="/triumphs" className="menu-item">
         Triumphs
       </Link>
+      <Link to ="/commendations" className="menu-item">
+        Commendations
+      </Link>
 
     </Menu>
 

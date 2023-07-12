@@ -19,6 +19,7 @@ class JoeTriumphData extends Component {
     const data = await response.json();
     this.setState({triumphScore: data.Response.profileRecords.data.score});
     this.setState({legacyScore: data.Response.profileRecords.data.legacyScore})
+    this.setState({aquanautProgress: data.Response.profileRecords.data.records[3570567217].objectives[0].progress});
     this.setState({scallyWagProgress: data.Response.profileRecords.data.records[4176879201].objectives[0].progress});
     this.setState({kingSlayerProgress: data.Response.profileRecords.data.records[3910736783].objectives[0].progress});
     this.setState({revelerProgress: data.Response.profileRecords.data.records[1228693527].objectives[0].progress});
@@ -55,6 +56,7 @@ class JoeTriumphData extends Component {
   render() {
     const triumphScore = this.state.triumphScore
     const legacyScore = this.state.legacyScore
+    const aquanautProgress = this.state.aquanautProgress
     const scallyWagProgress = this.state.scallyWagProgress
     const kingSlayerProgress = this.state.kingSlayerProgress
     const flameKeeperProgress = this.state.flameKeeperProgress
@@ -108,6 +110,7 @@ class JoeTriumphData extends Component {
             <h1>Triumphs</h1>
             <p>Current Triumph Score: {triumphScore}</p>
             <p>Legacy Triumph Score: {legacyScore}</p>
+            <p>Aquanaut Progress: {aquanautProgress} /10</p>
             <p>Scallywag Progress: {scallyWagProgress} / 10</p>
             <p>Kingslayer Progress: {kingSlayerProgress} / 21</p>
             <p>Reveler Progress: {revelerProgress} / 4</p>

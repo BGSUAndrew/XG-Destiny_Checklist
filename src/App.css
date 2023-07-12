@@ -277,6 +277,7 @@ a.menu-item {
   font-weight: bold;
 }
 
+
 @media screen and (max-width: 500px) {
   .data_container {
     display: block;

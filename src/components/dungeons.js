@@ -3,6 +3,9 @@ import dungeon_shattered from '../images/dungeon_shattered.webp'
 import dungeon_pit from '../images/dungeon_pit_of_heresy.webp'
 import dungeon_prophecy from '../images/dungeon_prophecy.webp'
 import dungeon_grasp from '../images/dungeon_grasp.webp'
+import dungeon_duality from '../images/dungeon_duality.webp'
+
+
 
 class Dungeon extends Component {
     state = {
@@ -33,7 +36,6 @@ class Dungeon extends Component {
        //console.log(this.state.pitOfHeresy)
        //console.log(this.state.prophecy)
        //console.log(this.state.grasp)
-       console.log(this.state.spire);
       }
     
       render() {
@@ -76,9 +78,10 @@ class Dungeon extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.duality === null ? 
+                        {this.state.duality === 2823159265 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Duality</p>
+                       <img className='img-fluid w-500' src={dungeon_duality} alt='duality art'></img>
                        </div> : null }
                        </div>
                        <div>
