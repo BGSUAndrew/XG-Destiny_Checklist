@@ -12,6 +12,7 @@ class Dungeon extends Component {
         pitOfHeresy: [],
         prophecy: [],
         grasp: [],
+        spire: []
 
     }
       async componentDidMount() {
@@ -27,10 +28,12 @@ class Dungeon extends Component {
         this.setState({prophecy: data.Response[478604913].activities[0].challengeObjectiveHashes[0]});
         this.setState({grasp: data.Response[1092691445]});
         this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
+        this.setState({spire: data.Response[526718853].milestoneHash});
        //console.log(this.state.dungeonShattered)
        //console.log(this.state.pitOfHeresy)
        //console.log(this.state.prophecy)
        //console.log(this.state.grasp)
+       console.log(this.state.spire);
       }
     
       render() {
@@ -76,6 +79,12 @@ class Dungeon extends Component {
                         {this.state.duality === null ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Duality</p>
+                       </div> : null }
+                       </div>
+                       <div>
+                        {this.state.spire === 526718853 ? 
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Spire of the Watcher</p>
                        </div> : null }
                        </div>
                        <div>

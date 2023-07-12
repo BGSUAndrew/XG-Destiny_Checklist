@@ -84,7 +84,7 @@ class Nightfall extends Component {
                        <p>Enter Rasputin's bunker in the Cosmodrome and discover the source of the security breach.</p>
                        <img className='img-fluid w-500' src={saber} alt='strike art'></img>
                        </div> : null }
-                       {this.state.nightfall == "2416314397" ? 
+                       {this.state.nightfall == "2416314398" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Corrupted</p>
                        <p>Hunt down one of Queen Mara's most trusted advisors and free her from Taken possession.</p>

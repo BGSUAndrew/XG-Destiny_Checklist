@@ -98,6 +98,14 @@ class Crucible extends Component {
                            : null }
                        </div>
                        <div>
+                            {this.state.crucible == "2081353834" ?
+                            <div className='crucible_info'>
+                                <p>Supremecy</p>
+                                <img className='img-fluid' src={crucible} alt='crucible art'></img>
+                            </div>
+                           : null }
+                       </div>
+                       <div>
              
                        </div>
                        </section>
