@@ -66,7 +66,7 @@ class Nightfall extends Component {
                        <p>Investigate the recently erected Scarlet Keep and discover its dark purpose.</p>
                        <img className='img-fluid w-500' src={scarlet} alt='strike art'></img>
                        </div> : null }
-                       {this.state.nightfall == "2136458564" ? 
+                       {this.state.nightfall == "2136458567" ? 
                        <div className='nightfall_info'>
                            <p className='nightfallTitle'>The Disgraced</p>
                            <p>Defeat the shamed Hive Wizard Navôta in the Cosmodrome.</p>

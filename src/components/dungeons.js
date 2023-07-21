@@ -27,15 +27,16 @@ class Dungeon extends Component {
         })
         const data = await response.json();
         this.setState({dungeonShattered: data.Response[1742973996].activities[0].challengeObjectiveHashes[0]});
-        this.setState({pitOfHeresy: data.Response[422102671].activities[0].challengeObjectiveHashes[0]});
+        this.setState({pitOfHeresy: data.Response[422102671].milestoneHash});
         this.setState({prophecy: data.Response[478604913].activities[0].challengeObjectiveHashes[0]});
         this.setState({grasp: data.Response[1092691445]});
         this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
-        this.setState({spire: data.Response[526718853].milestoneHash});
+        //this.setState({spire: data.Response[526718853].milestoneHash});
        //console.log(this.state.dungeonShattered)
        //console.log(this.state.pitOfHeresy)
        //console.log(this.state.prophecy)
        //console.log(this.state.grasp)
+       //console.log(this.state.spire)
       }
     
       render() {
@@ -57,7 +58,7 @@ class Dungeon extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.pitOfHeresy === 2039792527 ? 
+                        {this.state.pitOfHeresy === 422102671 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Pit of Heresy</p>
                        <img className='img-fluid w-500' src={dungeon_pit} alt='pit art'></img>
