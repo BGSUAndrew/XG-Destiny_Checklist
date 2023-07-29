@@ -26,8 +26,8 @@ class Dungeon extends Component {
             }
         })
         const data = await response.json();
-        this.setState({dungeonShattered: data.Response[1742973996].activities[0].challengeObjectiveHashes[0]});
-        this.setState({pitOfHeresy: data.Response[422102671].milestoneHash});
+        this.setState({dungeonShattered: data.Response[1742973996].activities[0].activityHash});
+        this.setState({pitOfHeresy: data.Response[422102671].activities[0].challengeObjectiveHashes[0]});
         this.setState({prophecy: data.Response[478604913].activities[0].challengeObjectiveHashes[0]});
         this.setState({grasp: data.Response[1092691445]});
         this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
@@ -51,7 +51,7 @@ class Dungeon extends Component {
                         <section className='nightfall_info'>
                         <h2>Dungeon Rotator</h2>
                         <div>
-                        {this.state.dungeonShattered === 2039792527 ? 
+                        {this.state.dungeonShattered === 2032534090 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Shattered Throne</p>
                        <img className='img-fluid w-500' src={dungeon_shattered} alt='shattered art'></img>
