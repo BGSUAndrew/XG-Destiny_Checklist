@@ -25,21 +25,23 @@ class AndrewData extends Component {
       render() {
         const checklist = this.state.checklist
         const vanguardBounties =  checklist["2709491520"]
-        const vanguardNightfall = checklist["1942283261"]
-        const vanguardBurn = checklist["1437935813"]
-        const crucibleMatches = checklist["3312774044"]
         const crucibleBounties = checklist["2594202463"]
-        const gambitMatches = checklist["3448738070"]
         const gambitBounties = checklist["3802603984"]
         const dares = checklist["295129163"]
         const gunsmith = checklist["3899487295"]
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
-
         const lightfallCampaign = checklist["793110320"]
-        const rootOfNightmares = checklist["3699252268"]
-        const Salvage = checklist["1437564680"]
-        const DeepDives = checklist["413772374"]
+        const ghostsOfTheDeep = checklist["390471874"]
+        const spire_one = checklist["2870173601"]
+        const spire_two = checklist["2870173602"]
+        const spire_three = checklist["2870173602"]
+        const altars_one = checklist["3031368925"]
+        const altars_two = checklist["3031368926"]
+        const altars_three = checklist["3031368927"]
+        const rituals_one = checklist["1049998279"]
+        const rituals_two = checklist["1049998276"]
+        const rituals_three = checklist["1049998277"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
 
 
@@ -63,28 +65,72 @@ class AndrewData extends Component {
                     <div className='seasonal card'>
                     <h2>Seasonal Activities</h2>
                     <section className='challenge'>
-                        <h2>Season of the Deep</h2>
+                        <h2>Season of the Witch</h2>
                         <div>
-                       {Salvage ? (
+                       {spire_one ? (
                            <div className='needToComplete'>
-                           <p>Salvage activities: Need to complete <span className='powerful-3'></span></p>
+                            <p>Savathûn's Spire Tier 1: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
                            <div className='completed'>
-                           <p>Salvage activities: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Savathûn's Spire Tier 1: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                       <div>
+                       {spire_two ? (
+                           <div className='needToComplete'>
+                            <p>Savathûn's Spire Tier 2: Need to complete <span className='powerful-3'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Savathûn's Spire Tier 2: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                       <div>
+                       {spire_three ? (
+                           <div className='needToComplete'>
+                            <p>Savathûn's Spire Tier 3: Need to complete <span className='powerful-2'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Savathûn's Spire Tier 3: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                            </div>
                        )}
                        </div>
                        </section>
                        <section className='challenge'>
                         <div>
-                       {DeepDives ? (
+                            {altars_one ? (
                            <div className='needToComplete'>
-                           <p>Deep Dives: Need to complete <span className='powerful-1'></span></p>
+                            <p>Altars of Summoning Tier 1: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
                            <div className='completed'>
-                           <p>Deep Dives: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Altars of Summoning Tier 1: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                       <div>
+                       {altars_two ? (
+                           <div className='needToComplete'>
+                            <p>Altars of Summoning Tier 2: Need to complete <span className='powerful-3'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Altars of Summoning Tier 2: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                       <div>
+                       {altars_three ? (
+                           <div className='needToComplete'>
+                            <p>Altars of Summoning Tier 3: Need to complete <span className='powerful-2'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Altars of Summoning Tier 3: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                            </div>
                        )}
                        </div>
@@ -106,6 +152,42 @@ class AndrewData extends Component {
                     </div>
                         <div className='rituals card'>
                         <h2>Ritual Activities</h2>
+                         <section className='challenge'>
+                        <h2>Ritual Pinnacles</h2>
+                        <div>
+                       {rituals_one ? (
+                           <div className='needToComplete'>
+                           <p>Ritual Pinnacles 1: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Ritual Pinnacles 1: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                        <div>
+                       {rituals_two ? (
+                           <div className='needToComplete'>
+                           <p>Ritual Pinnacles 2: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Ritual Pinnacles 2: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                        <div>
+                       {rituals_three ? (
+                           <div className='needToComplete'>
+                           <p>Ritual Pinnacles 3: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Ritual Pinnacles 3: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                       </section>
                         <section className='challenge'>
                         <h2>Vanguard</h2>
                         <div>
@@ -119,36 +201,9 @@ class AndrewData extends Component {
                            </div>
                        )}
                        </div>
-                       <div>
-                       {vanguardNightfall ? (
-                           <div className='needToComplete'>
-                           <p>Vanguard Nightfall: Need to complete <span className='exotic'></span></p>
-                           </div>
-                       ) : (
-                           <p>Vanguard Nightfall: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                       </div>
-                       <div>
-                       {vanguardBurn ? (
-                           <div className='needToComplete'>
-                           <p>Vanguard Operations Burn: Need to complete <span className='exotic'></span></p>
-                           </div>
-                       ) : (
-                           <p>Vanguard Operations Burn: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                       </div>
                        </section>
                        <section className='challenge'>
                        <h2>Crucible</h2>
-                       <div>
-                       {crucibleMatches ? (
-                           <div className='needToComplete'>
-                           <p>3 Crucible Matches: Need to complete <span className='exotic'></span></p>
-                           </div>
-                       ) : (
-                           <p>3 Crucible Matches: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                       </div>
                        <div>
                        {crucibleBounties ? (
                            <div className='needToComplete'>
@@ -161,15 +216,6 @@ class AndrewData extends Component {
                        </section>
                        <section className='challenge'>
                        <h2>Gambit</h2>           
-                       <div>
-                       {gambitMatches ? (
-                           <div className='needToComplete'>
-                           <p>Gambit Matches: Need to complete <span className='exotic'></span></p>
-                           </div>
-                       ) : (
-                           <p>Gambit Matches: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                       </div>
                        <div>
                        {gambitBounties ? (
                            <div className='needToComplete'>
@@ -204,16 +250,14 @@ class AndrewData extends Component {
                    
                     <div className='raids card'>
                     <h2>Raids & Dungeons</h2>
-
-
                         <section className='challenge'>
-                        <h2>Root of Nightmares</h2>
-                       {rootOfNightmares ? (
+                        <h2>Ghosts of the Deep</h2>
+                       {ghostsOfTheDeep ? (
                            <div className='needToComplete'>
-                           <p>Root of Nightmares: Need to complete <span className='pinnacle'></span></p>
+                           <p>Ghosts of the Deep: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
-                           <p>Root of Nightmares: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Ghosts of the Deep: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
                     </div>
