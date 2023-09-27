@@ -20,7 +20,6 @@ class WeeklyReset extends Component {
             </section>
             <section>
             <VanguardBurn />
-            <Crucible />
             </section>
 
             </div>

@@ -91,6 +91,13 @@ class Raid extends Component {
                        </div> : null }
                        </div>
                        <div>
+                        {this.state.root === 1 ? 
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Root of Nightmares</p>
+                       <img className='img-fluid w-500' src={raid_king} alt='Root of Nightmares art'></img>
+                       </div> : null }
+                       </div>
+                       <div>
              
                        </div>
                        </section>

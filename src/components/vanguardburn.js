@@ -13,7 +13,7 @@ class VanguardBurn extends Component {
             }
         })
         const data = await response.json();
-         this.setState({vanguard: data.Response[1942283261].activities[0].modifierHashes, loading: false});
+         this.setState({vanguard: data.Response[2029743966].activities[0].modifierHashes, loading: false});
 
        
       }

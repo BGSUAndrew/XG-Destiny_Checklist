@@ -41,7 +41,7 @@ class Nightfall extends Component {
             }
         })
         const data = await response.json();
-        this.setState({nightfall: data.Response[1942283261].activities[1].activityHash, loading: false});
+        this.setState({nightfall: data.Response[2029743966].activities[0].activityHash, loading: false});
        console.log(this.state.nightfall)
        
       }
