@@ -143,7 +143,7 @@ class Nightfall extends Component {
                        <p>Help the Drifter restore order at the Prison of Elders.</p>
                        <img className='img-fluid w-500' src={warden} alt='strike art'></img>
                        </div> : null }
-                       {this.state.nightfall == "1964120201" ? 
+                       {this.state.nightfall == "1964120202" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Lightblade</p>
                        <p>Recover an artifact from a monument to Oryx, located deep in the swamps of Savathûn's throne world.</p>

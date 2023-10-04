@@ -27,16 +27,11 @@ class Dungeon extends Component {
         })
         const data = await response.json();
         this.setState({dungeonShattered: data.Response[1742973996].activities[0].challengeObjectiveHashes[0]});
-        this.setState({pitOfHeresy: data.Response[422102671].milestoneHash});
+        this.setState({pitOfHeresy: data.Response[422102671].activities[0].challengeObjectiveHashes[0]});
         this.setState({prophecy: data.Response[478604913].activities[0].challengeObjectiveHashes[0]});
-        this.setState({grasp: data.Response[1092691445]});
+        //this.setState({grasp: data.Response[1092691445].activities[0].challengeObjectiveHashes[0]});
         this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
-        //this.setState({spire: data.Response[526718853].milestoneHash});
-       //console.log(this.state.dungeonShattered)
-       //console.log(this.state.pitOfHeresy)
-       //console.log(this.state.prophecy)
-       //console.log(this.state.grasp)
-       //console.log(this.state.spire)
+       console.log(this.state.duality)
       }
     
       render() {
@@ -72,14 +67,14 @@ class Dungeon extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.grasp === null ? 
+                        {this.state.grasp === 1092691445 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Grasp of Avarice</p>
                        <img className='img-fluid w-500' src={dungeon_grasp} alt='grasp art'></img>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.duality === 2823159265 ? 
+                        {this.state.duality === 3039545165 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Duality</p>
                        <img className='img-fluid w-500' src={dungeon_duality} alt='duality art'></img>
