@@ -4,6 +4,7 @@ import dungeon_pit from '../images/dungeon_pit_of_heresy.webp'
 import dungeon_prophecy from '../images/dungeon_prophecy.webp'
 import dungeon_grasp from '../images/dungeon_grasp.webp'
 import dungeon_duality from '../images/dungeon_duality.webp'
+import dungeon_spire from '../images/dungeon_spire_of_the_watcher.webp'
 
 
 
@@ -31,7 +32,8 @@ class Dungeon extends Component {
         this.setState({prophecy: data.Response[478604913].activities[0].challengeObjectiveHashes[0]});
         //this.setState({grasp: data.Response[1092691445].activities[0].challengeObjectiveHashes[0]});
         this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
-       console.log(this.state.duality)
+        this.setState({spire: data.Response[526718853].activities[0].challengeObjectiveHashes[0]});
+       console.log(this.state.spire)
       }
     
       render() {
@@ -81,9 +83,11 @@ class Dungeon extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.spire === 526718853 ? 
+                        {this.state.spire === 3211393925 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Spire of the Watcher</p>
+                       <p>Machinations run wild in this dust-ridden ruin. Bring them to heel.</p>
+                       <img className='img-fluid w-500' src={dungeon_spire} alt='spire art'></img>
                        </div> : null }
                        </div>
                        <div>

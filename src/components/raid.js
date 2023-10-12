@@ -28,7 +28,7 @@ class Raid extends Component {
         this.setState({deep: data.Response[541780856].activities[0].challengeObjectiveHashes.length, loading: false});
         this.setState({last: data.Response[3181387331].activities[0].challengeObjectiveHashes.length, loading: false});
         this.setState({king: data.Response[292102995].activities[0].challengeObjectiveHashes.length, loading: false});
-        this.setState({root: data.Response[3699252268].milestoneHash, loading: false});
+        this.setState({root: data.Response[3699252268].activities[0].challengeObjectiveHashes.length, loading: false});
        console.log(this.state.root)
        //console.log(this.state.vault)
        
