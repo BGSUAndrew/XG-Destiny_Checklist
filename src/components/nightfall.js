@@ -60,7 +60,7 @@ class Nightfall extends Component {
                         <section className='nightfall_info'>
                         <h2>Nightfall</h2>
                         <div>
-                       {this.state.nightfall == "1495545952" ? 
+                       {this.state.nightfall == "1495545955" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Scarlet Keep</p>
                        <p>Investigate the recently erected Scarlet Keep and discover its dark purpose.</p>

@@ -55,7 +55,7 @@ class Dungeon extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.pitOfHeresy === 422102671 ? 
+                        {this.state.pitOfHeresy === 1283234589 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Pit of Heresy</p>
                        <img className='img-fluid w-500' src={dungeon_pit} alt='pit art'></img>
