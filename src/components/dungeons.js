@@ -33,7 +33,7 @@ class Dungeon extends Component {
         //this.setState({grasp: data.Response[1092691445].activities[0].challengeObjectiveHashes[0]});
         this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
         this.setState({spire: data.Response[526718853].activities[0].challengeObjectiveHashes[0]});
-       console.log(this.state.spire)
+       console.log(this.state.dungeonShattered)
       }
     
       render() {
@@ -48,7 +48,7 @@ class Dungeon extends Component {
                         <section className='nightfall_info'>
                         <h2>Dungeon Rotator</h2>
                         <div>
-                        {this.state.dungeonShattered === 2039792527 ? 
+                        {this.state.dungeonShattered === 3838169295 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Shattered Throne</p>
                        <img className='img-fluid w-500' src={dungeon_shattered} alt='shattered art'></img>
