@@ -5,6 +5,7 @@ import raid_vow from '../images/raid_vow.jpg'
 import raid_last from '../images/raid_last.jpg'
 import raid_garden from '../images/raid_garden.webp'
 import raid_king from '../images/raid_kings_fall.webp'
+import raid_root from '../images/raid_root_of_nightmares.jpg'
 
 
 class Raid extends Component {
@@ -27,7 +28,8 @@ class Raid extends Component {
         this.setState({deep: data.Response[541780856].activities[0].challengeObjectiveHashes.length, loading: false});
         this.setState({last: data.Response[3181387331].activities[0].challengeObjectiveHashes.length, loading: false});
         this.setState({king: data.Response[292102995].activities[0].challengeObjectiveHashes.length, loading: false});
-       //onsole.log(this.state.garden)
+        this.setState({root: data.Response[3699252268].activities[0].challengeObjectiveHashes.length, loading: false});
+       console.log(this.state.root)
        //console.log(this.state.vault)
        
       }
@@ -90,6 +92,15 @@ class Raid extends Component {
                        <img className='img-fluid w-500' src={raid_king} alt='Kings Fall art'></img>
                        </div> : null }
                        </div>
+                       <div>
+                        {this.state.root === 3699252268 ? 
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Root of Nightmares</p>
+                       <p>A sinister threat has taken root.</p>
+                       <img className='img-fluid w-500' src={raid_root} alt='Root of Nightmares art'></img>
+                       </div> : null }
+                       </div>
+                       
                        <div>
              
                        </div>

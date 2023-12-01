@@ -41,7 +41,7 @@ class Nightfall extends Component {
             }
         })
         const data = await response.json();
-        this.setState({nightfall: data.Response[1942283261].activities[0].activityHash, loading: false});
+        this.setState({nightfall: data.Response[2029743966].activities[0].activityHash, loading: false});
        console.log(this.state.nightfall)
        
       }
@@ -60,7 +60,7 @@ class Nightfall extends Component {
                         <section className='nightfall_info'>
                         <h2>Nightfall</h2>
                         <div>
-                       {this.state.nightfall == "1495545952" ? 
+                       {this.state.nightfall == "1495545955" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Scarlet Keep</p>
                        <p>Investigate the recently erected Scarlet Keep and discover its dark purpose.</p>
@@ -143,7 +143,7 @@ class Nightfall extends Component {
                        <p>Help the Drifter restore order at the Prison of Elders.</p>
                        <img className='img-fluid w-500' src={warden} alt='strike art'></img>
                        </div> : null }
-                       {this.state.nightfall == "743628305" ? 
+                       {this.state.nightfall == "1964120202" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Lightblade</p>
                        <p>Recover an artifact from a monument to Oryx, located deep in the swamps of Savathûn's throne world.</p>
