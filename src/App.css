@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
   /*background-image: radial-gradient(circle,#C02885,#3393AB);*/
-  background-image: radial-gradient(circle,#d4db5247,#1c2a1fe3), url('http://localhost:3000/static/media/2023_Season_of_the_Witch_PressKit_Spire_Compressed_001.318ce7d1b5dfa8e9a0cc.jpg');
+  background-image: radial-gradient(circle,#cd5c60c6,#0d202de1), url('images/2023_S23_Season_of_the_Wish_Launch_Press_Kit_Helm_LARGE_001.jpg');
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -172,6 +172,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
+  max-width: 600px;
 }
 
 .data_button {
@@ -209,7 +210,7 @@ font-size: 1rem;
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #d4db52;
+  background: #0d202d;
 }
 
 /* Color/shape of burger icon bars on hover*/

@@ -32,16 +32,12 @@ class AndrewData extends Component {
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
         const lightfallCampaign = checklist["793110320"]
-        const ghostsOfTheDeep = checklist["390471874"]
-        const spire_one = checklist["2870173601"]
-        const spire_two = checklist["2870173602"]
-        const spire_three = checklist["2870173602"]
-        const altars_one = checklist["3031368925"]
-        const altars_two = checklist["3031368926"]
-        const altars_three = checklist["3031368927"]
         const rituals_one = checklist["1049998279"]
         const rituals_two = checklist["1049998276"]
         const rituals_three = checklist["1049998277"]
+        const warlords = checklist["3921784328"]
+        const crota = checklist["540415767"]
+        const wishfulfillment = checklist["541127642"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
 
 
@@ -65,76 +61,21 @@ class AndrewData extends Component {
                     <div className='seasonal card'>
                     <h2>Seasonal Activities</h2>
                     <section className='challenge'>
-                        <h2>Season of the Witch</h2>
+                        <h2>Season of the Wish</h2>
                         <div>
-                       {spire_one ? (
+                       {wishfulfillment ? (
                            <div className='needToComplete'>
-                            <p>Savathûn's Spire Tier 1: Need to complete <span className='pinnacle'></span></p>
+                            <p>Wish Fulfillment: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
                            <div className='completed'>
-                           <p>Savathûn's Spire Tier 1: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Wish Fulfillment: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                            </div>
                        )}
                        </div>
-                       <div>
-                       {spire_two ? (
-                           <div className='needToComplete'>
-                            <p>Savathûn's Spire Tier 2: Need to complete <span className='powerful-3'></span></p>
-                           </div>
-                       ) : (
-                           <div className='completed'>
-                           <p>Savathûn's Spire Tier 2: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                           </div>
-                       )}
-                       </div>
-                       <div>
-                       {spire_three ? (
-                           <div className='needToComplete'>
-                            <p>Savathûn's Spire Tier 3: Need to complete <span className='powerful-2'></span></p>
-                           </div>
-                       ) : (
-                           <div className='completed'>
-                           <p>Savathûn's Spire Tier 3: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                           </div>
-                       )}
-                       </div>
+
                        </section>
-                       <section className='challenge'>
-                        <div>
-                            {altars_one ? (
-                           <div className='needToComplete'>
-                            <p>Altars of Summoning Tier 1: Need to complete <span className='pinnacle'></span></p>
-                           </div>
-                       ) : (
-                           <div className='completed'>
-                           <p>Altars of Summoning Tier 1: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                           </div>
-                       )}
-                       </div>
-                       <div>
-                       {altars_two ? (
-                           <div className='needToComplete'>
-                            <p>Altars of Summoning Tier 2: Need to complete <span className='powerful-3'></span></p>
-                           </div>
-                       ) : (
-                           <div className='completed'>
-                           <p>Altars of Summoning Tier 2: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                           </div>
-                       )}
-                       </div>
-                       <div>
-                       {altars_three ? (
-                           <div className='needToComplete'>
-                            <p>Altars of Summoning Tier 3: Need to complete <span className='powerful-2'></span></p>
-                           </div>
-                       ) : (
-                           <div className='completed'>
-                           <p>Altars of Summoning Tier 3: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                           </div>
-                       )}
-                       </div>
-                       </section>
+
                        <section className='challenge'>
                         <h2>Lightfall</h2>
                         <div>
@@ -251,13 +192,23 @@ class AndrewData extends Component {
                     <div className='raids card'>
                     <h2>Raids & Dungeons</h2>
                         <section className='challenge'>
-                        <h2>Ghosts of the Deep</h2>
-                       {ghostsOfTheDeep ? (
+                        <h2>Warlord's Ruin</h2>
+                       {warlords ? (
                            <div className='needToComplete'>
-                           <p>Ghosts of the Deep: Need to complete <span className='pinnacle'></span></p>
+                           <p>Warlord's Ruin: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
-                           <p>Ghosts of the Deep: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Warlord's Ruin: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
+                        <section className='challenge'>
+                        <h2>Crota's End</h2>
+                       {crota ? (
+                           <div className='needToComplete'>
+                           <p>Crota's End: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <p>Crota's End: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
                     </div>
