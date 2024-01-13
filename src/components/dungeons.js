@@ -5,6 +5,7 @@ import dungeon_prophecy from '../images/dungeon_prophecy.webp'
 import dungeon_grasp from '../images/dungeon_grasp.webp'
 import dungeon_duality from '../images/dungeon_duality.webp'
 import dungeon_spire from '../images/dungeon_spire_of_the_watcher.webp'
+import dungeon_ghosts from '../images/dungeon_ghosts_of_the_deep.webp'
 
 
 
@@ -16,7 +17,8 @@ class Dungeon extends Component {
         pitOfHeresy: [],
         prophecy: [],
         grasp: [],
-        spire: []
+        spire: [],
+        ghosts: []
 
     }
       async componentDidMount() {
@@ -33,6 +35,7 @@ class Dungeon extends Component {
         //this.setState({grasp: data.Response[1092691445].activities[0].challengeObjectiveHashes[0]});
         this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
         this.setState({spire: data.Response[526718853].activities[0].challengeObjectiveHashes[0]});
+        this.setState({ghosts: data.Response[390471874].activities[0].challengeObjectiveHashes[0]});
        console.log(this.state.dungeonShattered)
       }
     
@@ -88,6 +91,14 @@ class Dungeon extends Component {
                        <p className='nightfallTitle'>Spire of the Watcher</p>
                        <p>Machinations run wild in this dust-ridden ruin. Bring them to heel.</p>
                        <img className='img-fluid w-500' src={dungeon_spire} alt='spire art'></img>
+                       </div> : null }
+                       </div>
+                       <div>
+                        {this.state.ghosts === 2697564403 ? 
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Ghosts of the Deep</p>
+                       <p>Drown in the deep, or rise from it.</p>
+                       <img className='img-fluid w-500' src={dungeon_ghosts} alt='Ghosts of the Deep art'></img>
                        </div> : null }
                        </div>
                        <div>

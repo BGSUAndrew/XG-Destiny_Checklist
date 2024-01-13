@@ -14,7 +14,7 @@ class VanguardBurn extends Component {
         })
         const data = await response.json();
          this.setState({vanguard: data.Response[2029743966].activities[0].modifierHashes, loading: false});
-
+        console.log(this.state.vanguard);
        
       }
     
@@ -44,7 +44,7 @@ class VanguardBurn extends Component {
                             <img className='img-fluid' src="https://www.bungie.net/common/destiny2_content/icons/DestinyDamageTypeDefinition_2a1773e10968f2d088b97c22b22bba9e.png" alt='solar' />
                         </div>
                         : null }
-                        {burn.includes(3196075844) ? 
+                        {burn.includes(2620827383) ? 
                         <div>
                             <img className='img-fluid' src="https://www.bungie.net/common/destiny2_content/icons/DestinyDamageTypeDefinition_ceb2f6197dccf3958bb31cc783eb97a0.png" alt='void' />
                         </div>

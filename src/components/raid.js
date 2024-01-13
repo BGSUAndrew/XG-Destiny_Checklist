@@ -93,7 +93,7 @@ class Raid extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.root === 3699252268 ? 
+                        {this.state.root === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Root of Nightmares</p>
                        <p>A sinister threat has taken root.</p>
