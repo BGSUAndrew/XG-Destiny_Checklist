@@ -6,6 +6,7 @@ class AndrewData extends Component {
         state = {
             loading: true,
             checklist: [],
+            crotaData: [],
             visible: true
         }
 
@@ -18,12 +19,13 @@ class AndrewData extends Component {
         })
         const data = await response.json();
         this.setState({checklist: data.Response.progressions.data.milestones, loading: false});
-        console.log(data.Response.progressions.data.milestones)
-       
+        this.setState({crotaData: data.Response.progressions.data.milestones[540415767].activities[0].phases[3].complete});
+        //console.log(data.Response.progressions.data.milestones[540415767].activities[0].phases[3].complete);
       }
     
       render() {
         const checklist = this.state.checklist
+        const crotaraid = this.state.crotaData
         const vanguardBounties =  checklist["2709491520"]
         const crucibleBounties = checklist["2594202463"]
         const gambitBounties = checklist["3802603984"]
@@ -36,9 +38,10 @@ class AndrewData extends Component {
         const rituals_two = checklist["1049998276"]
         const rituals_three = checklist["1049998277"]
         const warlords = checklist["3921784328"]
-        const crota = checklist["540415767"]
+        const crota = crotaraid
         const wishfulfillment = checklist["541127642"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
+        //console.log(crota)
 
 
         return (
@@ -203,7 +206,7 @@ class AndrewData extends Component {
                         </section>
                         <section className='challenge'>
                         <h2>Crota's End</h2>
-                       {crota ? (
+                       {crota == false ? (
                            <div className='needToComplete'>
                            <p>Crota's End: Need to complete <span className='pinnacle'></span></p>
                            </div>
