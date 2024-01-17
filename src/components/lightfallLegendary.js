@@ -26,7 +26,9 @@ class lightfallLegendary extends Component {
         })
         const data = await response.json();
         this.setState({lightfallLegendary: data.Response.progressions.data.milestones[793110320].activities[0].activityHash});
-      }
+        console.log(this.state.lightfallLegendary)  
+    }
+      
     
       render() {
         return (
@@ -56,7 +58,7 @@ class lightfallLegendary extends Component {
                        </div> : null }
                     </div>
                     <div>
-                        {this.state.lightfallLegendary === 1257086860 ? 
+                        {this.state.lightfallLegendary === 1257086861 ? 
                        <div className='nightfall_info'>
                         <p className='nightfallTitle'>Downfall</p>
                         <p>Infiltrate the heart of Calus's lair and destroy the Darkness relay.</p>
