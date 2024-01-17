@@ -149,7 +149,7 @@ class Nightfall extends Component {
                        <p>Recover an artifact from a monument to Oryx, located deep in the swamps of Savathûn's throne world.</p>
                        <img className='img-fluid w-500' src={strike_lightblade} alt='lightblade art'></img>
                        </div> : null }
-                       {this.state.nightfall == "2766844310" ?
+                       {this.state.nightfall == "2766844309" ?
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Birthplace of the Vile</p> 
                        <p>An uneasy ally asks for a favor…</p>

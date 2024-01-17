@@ -21,11 +21,11 @@ class exoticMission extends Component {
             }
         })
         const data = await response.json();
-        this.setState({shield: data.Response[4244749316].milestoneHash});
-        this.setState({presage: data.Response[3557475774].milestoneHash});
-        this.setState({vox: data.Response[1027301269].milestoneHash});
+        this.setState({shield: data.Response[4244749316]});
+        this.setState({presage: data.Response[3557475774]});
+        this.setState({vox: data.Response[1027301269]});
 
-        //console.log(data.Response[4244749316].milestoneHash)
+        console.log(this.state.presage)
       }
     
       render() {
@@ -40,7 +40,7 @@ class exoticMission extends Component {
                         <section className='nightfall_info'>
                         <h2>Exotic Mission Rotator</h2>
                     <div>
-                        {this.state.shield === 4244749316 ? 
+                        {this.state.shield != null ? 
                        <div className='nightfall_info'>
                         <p className='nightfallTitle'>Operation: Seraph's Shield</p>
                         <p>Operation: Seraph's Shield</p>
@@ -48,7 +48,7 @@ class exoticMission extends Component {
                        </div> : null }
                     </div>
                     <div>
-                        {this.state.shield === 3557475774 ? 
+                        {this.state.presage != null ? 
                        <div className='nightfall_info'>
                         <p className='nightfallTitle'>Presage</p>
                         <p>Jump coordinates matching an errant distress signal.</p>
@@ -56,7 +56,7 @@ class exoticMission extends Component {
                        </div> : null }
                     </div>
                     <div>
-                        {this.state.shield === 1027301269 ? 
+                        {this.state.vox != null ? 
                        <div className='nightfall_info'>
                         <p className='nightfallTitle'>Vox Obscura</p>
                         <p>A Psionic propaganda transmission threatens to destabilize the Vanguard's Cabal allies. Breach the rebel stronghold to discover who's behind the new Psionic offensive.</p>
