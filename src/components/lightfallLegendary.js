@@ -66,7 +66,7 @@ class lightfallLegendary extends Component {
                        </div> : null }
                     </div>
                     <div>
-                        {this.state.lightfallLegendary === 1565392032 ? 
+                        {this.state.lightfallLegendary === 1565392033 ? 
                        <div className='nightfall_info'>
                         <p className='nightfallTitle'>Breakneck</p>
                         <p>Stop the Vex incursion of the Neomuni CloudArk.</p>
