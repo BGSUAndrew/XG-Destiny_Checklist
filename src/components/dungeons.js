@@ -16,27 +16,35 @@ class Dungeon extends Component {
         dungeonShattered: [],
         pitOfHeresy: [],
         prophecy: [],
-        grasp: [],
         spire: [],
-        ghosts: []
-
+        ghosts: [],
+        graspofavarice: false
     }
+
+
+
       async componentDidMount() {
         const url = "https://www.bungie.net/platform/Destiny2/Milestones";
+
         const response = await fetch(url, {
             headers: {
                 'x-api-key': '2c6c008e57644a4bb63f00504758c443'
             }
         })
         const data = await response.json();
+        const graspofavarice = false
         this.setState({dungeonShattered: data.Response[1742973996].activities[0].challengeObjectiveHashes[0]});
         this.setState({pitOfHeresy: data.Response[422102671].activities[0].challengeObjectiveHashes[0]});
         this.setState({prophecy: data.Response[478604913].activities[0].challengeObjectiveHashes[0]});
-        //this.setState({grasp: data.Response[1092691445].activities[0].challengeObjectiveHashes[0]});
         this.setState({duality: data.Response[3618845105].activities[0].challengeObjectiveHashes[0]});
         this.setState({spire: data.Response[526718853].activities[0].challengeObjectiveHashes[0]});
         this.setState({ghosts: data.Response[390471874].activities[0].challengeObjectiveHashes[0]});
-       console.log(this.state.dungeonShattered)
+        if (this.state.dungeonShattered == null && this.state.pitOfHeresy == null && this.state.prophecy == null && this.state.duality == null && this.state.spire == null && this.state.ghosts == null) {
+            const graspofavarice = true;
+        } else {
+
+        }
+      // console.log(this.state.grasp)
       }
     
       render() {
@@ -72,7 +80,7 @@ class Dungeon extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.grasp === 1092691445 ? 
+                        {this.state.graspofavarice = true ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Grasp of Avarice</p>
                        <img className='img-fluid w-500' src={dungeon_grasp} alt='grasp art'></img>
