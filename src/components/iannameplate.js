@@ -16,7 +16,7 @@ class IanName extends Component {
         const data = await response.json();
         this.setState({nameplate: data.Response.characters.data["2305843009916944635"].emblemBackgroundPath});
         this.setState({dateLastPlayed:data.Response.profile.data.dateLastPlayed});
-        this.setState({gamertag:data.Response.profile.data.userInfo.displayName});
+        this.setState({gamertag:data.Response.profile.data.userInfo.bungieGlobalDisplayName});
         this.setState({guardianRank:data.Response.profile.data.currentGuardianRank}) 
         this.setState({ally:data.Response.profileCommendations.data.commendationNodeScoresByHash["154475713"]});
         this.setState({fun:data.Response.profileCommendations.data.commendationNodeScoresByHash["1341823550"]});
