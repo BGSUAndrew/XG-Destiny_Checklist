@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import raid_dsc from '../images/raid_dsc.webp'
 import raid_vault from '../images/raid_vault.webp'
 import raid_vow from '../images/raid_vow.jpg'
@@ -7,47 +7,46 @@ import raid_garden from '../images/raid_garden.webp'
 import raid_king from '../images/raid_kings_fall.webp'
 import raid_root from '../images/raid_root_of_nightmares.jpg'
 
+function Raid() {
 
-class Raid extends Component {
-    state = {
-        loading: true,
-        raid: [],
-        visible: true
-    }
-      async componentDidMount() {
+    const [garden, setGarden] = useState(null);
+    const [vault, setVault] = useState(null);
+    const [vow, setVow] = useState(null);
+    const [deep, setDeep] = useState(null);
+    const [last, setLast] = useState(null);
+    const [king, setKing] = useState(null);
+    const [root, setRoot] = useState(null);
+    
+    useEffect(() => {
+        const fetchData = async() => {
         const url = "https://www.bungie.net/platform/Destiny2/Milestones";
-        const response = await fetch(url, {
+        const getData = await fetch(url, {
             headers: {
                 'x-api-key': '2c6c008e57644a4bb63f00504758c443'
             }
         })
-        const data = await response.json();
-        this.setState({garden: data.Response[2712317338].activities[0].challengeObjectiveHashes.length, loading: false});
-        this.setState({vault: data.Response[1888320892].activities[0].challengeObjectiveHashes.length, loading: false});
-        this.setState({vow: data.Response[2136320298].activities[0].challengeObjectiveHashes.length, loading: false});
-        this.setState({deep: data.Response[541780856].activities[0].challengeObjectiveHashes.length, loading: false});
-        this.setState({last: data.Response[3181387331].activities[0].challengeObjectiveHashes.length, loading: false});
-        this.setState({king: data.Response[292102995].activities[0].challengeObjectiveHashes.length, loading: false});
-        this.setState({root: data.Response[3699252268].activities[0].challengeObjectiveHashes.length, loading: false});
-       console.log(this.state.root)
-       //console.log(this.state.vault)
-       
-      }
-    
-      render() {
+        getData.json().then(json => {
+            setGarden(json.Response[2712317338].activities[0].challengeObjectiveHashes.length);
+            setVault(json.Response[1888320892].activities[0].challengeObjectiveHashes.length);
+            setVow(json.Response[2136320298].activities[0].challengeObjectiveHashes.length);
+            setDeep(json.Response[541780856].activities[0].challengeObjectiveHashes.length);
+            setLast(json.Response[3181387331].activities[0].challengeObjectiveHashes.length);
+            setKing(json.Response[292102995].activities[0].challengeObjectiveHashes.length);
+            setRoot(json.Response[3699252268].activities[0].challengeObjectiveHashes.length);
+          });
+          console.log(setVault);
+        }
+        fetchData();
+       },[]);
+
         return (
-            <div>
-            {this.state.visible ? 
-            <div className='container'>
-                {this.state.loading || !this.state.raid ? (
-                    <div>loading...</div>
-                )  : (
+             <div className='container'>
                     <div>
                         <div className='rituals card'>
                         <section className='nightfall_info'>
                         <h2>Raid Rotator</h2>
                         <div>
-                        {this.state.garden === 1 ? 
+                        {garden === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Garden of Salvation</p>
                         <p>Defeat the Sanctified Mind.</p>
@@ -55,7 +54,7 @@ class Raid extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.vault === 1 ? 
+                        {vault === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Vault of Glass</p>
                        <p>Beneath Venus, evil stirs…</p>
@@ -63,7 +62,7 @@ class Raid extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.vow === 1 ? 
+                        {vow === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Vow of the Disciple</p>
                        <p>The disciple beckons…</p>
@@ -71,7 +70,7 @@ class Raid extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.deep === 1 ? 
+                        {deep === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Deep Stone Crypt</p>
                        <p>The chains of legacy must be broken.</p>
@@ -79,21 +78,21 @@ class Raid extends Component {
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.last === 1 ? 
+                        {last === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Last Wish</p>
                        <img className='img-fluid w-500' src={raid_last} alt='last wish art'></img>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.king === 1 ? 
+                        {king === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>King's Fall</p>
                        <img className='img-fluid w-500' src={raid_king} alt='Kings Fall art'></img>
                        </div> : null }
                        </div>
                        <div>
-                        {this.state.root === 1 ? 
+                        {root === 1 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Root of Nightmares</p>
                        <p>A sinister threat has taken root.</p>
@@ -108,12 +107,10 @@ class Raid extends Component {
                     </div>
     
                     </div>
-                )}
-            </div>
-             : null  }
-            </div>
-          )
-      }
+                    </div>
+        )
     }
+
+        
 
 export default Raid;
