@@ -1,38 +1,34 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import presageImage from '../images/exotic_quest_presage.webp'
 import shieldImage from '../images/season_19_exotic_mission.jpg'
 import voxImage from '../images/exotic_mission_chrome.webp'
 
 
+function ExoticMission() {
 
-class exoticMission extends Component {
-    state = {
-        loading: true,
-        visible: true,
-        presage: [],
-        vox: [],
-        shield:[]
-    }
-      async componentDidMount() {
+    const [presage, setPresage] = useState();
+    const [vox, setVox] = useState(null);
+    const [shield, setShield] = useState(null);
+
+
+    useEffect(() => {
+        const fetchData = async() => {
         const url = "https://www.bungie.net/platform/Destiny2/Milestones";
-        const response = await fetch(url, {
+        const getData = await fetch(url, {
             headers: {
                 'x-api-key': '2c6c008e57644a4bb63f00504758c443'
             }
         })
-        const data = await response.json();
-        this.setState({shield: data.Response[4244749316]});
-        this.setState({presage: data.Response[3557475774]});
-        this.setState({vox: data.Response[1027301269]});
+        getData.json().then(json => {
+            setPresage(json.Response[3557475774]);
+            setVox(json.Response[1027301269]);
+            setShield(json.Response[4244749316]);
+          });
+        }
+        fetchData();
+       },[]);
 
-        console.log(this.state.presage)
-      }
-    
-      render() {
         return (
-            <div>
-               <div>
-            {this.state.visible ? 
             <div className='container'>
                 {(
                     <div>
@@ -40,7 +36,7 @@ class exoticMission extends Component {
                         <section className='nightfall_info'>
                         <h2>Exotic Mission Rotator</h2>
                     <div>
-                        {this.state.shield != null ? 
+                        {shield != null ? 
                        <div className='nightfall_info'>
                         <p className='nightfallTitle'>Operation: Seraph's Shield</p>
                         <p>Operation: Seraph's Shield</p>
@@ -48,7 +44,7 @@ class exoticMission extends Component {
                        </div> : null }
                     </div>
                     <div>
-                        {this.state.presage != null ? 
+                        {presage != null ? 
                        <div className='nightfall_info'>
                         <p className='nightfallTitle'>Presage</p>
                         <p>Jump coordinates matching an errant distress signal.</p>
@@ -56,7 +52,7 @@ class exoticMission extends Component {
                        </div> : null }
                     </div>
                     <div>
-                        {this.state.vox != null ? 
+                        {vox != null ? 
                        <div className='nightfall_info'>
                         <p className='nightfallTitle'>Vox Obscura</p>
                         <p>A Psionic propaganda transmission threatens to destabilize the Vanguard's Cabal allies. Breach the rebel stronghold to discover who's behind the new Psionic offensive.</p>
@@ -71,12 +67,9 @@ class exoticMission extends Component {
                     </div>
                 )}
             </div>
-             : null  }
-            </div>
-           
-            </div>
-          )
-      }
+        )
     }
 
-export default exoticMission;
+        
+
+export default ExoticMission;
