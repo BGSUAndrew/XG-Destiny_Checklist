@@ -1,35 +1,37 @@
-import React, { Component } from 'react'
-class VanguardBurn extends Component {
-    state = {
-        loading: true,
-        vanguard: [],
-        visible: true
-    }
-      async componentDidMount() {
+import React, { useEffect, useState } from 'react'
+
+function Burn() {
+
+    const [solar, setSolar] = useState(null);
+    const [arc, setArc] = useState(null);
+    const [voidburn, setVoid] = useState(null);
+    const [strand, setStrand] = useState(null);
+    const [stasis, setStasis] = useState(null);
+    const [burn, setBurn] = useState(null);
+
+
+    useEffect(() => {
+        const fetchData = async() => {
         const url = "https://www.bungie.net/platform/Destiny2/Milestones";
-        const response = await fetch(url, {
+        const getData = await fetch(url, {
             headers: {
                 'x-api-key': '2c6c008e57644a4bb63f00504758c443'
             }
         })
-        const data = await response.json();
-         this.setState({vanguard: data.Response[2029743966].activities[0].modifierHashes, loading: false});
-        console.log(this.state.vanguard);
-       
-      }
-    
-      render() {
-        const burn = this.state.vanguard
-        console.log(burn.indexOf(3810297122) > -1);
-        return (
-            <div>
+        getData.json().then(json => {
+            setBurn(json.Response[2029743966].activities[0].modifierHashes);
+          });
+          console.log(burn);
+        
+        
 
-            {this.state.visible ? 
-            <div className='container'>
-                {this.state.loading || !this.state.vanguard ? (
-                    <div>loading...</div>
-                )  : (
-                    <div>
+        }
+        fetchData();
+       },[]);
+
+        return (
+             <div className='container'>
+<div>
                         <div className='rituals card'>
                         <section className='nightfall_info'>
                         <h2>Vanguard Burn</h2>
@@ -67,12 +69,10 @@ class VanguardBurn extends Component {
                     </div>
     
                     </div>
-                )}
-            </div>
-             : null  }
-            </div>
-          )
-      }
+                    </div>
+        )
     }
 
-export default VanguardBurn;
+        
+
+export default Burn;
