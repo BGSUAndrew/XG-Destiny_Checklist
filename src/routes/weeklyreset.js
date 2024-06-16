@@ -5,7 +5,6 @@ import VanguardBurn from '../components/vanguardburn';
 import Crucible from '../components/crucible';
 import Raid from '../components/raid';
 import Dungeon from '../components/dungeons';
-import LightfallLegendary from '../components/lightfallLegendary';
 import ExoticMission from '../components/exoticMission';
 class WeeklyReset extends Component {
     render() {
@@ -25,7 +24,6 @@ class WeeklyReset extends Component {
             </section>
             <section>
             <ExoticMission />
-                <LightfallLegendary />
             </section>
 
             </div>
