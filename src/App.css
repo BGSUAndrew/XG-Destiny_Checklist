@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
   /*background-image: radial-gradient(circle,#C02885,#3393AB);*/
-  background-image: radial-gradient(circle,#cd5c60c6,#0d202de1), url('images/2023_S23_Season_of_the_Wish_Launch_Press_Kit_Helm_LARGE_001.jpg');
+  background-image: radial-gradient(circle,#cd5c60c6,#0d202de1), url('images/2024_Echoes_Act_One_Press_Kit_Breach_Executable_COMPRESSED_001.jpg');
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -166,13 +166,12 @@ html {
 }
 
 .destiny_image {
-  /*max-width: 30%; Logo is more square this season. Don't need max width*/
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
-  max-width: 600px;
+  max-width: 200px;
 }
 
 .data_button {

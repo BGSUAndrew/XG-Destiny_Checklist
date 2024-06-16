@@ -26,20 +26,18 @@ class AndrewData extends Component {
       render() {
         const checklist = this.state.checklist
         const crotaraid = this.state.crotaData
-        const vanguardBounties =  checklist["2709491520"]
-        const crucibleBounties = checklist["2594202463"]
-        const gambitBounties = checklist["3802603984"]
-        const dares = checklist["295129163"]
         const gunsmith = checklist["3899487295"]
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
-        const lightfallCampaign = checklist["793110320"]
         const rituals_one = checklist["1049998279"]
         const rituals_two = checklist["1049998276"]
         const rituals_three = checklist["1049998277"]
         const warlords = checklist["3921784328"]
         const crota = crotaraid
-        const wishfulfillment = checklist["541127642"]
+        const pale_pathfinder = checklist["1816391649"]
+        const ghostrank = checklist["2603713309"]
+        const excision = checklist["930637700"]
+        const exoticRotator = checklist["4244749316"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
         //console.log(crota)
 
@@ -62,33 +60,39 @@ class AndrewData extends Component {
                     <div>
                         <AndrewName></AndrewName>
                     <div className='seasonal card'>
-                    <h2>Seasonal Activities</h2>
-                    <section className='challenge'>
-                        <h2>Season of the Wish</h2>
+
+                       <section className='challenge'>
+                        <h2>The Final Shape</h2>
                         <div>
-                       {wishfulfillment ? (
+                       {pale_pathfinder ? (
                            <div className='needToComplete'>
-                            <p>Wish Fulfillment: Need to complete <span className='pinnacle'></span></p>
+                           <p>Pale Heart Pathfinder: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
                            <div className='completed'>
-                           <p>Wish Fulfillment: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Pale Heart Pathfinder: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                            </div>
                        )}
                        </div>
-
-                       </section>
-
-                       <section className='challenge'>
-                        <h2>Lightfall</h2>
-                        <div>
-                       {lightfallCampaign ? (
+                       <div>
+                       {ghostrank ? (
                            <div className='needToComplete'>
-                           <p>Weekly Campaign Mission: Need to complete <span className='pinnacle'></span></p>
+                           <p>Ghost Rank Up: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
                            <div className='completed'>
-                           <p>Weekly Campaign Mission: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Ghost Rank Up: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           </div>
+                       )}
+                       </div>
+                       <div>
+                       {excision ? (
+                           <div className='needToComplete'>
+                           <p>Excision: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <div className='completed'>
+                           <p>Excision: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                            </div>
                        )}
                        </div>
@@ -99,7 +103,8 @@ class AndrewData extends Component {
                          <section className='challenge'>
                         <h2>Ritual Pinnacles</h2>
                         <div>
-                       {rituals_one ? (
+                        
+                       { rituals_one ==  null ? (
                            <div className='needToComplete'>
                            <p>Ritual Pinnacles 1: Need to complete <span className='pinnacle'></span></p>
                            </div>
@@ -131,55 +136,20 @@ class AndrewData extends Component {
                            </div>
                        )}
                        </div>
-                       </section>
-                        <section className='challenge'>
-                        <h2>Vanguard</h2>
-                        <div>
-                       {vanguardBounties ? (
+                       <div>
+                       {exoticRotator ? (
                            <div className='needToComplete'>
-                           <p>Vanguard Bounties: Need to complete <span className='powerful-1'></span></p>
+                           <p>Exotic Rotator: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
                            <div className='completed'>
-                           <p>Vanguard Bounties: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Exotic Rotator: Completed <span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                            </div>
                        )}
                        </div>
                        </section>
-                       <section className='challenge'>
-                       <h2>Crucible</h2>
-                       <div>
-                       {crucibleBounties ? (
-                           <div className='needToComplete'>
-                           <p>Crucible Bounties: Need to complete <span className='powerful-1'></span></p>
-                           </div>
-                       ) : (
-                           <p>Crucible Bounties: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                       </div>
-                       </section>
-                       <section className='challenge'>
-                       <h2>Gambit</h2>           
-                       <div>
-                       {gambitBounties ? (
-                           <div className='needToComplete'>
-                           <p>Gambit Bounties: Need to complete <span className='powerful-1'></span></p>
-                           </div>
-                       ) : (
-                           <p>Gambit Bounties: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                       </div>
-                       </section>
-                       <section className='challenge'>
-                       <h2>Dares of Eternity</h2>
-                       {dares ? (
-                           <div className='needToComplete'>
-                           <p>Complete rounds of Dares of Eternity: Need to complete <span className='powerful-1'></span></p>
-                           </div>
-                       ) : (
-                           <p>Complete rounds of round of Dares of Eternity: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                       )}
-                        </section>
+
+    
                         <section className='challenge'>
                        <h2>Gunsmith Bounties</h2>
                        {gunsmith ? (

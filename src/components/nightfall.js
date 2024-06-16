@@ -137,7 +137,7 @@ class Nightfall extends Component {
                        <p>Defeat Caiatl's Chosen aboard the Land Tank, Halphas Electus, on Nessus.</p>
                        <img className='img-fluid w-500' src={proving} alt='strike art'></img>
                        </div>: null }
-                       {this.state.nightfall == "4196944360" ? 
+                       {this.state.nightfall == "4196944363" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Warden of Nothing</p>
                        <p>Help the Drifter restore order at the Prison of Elders.</p>
