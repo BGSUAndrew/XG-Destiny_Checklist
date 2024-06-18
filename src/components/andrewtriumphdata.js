@@ -175,16 +175,15 @@ class AndrewTriumphData extends Component {
 
     const button = this.state.visible ? "Hide player data" : "Show player data";
 
+    
+
     return (
         <div>
-        <button 
-        onClick={() => {
+        <button onClick={() => {
             this.setState({visible: !this.state.visible});
-        }}
-        className='data_button'
-    >
-        {button}
-    </button>
+        }} className='data_button'>
+            {button}
+        </button>
 
     {this.state.visible ?
         <div className='container'>
@@ -231,7 +230,7 @@ class AndrewTriumphData extends Component {
             <p>Dream Warrior Progress: {dreamwarriorProgress} / {dreamwarriorCompletion}</p>
             <p>Virtual Fighter Progress: {virtualfighterProgress} / {virtualfighterCompletion}</p>
             <p>Queensguard Progress: {queensguardProgress} / {queensguardCompletion}</p>
-        </div>
+            </div>
         </div>
         : null }
         </div>
@@ -239,6 +238,7 @@ class AndrewTriumphData extends Component {
       )
       
   }
+  
 }
 
 export default AndrewTriumphData;

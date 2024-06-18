@@ -25,7 +25,10 @@ import heist_bg_moon from '../images/season_19_battleground_luna.jpg'
 import heist_bg_mars from '../images/season_19_battleground_polaris.webp'
 import bg_behemoth from '../images/nessus_battleground_behemoth.jpg'
 import bg_oracle from '../images/nessus_battleground_oracle.jpg'
-
+import defiant_edz from '../images/season_20_battleground_exeter.jpg'
+import defiant_prison from '../images/season_20_battleground_bulkhead.jpg'
+import defiant_cosmodrome from '../images/season_20_battleground_turnabout.jpg'
+import liminality from '../images/strike_pickaxe.jpg'
 
 class Nightfall extends Component {
     state = {
@@ -111,27 +114,27 @@ class Nightfall extends Component {
                        <img className='img-fluid w-500' src={glassway} alt='strike art'></img>
                        </div>
                        : null }
-                       {this.state.nightfall == "3029388708" ?
+                       {this.state.nightfall == "3029388711" ?
                        <div className='nightfall_info'> 
                        <p className='nightfallTitle'>The Insight Terminus</p>
                        <p>Break into the ancient Vex installation.</p>
                        <img className='img-fluid w-500' src={insight} alt='strike art'></img>
                        </div> : null }
-                       {this.state.nightfall == "2599001915" ? 
+                       {this.state.nightfall == "2599001912" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Inverted Spire</p> 
                        <p>End the Red Legion expedition that's ripped open the planet's surface.</p>
                        <img className='img-fluid w-500' src={inverted} alt='strike art'></img>
                        </div>
                        : null }
-                       {this.state.nightfall == "3233498450" ? 
+                       {this.state.nightfall == "3233498449" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Exodus Crash</p> 
                        <p>Purge the Fallen infestation of the Exodus Black.</p>
                        <img className='img-fluid w-500' src={exodus} alt='strike art'></img>
                        </div>
                        : null }
-                       {this.state.nightfall == "2103025319" ? 
+                       {this.state.nightfall == "2103025316" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Proving Grounds</p> 
                        <p>Defeat Caiatl's Chosen aboard the Land Tank, Halphas Electus, on Nessus.</p>
@@ -209,6 +212,26 @@ class Nightfall extends Component {
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Battleground: Oracle</p> 
                        <img className='img-fluid w-500' src={bg_oracle} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "2748682955" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Defiant Battleground: EDZ</p> 
+                       <img className='img-fluid w-500' src={defiant_edz} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "1030419224" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Defiant Battleground: Orbital Prison</p> 
+                       <img className='img-fluid w-500' src={defiant_prison} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "53750501" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Defiant Battleground: Cosmodrome</p> 
+                       <img className='img-fluid w-500' src={defiant_cosmodrome} alt='strike art'></img>
+                       </div>: null }
+                       {this.state.nightfall == "2099835175" ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Liminality</p> 
+                       <img className='img-fluid w-500' src={liminality} alt='strike art'></img>
                        </div>: null }
                        </div>
                        <div>
