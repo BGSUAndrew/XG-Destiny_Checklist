@@ -6,7 +6,6 @@ class AndrewData extends Component {
         state = {
             loading: true,
             checklist: [],
-            crotaData: [],
             visible: true
         }
 
@@ -19,27 +18,27 @@ class AndrewData extends Component {
         })
         const data = await response.json();
         this.setState({checklist: data.Response.progressions.data.milestones, loading: false});
-        this.setState({crotaData: data.Response.progressions.data.milestones[540415767].activities[0].phases[3].complete});
+        this.setState({rituals_one_progress: data.Response.progressions.data.milestones["1049998279"].activities[0].challenges[0].objective.complete});
         //console.log(data.Response.progressions.data.milestones[540415767].activities[0].phases[3].complete);
       }
     
       render() {
         const checklist = this.state.checklist
-        const crotaraid = this.state.crotaData
         const gunsmith = checklist["3899487295"]
         const trials = checklist["3007559996"]
         const trialswin = checklist["3842941126"]
         const rituals_one = checklist["1049998279"]
+        const rituals_one_progress = this.state.rituals_one_progress
         const rituals_two = checklist["1049998276"]
         const rituals_three = checklist["1049998277"]
         const warlords = checklist["3921784328"]
-        const crota = crotaraid
+        const salvation = checklist["4196566271"]
         const pale_pathfinder = checklist["1816391649"]
         const ghostrank = checklist["2603713309"]
         const excision = checklist["930637700"]
         const exoticRotator = checklist["4244749316"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
-        //console.log(crota)
+        console.log(rituals_one_progress);
 
 
         return (
@@ -104,7 +103,7 @@ class AndrewData extends Component {
                         <h2>Ritual Pinnacles</h2>
                         <div>
                         
-                       { rituals_one ==  null ? (
+                       { rituals_one ? (
                            <div className='needToComplete'>
                            <p>Ritual Pinnacles 1: Need to complete <span className='pinnacle'></span></p>
                            </div>
@@ -115,7 +114,8 @@ class AndrewData extends Component {
                        )}
                        </div>
                         <div>
-                       {rituals_two ? (
+
+                       { rituals_two ? (
                            <div className='needToComplete'>
                            <p>Ritual Pinnacles 2: Need to complete <span className='pinnacle'></span></p>
                            </div>
@@ -175,13 +175,13 @@ class AndrewData extends Component {
                        )}
                         </section>
                         <section className='challenge'>
-                        <h2>Crota's End</h2>
-                       {crota == false ? (
+                        <h2>Salvation's Edge</h2>
+                       {salvation ? (
                            <div className='needToComplete'>
-                           <p>Crota's End: Need to complete <span className='pinnacle'></span></p>
+                           <p>Salvation's Edge: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
-                           <p>Crota's End: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Salvation's Edge: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
                     </div>

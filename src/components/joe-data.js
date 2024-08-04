@@ -6,7 +6,6 @@ class JoeData extends Component {
         state = {
             loading: true,
             checklist: [],
-            crotaData: [],
             visible: true
         }
 
@@ -19,14 +18,12 @@ class JoeData extends Component {
         })
         const data = await response.json();
         this.setState({checklist: data.Response.progressions.data.milestones, loading: false});
-        this.setState({crotaData: data.Response.progressions.data.milestones[540415767].activities[0].phases[3].complete});
         //console.log(data.Response.progressions.data.milestones)
        
       }
     
       render() {
             const checklist = this.state.checklist
-            const crotaraid = this.state.crotaData
             const gunsmith = checklist["3899487295"]
             const trials = checklist["3007559996"]
             const trialswin = checklist["3842941126"]
@@ -34,7 +31,7 @@ class JoeData extends Component {
             const rituals_two = checklist["1049998276"]
             const rituals_three = checklist["1049998277"]
             const warlords = checklist["3921784328"]
-            const crota = crotaraid
+            const salvation = checklist["4196566271"]
             const pale_pathfinder = checklist["1816391649"]
             const ghostrank = checklist["2603713309"]
             const excision = checklist["930637700"]
@@ -56,7 +53,7 @@ class JoeData extends Component {
                 <div>loading...</div>
             )  : (
                 <div>
-                    <JoeName></JoeName>
+                    <JoeName></JoeName>>
                     <div className='seasonal card'>
 
 <section className='challenge'>
@@ -173,14 +170,14 @@ class JoeData extends Component {
                    )}
                     </section>
                     <section className='challenge'>
-                    <h2>Crota's End</h2>
-                   {crota == false ? (
-                       <div className='needToComplete'>
-                       <p>Crota's End: Need to complete <span className='pinnacle'></span></p>
-                       </div>
-                   ) : (
-                       <p>Crota's End: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                   )}
+                    <h2>Salvation's Edge</h2>
+                       {salvation ? (
+                           <div className='needToComplete'>
+                           <p>Salvation's Edge: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <p>Salvation's Edge: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
                     </section>
                 </div>
                 <div className='trials card'>
