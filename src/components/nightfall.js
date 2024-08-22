@@ -127,7 +127,7 @@ class Nightfall extends Component {
                        <img className='img-fluid w-500' src={inverted} alt='strike art'></img>
                        </div>
                        : null }
-                       {this.state.nightfall == "3233498449" ? 
+                       {this.state.nightfall == "2823591789" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Exodus Crash</p> 
                        <p>Purge the Fallen infestation of the Exodus Black.</p>
