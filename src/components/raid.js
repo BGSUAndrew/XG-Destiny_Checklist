@@ -17,6 +17,7 @@ function Raid() {
     const [last, setLast] = useState(null);
     const [king, setKing] = useState(null);
     const [root, setRoot] = useState(null);
+    const [crota, setCrota] = useState(null);
 
     
     useEffect(() => {
@@ -35,6 +36,7 @@ function Raid() {
             setLast(json.Response[3181387331].activities[0].challengeObjectiveHashes.length);
             setKing(json.Response[292102995].activities[0].challengeObjectiveHashes.length);
             setRoot(json.Response[3699252268].activities[0].challengeObjectiveHashes.length);
+            setCrota(json.Response[540415767].activities[0].challengeObjectiveHashes.length);
           });
           console.log("HELLO RAIDS!")
         }
@@ -98,6 +100,14 @@ function Raid() {
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Root of Nightmares</p>
                        <p>A sinister threat has taken root.</p>
+                       <img className='img-fluid w-500' src={raid_root} alt='Root of Nightmares art'></img>
+                       </div> : null }
+                       </div>
+                       <div>
+                        {crota === 1 ? 
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Crota's End</p>
+                       <p>He waits in the dark below.</p>
                        <img className='img-fluid w-500' src={raid_root} alt='Root of Nightmares art'></img>
                        </div> : null }
                        </div>
