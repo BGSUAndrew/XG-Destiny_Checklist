@@ -6,6 +6,7 @@ import raid_last from '../images/raid_last.jpg'
 import raid_garden from '../images/raid_garden.webp'
 import raid_king from '../images/raid_kings_fall.webp'
 import raid_root from '../images/raid_root_of_nightmares.jpg'
+import raid_crota from '../images/raid_crota.jpg'
 
 function Raid() {
 
@@ -16,6 +17,7 @@ function Raid() {
     const [last, setLast] = useState(null);
     const [king, setKing] = useState(null);
     const [root, setRoot] = useState(null);
+    const [crota, setCrota] = useState(null);
     
     useEffect(() => {
         const fetchData = async() => {
@@ -33,8 +35,10 @@ function Raid() {
             setLast(json.Response[3181387331].activities[0].challengeObjectiveHashes.length);
             setKing(json.Response[292102995].activities[0].challengeObjectiveHashes.length);
             setRoot(json.Response[3699252268].activities[0].challengeObjectiveHashes.length);
+            setCrota(json.Response[540415767].activities[0].challengeObjectiveHashes.length);
           });
-          console.log(setVault);
+          console.log(setCrota);
+          console.log(setGarden);
         }
         fetchData();
        },[]);
