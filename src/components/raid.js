@@ -6,6 +6,7 @@ import raid_last from '../images/raid_last.jpg'
 import raid_garden from '../images/raid_garden.webp'
 import raid_king from '../images/raid_kings_fall.webp'
 import raid_root from '../images/raid_root_of_nightmares.jpg'
+import raid_crota from '../images/raid_crotas_end.jpg'
 
 
 function Raid() {
@@ -108,7 +109,7 @@ function Raid() {
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Crota's End</p>
                        <p>He waits in the dark below.</p>
-                       <img className='img-fluid w-500' src={raid_root} alt='Root of Nightmares art'></img>
+                       <img className='img-fluid w-500' src={raid_crota} alt='Crotas End art'></img>
                        </div> : null }
                        </div>
  
