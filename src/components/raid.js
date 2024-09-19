@@ -37,8 +37,7 @@ function Raid() {
             setRoot(json.Response[3699252268].activities[0].challengeObjectiveHashes.length);
             setCrota(json.Response[540415767].activities[0].challengeObjectiveHashes.length);
           });
-          console.log(setCrota);
-          console.log(setGarden);
+          console.log("HELLO RAIDS!")
         }
         fetchData();
        },[]);
