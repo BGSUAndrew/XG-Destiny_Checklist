@@ -103,6 +103,14 @@ function Raid() {
                        <img className='img-fluid w-500' src={raid_root} alt='Root of Nightmares art'></img>
                        </div> : null }
                        </div>
+                       <div>
+                        {crota === 1 ? 
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Crota's End</p>
+                       <p>Something something Crota.</p>
+                       <img className='img-fluid w-500' src={raid_crota} alt='Root of Nightmares art'></img>
+                       </div> : null }
+                       </div>
                        
                        <div>
              
