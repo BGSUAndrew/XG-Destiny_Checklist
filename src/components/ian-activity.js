@@ -12,17 +12,22 @@ class IanActivity extends Component {
             CrucibleGames: [],
             CrucibleKills:[],
             CrucibleDeaths: [],
-            GambitKills: []
+            GambitKills: [],
+            raidKills: [],
+            raidBestSingleGameKills: [],
+            raidKillsConvert: [],
+            raidDeaths: [],
         }
 
       async componentDidMount() {
-        const url = "https://www.bungie.net/Platform/Destiny2/1/Account/4611686018519221998/Character/2305843009916944635/Stats/?modes=82,3,5,63";
+        const url = "https://www.bungie.net/Platform/Destiny2/1/Account/4611686018519221998/Character/2305843009916944635/Stats/?modes=82,3,5,63,4";
         const response = await fetch(url, {
             headers: {
                 'x-api-key': '2c6c008e57644a4bb63f00504758c443'
             }
         })
         const data = await response.json();
+
         this.setState({dungeonClears: data.Response.dungeon.allTime.activitiesCleared.basic.displayValue});
         this.setState({dungeonKills: data.Response.dungeon.allTime.kills.basic.value});
         this.setState({dungeonKillsAverage: data.Response.dungeon.allTime.kills.pga.displayValue});
@@ -67,6 +72,19 @@ class IanActivity extends Component {
       }
     
       render() {
+
+        const raidClears = this.state.raidClears
+        const raidKills = this.state.raidKills
+        const raidKillsConvert = raidKills.toLocaleString('en-US');
+        const raidKillsAverage = this.state.raidKillsAverage
+        const raidDeaths = this.state.raidDeaths
+        const raidDeathsConvert = raidDeaths.toLocaleString();
+        const raidDeathsAverage = this.state.raidDeathsAverage
+        const raidSecondsPlayed = this.state.raidSecondsPlayed
+        const raidBestSingleGameKills = this.state.raidBestSingleGameKills
+        const bestRaidSingleGameKillsConvert = raidBestSingleGameKills.toLocaleString('en-US');
+        const raidAverageSuperKills = this.state.raidAverageSuperKills 
+
         const dungeonClears = this.state.dungeonClears
         const dungeonKills = this.state.dungeonKills
         const dungeonKillsConvert = dungeonKills.toLocaleString();
@@ -131,6 +149,16 @@ class IanActivity extends Component {
             <div className='container'>
                                         <IanName></IanName>
                         <div className='rituals card'>
+
+                <h1>Raids</h1>
+                <p>Raid Clears: {raidClears}</p>
+                <p>Raid Kills: {raidKillsConvert}</p>
+                <p>Raid Kills per Run: {raidKillsAverage}</p>
+                <p>Raid Deaths: {raidDeathsConvert}</p>
+                <p>Raid Deaths per Run: {raidDeathsAverage}</p>
+                <p>Total time in Raids: {raidSecondsPlayed}</p>
+                <p>Most kills in a single run: {raidBestSingleGameKills}</p>
+                <p>Average Super kills per run: {raidAverageSuperKills}</p>
 
                 <h1>Dungeons</h1>
                 <p>Dungeon Clears: {dungeonClears}</p>

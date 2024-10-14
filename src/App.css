@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
   /*background-image: radial-gradient(circle,#C02885,#3393AB);*/
-  background-image: radial-gradient(circle,#cd5c60c6,#0d202de1), url('images/2024_Echoes_Act_One_Press_Kit_Breach_Executable_COMPRESSED_001.jpg');
+  background-image: radial-gradient(circle,#3d6973d2,#a63c45d3), url('images/2024_Revenant_Act1_Press_Kit_Mission_COMPRESSED_003.jpg');
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -209,7 +209,7 @@ font-size: 1rem;
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #cd5c60;
+  background: #fff;
 }
 
 /* Color/shape of burger icon bars on hover*/
