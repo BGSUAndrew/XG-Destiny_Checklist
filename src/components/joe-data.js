@@ -53,7 +53,7 @@ class JoeData extends Component {
                 <div>loading...</div>
             )  : (
                 <div>
-                    <JoeName></JoeName>>
+                    <JoeName></JoeName>
                     <div className='seasonal card'>
 
 <section className='challenge'>
