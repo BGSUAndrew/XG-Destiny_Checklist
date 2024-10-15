@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar';
 import AndrewTriumphData from '../components/andrewtriumphdata';
 import IanTriumphData from '../components/iantriumphdata';
 import JoeTriumphData from '../components/joetriumphdata';
+import Seasonal from '../components/seasonal'
 
 class Triumphs extends Component {
     render() {
@@ -10,6 +11,7 @@ class Triumphs extends Component {
             
             <div id="outer-container">
       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+      <Seasonal />
             <h1 className='page_title'>Triumph Data</h1>
             <div className='data_container'>
             <AndrewTriumphData />
