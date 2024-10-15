@@ -6,12 +6,14 @@ import Crucible from '../components/crucible';
 import Raid from '../components/raid';
 import Dungeon from '../components/dungeons';
 import ExoticMission from '../components/exoticMission';
+import Seasonal from '../components/seasonal'
 class WeeklyReset extends Component {
     render() {
         return (
             
             <div id="outer-container">
       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+      <Seasonal />
             <h1 className='page_title'>Weekly Reset Info</h1>
             <div className='data_container'>
             <section>
