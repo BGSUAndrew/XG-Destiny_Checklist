@@ -19,7 +19,10 @@ class AndrewData extends Component {
         const data = await response.json();
         this.setState({checklist: data.Response.progressions.data.milestones, loading: false});
         this.setState({rituals_one_progress: data.Response.progressions.data.milestones["1049998279"].activities[0].challenges[0].objective.complete});
-        //console.log(data.Response.progressions.data.milestones[540415767].activities[0].phases[3].complete);
+        //console.log(data.Response.progressions.data.milestones[540415767].activities[0].phases[3].complete)
+        const d = new Date();
+        var dayOfWeek = d.getDay();
+        console.log(dayOfWeek);
       }
     
       render() {
@@ -31,14 +34,16 @@ class AndrewData extends Component {
         const rituals_one_progress = this.state.rituals_one_progress
         const rituals_two = checklist["1049998276"]
         const rituals_three = checklist["1049998277"]
-        const warlords = checklist["3921784328"]
+        const dungeon = checklist["4034642472"]
         const salvation = checklist["4196566271"]
         const pale_pathfinder = checklist["1816391649"]
         const ghostrank = checklist["2603713309"]
         const excision = checklist["930637700"]
         const exoticRotator = checklist["4244749316"]
         const button = this.state.visible ? "Hide player data" : "Show player data";
-        console.log(rituals_one_progress);
+        const d = new Date();
+        var dayOfWeek = d.getDay();
+
 
 
         return (
@@ -165,13 +170,13 @@ class AndrewData extends Component {
                     <div className='raids card'>
                     <h2>Raids & Dungeons</h2>
                         <section className='challenge'>
-                        <h2>Warlord's Ruin</h2>
-                       {warlords ? (
+                        <h2>Vesper's Host</h2>
+                       {dungeon ? (
                            <div className='needToComplete'>
-                           <p>Warlord's Ruin: Need to complete <span className='pinnacle'></span></p>
+                           <p>Vesper's Host: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
-                           <p>Warlord's Ruin: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Vesper's Host: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
                         <section className='challenge'>
@@ -185,6 +190,7 @@ class AndrewData extends Component {
                        )}
                         </section>
                     </div>
+                    {dayOfWeek == 0 || dayOfWeek == 6 || dayOfWeek == 5 || dayOfWeek == 4 ? 
                     <div className='trials card'>
                     <h2>Trials of Osiris</h2>
                         <section className='challenge'>
@@ -207,8 +213,13 @@ class AndrewData extends Component {
                            <p>50 Trials of Osiris Round Wins: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
-                    </div>
 
+                    </div>
+                        : <div className='trials card'>
+                        <h2>Trials of Osiris</h2>
+                        <p>Trials of Osiris will return on Friday, when the Iron Banner is not live.</p>
+    
+                        </div>}
                     </div>
                 )}
             </div>
