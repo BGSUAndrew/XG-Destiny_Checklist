@@ -30,13 +30,15 @@ class JoeData extends Component {
             const rituals_one = checklist["1049998279"]
             const rituals_two = checklist["1049998276"]
             const rituals_three = checklist["1049998277"]
-            const warlords = checklist["3921784328"]
+            const dungeon = checklist["4034642472"]
             const salvation = checklist["4196566271"]
             const pale_pathfinder = checklist["1816391649"]
             const ghostrank = checklist["2603713309"]
             const excision = checklist["930637700"]
             const exoticRotator = checklist["4244749316"]
             const button = this.state.visible ? "Hide player data" : "Show player data";
+            const d = new Date();
+            var dayOfWeek = d.getDay();
         return (
             <div>
             <button 
@@ -159,16 +161,16 @@ class JoeData extends Component {
                
                 <div className='raids card'>
                 <h2>Raids & Dungeons</h2>
-                    <section className='challenge'>
-                    <h2>Warlord's Ruin</h2>
-                   {warlords ? (
-                       <div className='needToComplete'>
-                       <p>Warlord's Ruin: Need to complete <span className='pinnacle'></span></p>
-                       </div>
-                   ) : (
-                       <p>Warlord's Ruin: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                   )}
-                    </section>
+                <section className='challenge'>
+                        <h2>Vesper's Host</h2>
+                       {dungeon ? (
+                           <div className='needToComplete'>
+                           <p>Vesper's Host: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <p>Vesper's Host: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
                     <section className='challenge'>
                     <h2>Salvation's Edge</h2>
                        {salvation ? (
@@ -180,29 +182,36 @@ class JoeData extends Component {
                        )}
                     </section>
                 </div>
-                <div className='trials card'>
-                <h2>Trials of Osiris</h2>
-                    <section className='challenge'>
-                    <h2>Trials of Osiris Wins</h2>
-                   {trialswin ? (
-                       <div className='needToComplete'>
-                       <p>7 Trials Wins: Need to complete <span className='pinnacle'></span></p>
-                       </div>
-                   ) : (
-                       <p>7 Trials Wins: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                   )}
-                    </section>
-                    <section className='challenge'>
-                    <h2>Trials of Osiris Round Wins</h2>
-                   {trials ? (
-                       <div className='needToComplete'>
-                       <p>50 Trials of Osiris Round Wins: Need to complete <span className='pinnacle'></span></p>
-                       </div>
-                   ) : (
-                       <p>50 Trials of Osiris Round Wins: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
-                   )}
-                    </section>
-                </div>
+                {dayOfWeek == 0 || dayOfWeek == 6 || dayOfWeek == 5 || dayOfWeek == 4 ? 
+                    <div className='trials card'>
+                    <h2>Trials of Osiris</h2>
+                        <section className='challenge'>
+                        <h2>Trials of Osiris Wins</h2>
+                       {trialswin ? (
+                           <div className='needToComplete'>
+                           <p>7 Trials Wins: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <p>7 Trials Wins: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
+                        <section className='challenge'>
+                        <h2>Trials of Osiris Round Wins</h2>
+                       {trials ? (
+                           <div className='needToComplete'>
+                           <p>50 Trials of Osiris Round Wins: Need to complete <span className='pinnacle'></span></p>
+                           </div>
+                       ) : (
+                           <p>50 Trials of Osiris Round Wins: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                       )}
+                        </section>
+
+                    </div>
+                        : <div className='trials card'>
+                        <h2>Trials of Osiris</h2>
+                        <p>Trials of Osiris will return on Friday, when the Iron Banner is not live.</p>
+    
+                        </div>}
 
                 </div>
             )}
