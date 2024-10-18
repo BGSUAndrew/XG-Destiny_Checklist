@@ -184,7 +184,7 @@ class IanData extends Component {
                        )}
                     </section>
                 </div>
-                {dayOfWeek == 0 || dayOfWeek == 6 || dayOfWeek == 5 || dayOfWeek == 4 ? 
+                {dayOfWeek == 0 || dayOfWeek == 6 || dayOfWeek == 5 || dayOfWeek == 1 ? 
                     <div className='trials card'>
                     <h2>Trials of Osiris</h2>
                         <section className='challenge'>
