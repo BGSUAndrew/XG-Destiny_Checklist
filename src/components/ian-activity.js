@@ -28,6 +28,15 @@ class IanActivity extends Component {
         })
         const data = await response.json();
 
+        this.setState({raidClears: data.Response.raid.allTime.activitiesCleared.basic.displayValue});
+        this.setState({raidKills: data.Response.raid.allTime.kills.basic.value});
+        this.setState({raidKillsAverage: data.Response.raid.allTime.kills.pga.displayValue});
+        this.setState({raidDeaths: data.Response.raid.allTime.deaths.basic.value});
+        this.setState({raidDeathsAverage: data.Response.raid.allTime.deaths.pga.displayValue});
+        this.setState({raidSecondsPlayed: data.Response.raid.allTime.secondsPlayed.basic.displayValue});
+        this.setState({raidBestSingleGameKills: data.Response.raid.allTime.bestSingleGameKills.basic.value});
+        this.setState({raidAverageSuperKills: data.Response.raid.allTime.weaponKillsSuper.pga.displayValue});
+
         this.setState({dungeonClears: data.Response.dungeon.allTime.activitiesCleared.basic.displayValue});
         this.setState({dungeonKills: data.Response.dungeon.allTime.kills.basic.value});
         this.setState({dungeonKillsAverage: data.Response.dungeon.allTime.kills.pga.displayValue});
@@ -67,7 +76,6 @@ class IanActivity extends Component {
         this.setState({GambitSecondsPlayed: data.Response.pvecomp_gambit.allTime.secondsPlayed.basic.displayValue});
         this.setState({bestSingleGambitGameKills: data.Response.pvecomp_gambit.allTime.bestSingleGameKills.basic.displayValue});
         this.setState({averageGambitSuperKills: data.Response.pvecomp_gambit.allTime.weaponKillsSuper.pga.displayValue});
-       //console.log(data.Response.allPvP.allTime.activitiesEntered.basic.displayValue);
        
       }
     
@@ -75,14 +83,14 @@ class IanActivity extends Component {
 
         const raidClears = this.state.raidClears
         const raidKills = this.state.raidKills
-        const raidKillsConvert = raidKills.toLocaleString('en-US');
+        const raidKillsConvert = raidKills.toLocaleString();
         const raidKillsAverage = this.state.raidKillsAverage
         const raidDeaths = this.state.raidDeaths
         const raidDeathsConvert = raidDeaths.toLocaleString();
         const raidDeathsAverage = this.state.raidDeathsAverage
         const raidSecondsPlayed = this.state.raidSecondsPlayed
         const raidBestSingleGameKills = this.state.raidBestSingleGameKills
-        const bestRaidSingleGameKillsConvert = raidBestSingleGameKills.toLocaleString('en-US');
+        const bestRaidSingleGameKillsConvert = raidBestSingleGameKills.toLocaleString();
         const raidAverageSuperKills = this.state.raidAverageSuperKills 
 
         const dungeonClears = this.state.dungeonClears
@@ -157,7 +165,7 @@ class IanActivity extends Component {
                 <p>Raid Deaths: {raidDeathsConvert}</p>
                 <p>Raid Deaths per Run: {raidDeathsAverage}</p>
                 <p>Total time in Raids: {raidSecondsPlayed}</p>
-                <p>Most kills in a single run: {raidBestSingleGameKills}</p>
+                <p>Most kills in a single run: {bestRaidSingleGameKillsConvert}</p>
                 <p>Average Super kills per run: {raidAverageSuperKills}</p>
 
                 <h1>Dungeons</h1>
