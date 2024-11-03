@@ -6,6 +6,7 @@ import dungeon_grasp from '../images/dungeon_grasp.webp'
 import dungeon_duality from '../images/dungeon_duality.webp'
 import dungeon_spire from '../images/dungeon_spire_of_the_watcher.webp'
 import dungeon_ghosts from '../images/dungeon_ghosts_of_the_deep.webp'
+import dungeon_warlords from '../images/dungeon_ridgeline.jpg'
 
 function Dungeon() {
 
@@ -15,9 +16,10 @@ function Dungeon() {
     const [duality, setDuality] = useState(null);
     const [spire, setSpire] = useState(null);
     const [ghosts, setGhosts] = useState(null);
+    const [warlords, setWarlords] = useState(null);
     var grasp = false;
 
-    if (dungeonShattered === null && pit === null && prophecy === null && duality === null && spire === null && ghosts === null) {
+    if (warlords != null) {
         var grasp = true;
     } else {
 
@@ -38,10 +40,8 @@ function Dungeon() {
             setDuality(json.Response[3618845105].activities[0].challengeObjectiveHashes[0]);
             setSpire(json.Response[526718853].activities[0].challengeObjectiveHashes[0]);
             setGhosts(json.Response[390471874].activities[0].challengeObjectiveHashes[0]);
+            setWarlords(json.Response[2756380383]);
           });
-        
-        
-
         }
         fetchData();
        },[]);
@@ -56,6 +56,7 @@ function Dungeon() {
                         {dungeonShattered === 3838169295 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Shattered Throne</p>
+                       <p>Strike back at the curse that plagues the Dreaming City.</p>
                        <img className='img-fluid w-500' src={dungeon_shattered} alt='shattered art'></img>
                        </div> : null }
                        </div>
@@ -63,6 +64,7 @@ function Dungeon() {
                         {pit === 1283234589 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Pit of Heresy</p>
+                       <p>Deep beneath Sorrow's Harbor, the Hive keep their darkest secrets.</p>
                        <img className='img-fluid w-500' src={dungeon_pit} alt='pit art'></img>
                        </div> : null }
                        </div>
@@ -70,6 +72,7 @@ function Dungeon() {
                         {prophecy === 2039792527 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Prophecy</p>
+                       <p>Enter the realm of the Nine and ask the question: "What is the nature of the Darkness?"</p>
                        <img className='img-fluid w-500' src={dungeon_prophecy} alt='prophecy art'></img>
                        </div> : null }
                        </div>
@@ -77,6 +80,7 @@ function Dungeon() {
                         {grasp === true ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Grasp of Avarice</p>
+                       <p>A cautionary tale for adventurers willing to trade their humanity for riches.</p>
                        <img className='img-fluid w-500' src={dungeon_grasp} alt='grasp art'></img>
                        </div> : null }
                        </div>
@@ -84,6 +88,7 @@ function Dungeon() {
                         {duality === 3039545165 ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>Duality</p>
+                       <p>Dive into the depths of the exiled emperor's mind in search of dark secrets.</p>
                        <img className='img-fluid w-500' src={dungeon_duality} alt='duality art'></img>
                        </div> : null }
                        </div>
@@ -101,6 +106,14 @@ function Dungeon() {
                        <p className='nightfallTitle'>Ghosts of the Deep</p>
                        <p>Drown in the deep, or rise from it.</p>
                        <img className='img-fluid w-500' src={dungeon_ghosts} alt='Ghosts of the Deep art'></img>
+                       </div> : null }
+                       </div>
+                       <div>
+                        {warlords ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Warlord's Ruin</p>
+                       <p>Nestled deep in the mountains of the EDZ, Scorn lay claim to a Dark Age castle containing dangerous relics, and a blighted vengeance festers in the dirt.</p>
+                       <img className='img-fluid w-500' src={dungeon_warlords} alt='Warlords Ruin art'></img>
                        </div> : null }
                        </div>
                        <div>
