@@ -40,7 +40,7 @@ function Dungeon() {
             setDuality(json.Response[3618845105].activities[0].challengeObjectiveHashes[0]);
             setSpire(json.Response[526718853].activities[0].challengeObjectiveHashes[0]);
             setGhosts(json.Response[390471874].activities[0].challengeObjectiveHashes[0]);
-            setWarlords(json.Response[2756380383]);
+            setWarlords(json.Response[3921784328].activities[0].challengeObjectiveHashes[0]);
           });
         }
         fetchData();
