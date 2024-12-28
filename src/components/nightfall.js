@@ -120,7 +120,7 @@ class Nightfall extends Component {
                        <p>Break into the ancient Vex installation.</p>
                        <img className='img-fluid w-500' src={insight} alt='strike art'></img>
                        </div> : null }
-                       {this.state.nightfall == "2599001912" ? 
+                       {this.state.nightfall == "2426813796" ? 
                        <div className='nightfall_info'>
                        <p className='nightfallTitle'>The Inverted Spire</p> 
                        <p>End the Red Legion expedition that's ripped open the planet's surface.</p>
