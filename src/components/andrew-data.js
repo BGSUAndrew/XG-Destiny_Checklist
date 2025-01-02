@@ -18,7 +18,7 @@ class AndrewData extends Component {
         })
         const data = await response.json();
         this.setState({checklist: data.Response.progressions.data.milestones, loading: false});
-        this.setState({rituals_one_progress: data.Response.progressions.data.milestones["1049998279"].activities[0].challenges[0].objective.complete});
+        //this.setState({rituals_one_progress: data.Response.progressions.data.milestones["1049998279"].activities[0].challenges[0].objective.complete});
         //console.log(data.Response.progressions.data.milestones[540415767].activities[0].phases[3].complete)
         const d = new Date();
         var dayOfWeek = d.getDay();

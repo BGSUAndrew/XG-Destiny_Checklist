@@ -24,6 +24,9 @@ export default props => {
       <Link to ="/commendations" className="menu-item">
         Commendations
       </Link>
+      <Link to="/dungeonstats" className="menu-item">
+        Dungeon Stats
+      </Link>
 
     </Menu>
 

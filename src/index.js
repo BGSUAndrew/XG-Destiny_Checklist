@@ -13,6 +13,7 @@ import WeeklyReset from "./routes/weeklyreset";
 import ActivityReport from "./routes/activitydata";
 import Triumphs from "./routes/triumphs"
 import Commendations from './routes/commendations';
+import DungeonStats from './routes/dungeonstats'
 
 
 ReactDOM.render(
@@ -23,6 +24,7 @@ ReactDOM.render(
       <Route path="activityreport" element={<ActivityReport />} />
       <Route path="triumphs" element={<Triumphs />} />
       <Route path="commendations" element={<Commendations />} />
+      <Route path="dungeonstats" element={<DungeonStats />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>,
