@@ -13,7 +13,7 @@ return (
     <div>
         <h1>Coming Soon!</h1>
         <button onClick={alertName}>
-            Click to load alert
+            Click to load alert!
         </button>
     </div>
     </div>
