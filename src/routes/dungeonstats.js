@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Sidebar from '../components/Sidebar';
 import Seasonal from '../components/seasonal'
+import AndrewDungeonStats from '../components/andrewdungeondata';
 
 function DungeonStats() {
     const alertName = () => {
@@ -16,6 +17,7 @@ return (
             Click to load alert!
         </button>
     </div>
+    <AndrewDungeonStats></AndrewDungeonStats>
     </div>
 )
 }
