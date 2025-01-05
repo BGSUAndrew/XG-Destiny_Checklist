@@ -6,6 +6,7 @@ function AndrewDungeonStats() {
     const [dungeonNameHash, setDungeonNameHash] = useState([]);
     const [dungeonCompletionTime, setDungeonCompletionTime] = useState([]);
     const [dungeonRuns, setDungeonRuns] = useState([]);
+    const [result, setResult] = useState([]);
 
     
     const getDungeonName = (dungeonName) => {
@@ -44,6 +45,7 @@ function AndrewDungeonStats() {
         const datesArray = [];
         const dungeonHashArray = [];
         const dungeonCompletionTimeArray = [];
+        const resultArray = [];
 
             for (const dungeon of activities) {
                 const date = new Date(dungeon.period);
@@ -55,15 +57,18 @@ function AndrewDungeonStats() {
                 datesArray.push(formattedDate);
                 dungeonHashArray.push(dungeon.activityDetails.directorActivityHash);
                 dungeonCompletionTimeArray.push(dungeon.values.activityDurationSeconds.basic.displayValue);
+                resultArray.push(dungeon.values.completed.basic.displayValue)
             }
             setDates(datesArray);
             setDungeonNameHash(dungeonHashArray);
             setDungeonCompletionTime(dungeonCompletionTimeArray);
+            setResult(resultArray);
 
             const dungeonRunsArray = datesArray.map((item, index) => ({
                 dateComplete: item, 
                 dungeonName: dungeonHashArray[index],
-                dungeonRunTime: dungeonCompletionTimeArray[index]
+                dungeonRunTime: dungeonCompletionTimeArray[index],
+                dungeonResult: resultArray[index]
             }));
             setDungeonRuns(dungeonRunsArray);
   
@@ -76,9 +81,11 @@ return (
         <div className='rituals card'>
             {dungeonRuns.map((group, index) => (
                 <div id="group" key={index}>
-                    <p>{group.dateComplete}</p>
-                    <p>{getDungeonName(group.dungeonName)}</p>
-                    <p>{group.dungeonRunTime}</p>
+                    <p>Date: {group.dateComplete}</p>
+                    <p>Dungeon name: {getDungeonName(group.dungeonName)}</p>
+                    <p>Run length: {group.dungeonRunTime}</p>
+                    <p>Completed: {group.dungeonResult}</p>
+        
                 </div>
             ))}
     </div>
