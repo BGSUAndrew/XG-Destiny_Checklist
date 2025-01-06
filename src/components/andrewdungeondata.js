@@ -7,6 +7,8 @@ function AndrewDungeonStats() {
     const [dungeonCompletionTime, setDungeonCompletionTime] = useState([]);
     const [dungeonRuns, setDungeonRuns] = useState([]);
     const [result, setResult] = useState([]);
+    const [kills, setKills] = useState([]);
+    const [deaths, setDeaths] = useState([]);
 
     
     const getDungeonName = (dungeonName) => {
@@ -46,6 +48,8 @@ function AndrewDungeonStats() {
         const dungeonHashArray = [];
         const dungeonCompletionTimeArray = [];
         const resultArray = [];
+        const killsArray = [];
+        const deathsArray = [];
 
             for (const dungeon of activities) {
                 const date = new Date(dungeon.period);
@@ -57,18 +61,24 @@ function AndrewDungeonStats() {
                 datesArray.push(formattedDate);
                 dungeonHashArray.push(dungeon.activityDetails.directorActivityHash);
                 dungeonCompletionTimeArray.push(dungeon.values.activityDurationSeconds.basic.displayValue);
-                resultArray.push(dungeon.values.completed.basic.displayValue)
+                resultArray.push(dungeon.values.completed.basic.displayValue);
+                killsArray.push(dungeon.values.kills.basic.displayValue);
+                deathsArray.push(dungeon.values.deaths.basic.displayValue);
             }
             setDates(datesArray);
             setDungeonNameHash(dungeonHashArray);
             setDungeonCompletionTime(dungeonCompletionTimeArray);
             setResult(resultArray);
+            setKills(killsArray);
+            setDeaths(deathsArray);
 
             const dungeonRunsArray = datesArray.map((item, index) => ({
                 dateComplete: item, 
                 dungeonName: dungeonHashArray[index],
                 dungeonRunTime: dungeonCompletionTimeArray[index],
-                dungeonResult: resultArray[index]
+                dungeonResult: resultArray[index],
+                killsResult: killsArray[index],
+                deathsResult: deathsArray[index]
             }));
             setDungeonRuns(dungeonRunsArray);
   
@@ -85,6 +95,8 @@ return (
                     <p>Dungeon name: {getDungeonName(group.dungeonName)}</p>
                     <p>Run length: {group.dungeonRunTime}</p>
                     <p>Completed: {group.dungeonResult}</p>
+                    <p>Total Kills: {group.killsResult}</p>
+                    <p>Total Deaths: {group.deathsResult}</p>
         
                 </div>
             ))}
