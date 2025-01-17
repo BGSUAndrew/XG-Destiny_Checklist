@@ -87,10 +87,11 @@ function AndrewDungeonStats() {
        },[]);
 return (
     <div className='container'>
-    <AndrewName></AndrewName>
+            <AndrewName></AndrewName>
+            <div className='data_container'>
         <div className='rituals card'>
             {dungeonRuns.map((group, index) => (
-                <div id="group" key={index}>
+                <div className='card' id="group" key={index}>
                     <p>Date: {group.dateComplete}</p>
                     <p>Dungeon name: {getDungeonName(group.dungeonName)}</p>
                     <p>Run length: {group.dungeonRunTime}</p>
@@ -102,6 +103,9 @@ return (
             ))}
     </div>
     </div>
+    </div>
+    
+
 )
 }
 
