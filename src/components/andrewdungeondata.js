@@ -9,6 +9,7 @@ function AndrewDungeonStats() {
     const [result, setResult] = useState([]);
     const [kills, setKills] = useState([]);
     const [deaths, setDeaths] = useState([]);
+    const [button, setButton] = useState({visible: true});
 
     
     const getDungeonName = (dungeonName) => {
@@ -86,6 +87,16 @@ function AndrewDungeonStats() {
         fetchData();
        },[]);
 return (
+    <div>
+          <button onClick={() => {
+                    setButton( prevState =>  ({visible: !prevState.visible}));
+                }}
+                className='data_button'
+            >
+                {button.visible ? 'Hide player data' : 'Show player data'}
+                
+            </button>
+            { button.visible == true ?
     <div className='container'>
             <AndrewName></AndrewName>
             <div className='data_container'>
@@ -104,7 +115,8 @@ return (
     </div>
     </div>
     </div>
-    
+     : false }
+    </div>
 
 )
 }
