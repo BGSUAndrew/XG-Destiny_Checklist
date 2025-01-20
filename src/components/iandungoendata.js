@@ -9,6 +9,7 @@ function IanDungeonStats() {
     const [result, setResult] = useState([]);
     const [kills, setKills] = useState([]);
     const [deaths, setDeaths] = useState([]);
+    const [button, setButton] = useState({visible: true});
 
     
     const getDungeonName = (dungeonName) => {
@@ -86,7 +87,17 @@ function IanDungeonStats() {
         fetchData();
        },[]);
 return (
-    <div className='container'>
+    <div>
+                  <button onClick={() => {
+                    setButton( prevState =>  ({visible: !prevState.visible}));
+                }}
+                className='data_button'
+            >
+                {button.visible ? 'Hide player data' : 'Show player data'}
+                
+            </button>
+            { button.visible == true ?
+            <div className='container'>
             <IanName></IanName>
             <div className='data_container'>
         <div className='rituals card'>
@@ -104,6 +115,9 @@ return (
     </div>
     </div>
     </div>
+        : false }
+    </div>
+
     
 
 )

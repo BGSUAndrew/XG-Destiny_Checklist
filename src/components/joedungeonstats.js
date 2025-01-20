@@ -9,6 +9,7 @@ function JoeDungeonStats() {
     const [result, setResult] = useState([]);
     const [kills, setKills] = useState([]);
     const [deaths, setDeaths] = useState([]);
+    const [button, setButton] = useState({visible: true});
 
     
     const getDungeonName = (dungeonName) => {
@@ -86,24 +87,37 @@ function JoeDungeonStats() {
         fetchData();
        },[]);
 return (
+    <div>
+             <button onClick={() => {
+                    setButton( prevState =>  ({visible: !prevState.visible}));
+                }}
+                className='data_button'
+            >
+                {button.visible ? 'Hide player data' : 'Show player data'}
+                
+            </button>
+            { button.visible == true ?
     <div className='container'>
-            <JoeName></JoeName>
-            <div className='data_container'>
-        <div className='rituals card'>
-            {dungeonRuns.map((group, index) => (
-                <div className='card' id="group" key={index}>
-                    <p>Date: {group.dateComplete}</p>
-                    <p>Dungeon name: {getDungeonName(group.dungeonName)}</p>
-                    <p>Run length: {group.dungeonRunTime}</p>
-                    <p>Completed: {group.dungeonResult}</p>
-                    <p>Total Kills: {group.killsResult}</p>
-                    <p>Total Deaths: {group.deathsResult}</p>
-        
-                </div>
-            ))}
-    </div>
-    </div>
-    </div>
+    <JoeName></JoeName>
+    <div className='data_container'>
+<div className='rituals card'>
+    {dungeonRuns.map((group, index) => (
+        <div className='card' id="group" key={index}>
+            <p>Date: {group.dateComplete}</p>
+            <p>Dungeon name: {getDungeonName(group.dungeonName)}</p>
+            <p>Run length: {group.dungeonRunTime}</p>
+            <p>Completed: {group.dungeonResult}</p>
+            <p>Total Kills: {group.killsResult}</p>
+            <p>Total Deaths: {group.deathsResult}</p>
+
+        </div>
+    ))}
+</div>
+</div>
+</div>
+: false }
+</div>
+
     
 
 )
