@@ -1,4 +1,4 @@
-import React, { Component , componentDidUpdate} from 'react'
+import React, { Component } from 'react'
 import AndrewName from './andrewnameplate';
 
 class AndrewTriumphData extends Component {
@@ -6,7 +6,7 @@ class AndrewTriumphData extends Component {
     state = {
         loading: true,
         triumphs: [],
-        visible: true
+        visible: true       
     }
 
   async componentDidMount() {
@@ -17,8 +17,9 @@ class AndrewTriumphData extends Component {
         }
     })
     const data = await response.json();
+    console.log(data.Response.profileRecords.data.records[3056675381].objectives[0].completionValue);
     this.setState({triumphScore: data.Response.profileRecords.data.score});
-    this.setState({legacyScore: data.Response.profileRecords.data.legacyScore})
+    this.setState({legacyScore: data.Response.profileRecords.data.legacyScore});
     this.setState({ghoulProgress: data.Response.profileRecords.data.records[3974717227].objectives[0].progress});
     this.setState({ghoulCompletion: data.Response.profileRecords.data.records[3974717227].objectives[0].completionValue});
     this.setState({wrathbearerProgress: data.Response.profileRecords.data.records[1142693639].objectives[0].progress});
@@ -75,8 +76,8 @@ class AndrewTriumphData extends Component {
     this.setState({reaperCompletion: data.Response.profileRecords.data.records[3947410852].objectives[0].completionValue});
     this.setState({risenProgress: data.Response.profileRecords.data.records[1710217127].objectives[0].progress});
     this.setState({risenCompletion: data.Response.profileRecords.data.records[1710217127].objectives[0].completionValue});
-    this.setState({flameKeeperProgress: data.Response.profileRecords.data.records[213559382].objectives[0].progress});
-    this.setState({flameKeeperCompletion: data.Response.profileRecords.data.records[213559382].objectives[0].completionValue});
+    this.setState({flameKeeperProgress: data.Response.profileRecords.data.records[1568969457].objectives[0].progress});
+    this.setState({flameKeeperCompletion: data.Response.profileRecords.data.records[1568969457].objectives[0].completionValue});
     this.setState({gloriousProgress: data.Response.profileRecords.data.records[969142496].objectives[0].progress});
     this.setState({gloriousCompletion: data.Response.profileRecords.data.records[969142496].objectives[0].completionValue});
     this.setState({ghostWriterProgress: data.Response.profileRecords.data.records[2981294724].objectives[0].progress});
