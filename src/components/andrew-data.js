@@ -34,7 +34,7 @@ class AndrewData extends Component {
         const rituals_one_progress = this.state.rituals_one_progress
         const rituals_two = checklist["1049998276"]
         const rituals_three = checklist["1049998277"]
-        const dungeon = checklist["4034642472"]
+        const dungeon = checklist["2032830539"]
         const salvation = checklist["4196566271"]
         const pale_pathfinder = checklist["1816391649"]
         const ghostrank = checklist["2603713309"]
@@ -170,13 +170,13 @@ class AndrewData extends Component {
                     <div className='raids card'>
                     <h2>Raids & Dungeons</h2>
                         <section className='challenge'>
-                        <h2>Vesper's Host</h2>
+                        <h2>Sundered Doctrine</h2>
                        {dungeon ? (
                            <div className='needToComplete'>
-                           <p>Vesper's Host: Need to complete <span className='pinnacle'></span></p>
+                           <p>Sundered Doctrine: Need to complete <span className='pinnacle'></span></p>
                            </div>
                        ) : (
-                           <p>Vesper's Host: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
+                           <p>Sundered Doctrine: Completed<span className='completed'><img src={require('../images/outline_done_white_18dp.png')}></img></span></p>
                        )}
                         </section>
                         <section className='challenge'>
