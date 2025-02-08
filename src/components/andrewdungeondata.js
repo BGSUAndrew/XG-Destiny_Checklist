@@ -29,8 +29,10 @@ function AndrewDungeonStats() {
             return "Ghosts of the Deep"
         } else if (dungeonName === 2004855007) {
             return "Warlord's Ruin"
-        } else {
+        } else if (dungeonName === 300092127) {
             return "Vesper's Host"
+        }  else {
+            return "Sundered Doctrine"
         }
     }
 
