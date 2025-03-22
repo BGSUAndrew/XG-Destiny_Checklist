@@ -93,7 +93,8 @@ class JoeTriumphData extends Component {
     this.setState({queensguardCompletion: data.Response.profileRecords.data.records[1722592950].objectives[0].completionValue});
     this.setState({moments2023Progress: data.Response.characterRecords.data["2305843009889894407"].records[3175660257].objectives[0].progress});
     this.setState({moments2023CompletionValue: data.Response.characterRecords.data["2305843009889894407"].records[3175660257].objectives[0].completionValue});
-
+    this.setState({moments2024Progress: data.Response.characterRecords.data["2305843009889894407"].records[126238604].objectives[0].progress});
+    this.setState({moments2024CompletionValue: data.Response.characterRecords.data["2305843009889894407"].records[126238604].objectives[0].completionValue});
   }
 
   render() {
@@ -173,6 +174,8 @@ class JoeTriumphData extends Component {
     const ghoulCompletion = this.state.ghoulCompletion
     const moments2023Progress = this.state.moments2023Progress
     const moments2023CompletionValue = this.state.moments2023CompletionValue
+    const moments2024Progress = this.state.moments2024Progress
+    const moments2024CompletionValue = this.state.moments2024CompletionValue
 
     const button = this.state.visible ? "Hide player data" : "Show player data";
 
@@ -195,9 +198,10 @@ class JoeTriumphData extends Component {
             <h1>Triumphs</h1>
             <p className='font-bold'>Current Triumph Score: {triumphScore}</p>
             <p className='font-bold'>Legacy Triumph Score: {legacyScore}</p>
-            <p className='font-bold'>Moments of Triumph 2023 Progress: {moments2023Progress} / {moments2023CompletionValue}</p>
-            <p className='font-bold'>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p>
-            <p className='font-bold'>Wishbearer Progress: {wishbearerProgress} / {wishbearerCompletion}</p>
+            <p className='font-bold'>Moments of Triumph 2024 Progress: {moments2024Progress} / {moments2024CompletionValue}</p>
+            <p>Moments of Triumph 2023 Progress: {moments2023Progress} / {moments2023CompletionValue}</p>
+            <p>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p>
+            <p>Wishbearer Progress: {wishbearerProgress} / {wishbearerCompletion}</p>
             <p>Swordbearer Progress: {swordbearerProgress} / {swordbearerCompletion}</p>
             <p>Haruspex Progress: {haruspexProgress} / {haruspexCompletion} </p>
             <p>Ghoul Progress: {ghoulProgress} / {ghoulCompletion}</p>
