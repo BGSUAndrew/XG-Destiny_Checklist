@@ -44,19 +44,22 @@ class Nightfall extends Component {
             }
         })
         const data = await response.json();
-        this.setState({nightfall: data.Response[2029743966].activities[0].activityHash, loading: false});
+        const nightfallData = data?.Response?.[2029743966]?.activities?.[0]?.activityHash || null;
+        this.setState({nightfall: nightfallData, loading: false});
+
        console.log(this.state.nightfall)
        
       }
     
       render() {
+        
         return (
             <div>
 
             {this.state.visible ? 
             <div className='container'>
                 {this.state.loading || !this.state.nightfall ? (
-                    <div>loading...</div>
+                    <div><p>Nightfall not loaded</p></div>
                 )  : (
                     <div>
                         <div className='rituals card'>

@@ -3,7 +3,8 @@ class VanguardBurn extends Component {
     state = {
         loading: true,
         vanguard: [],
-        visible: true
+        vanguardData: [],
+        visible: true,
     }
       async componentDidMount() {
         const url = "https://www.bungie.net/platform/Destiny2/Milestones";
@@ -13,21 +14,21 @@ class VanguardBurn extends Component {
             }
         })
         const data = await response.json();
-         this.setState({vanguard: data.Response[2029743966].activities[0].modifierHashes, loading: false});
-        console.log(this.state.vanguard);
+        const vanguardData = data?.response?.[2029743966]?.activities[0]?.modifierHashes || null;
+         this.setState({vanguard: vanguardData, loading: false});
+        //console.log(this.state.vanguard);
        
       }
     
       render() {
         const burn = this.state.vanguard
-        console.log(burn.indexOf(3810297122) > -1);
         return (
             <div>
 
             {this.state.visible ? 
             <div className='container'>
                 {this.state.loading || !this.state.vanguard ? (
-                    <div>loading...</div>
+                    <div><p>Vanguard Strike Burn not loaded</p></div>
                 )  : (
                     <div>
                         <div className='rituals card'>
