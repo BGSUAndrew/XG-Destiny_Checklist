@@ -7,6 +7,7 @@ import dungeon_duality from '../images/dungeon_duality.webp'
 import dungeon_spire from '../images/dungeon_spire_of_the_watcher.webp'
 import dungeon_ghosts from '../images/dungeon_ghosts_of_the_deep.webp'
 import dungeon_warlords from '../images/dungeon_ridgeline.jpg'
+import dungeon_vespers from '../images/vespers_host.jpg'
 
 function Dungeon() {
 
@@ -17,6 +18,8 @@ function Dungeon() {
     const [spire, setSpire] = useState(null);
     const [ghosts, setGhosts] = useState(null);
     const [warlords, setWarlords] = useState(null);
+    const [vespers, setVespers] = useState(null)
+
     var grasp = false;
 
     if (warlords != null) {
@@ -41,6 +44,7 @@ function Dungeon() {
             setSpire(json.Response[526718853].activities[0].challengeObjectiveHashes[0]);
             setGhosts(json.Response[390471874].activities[0].challengeObjectiveHashes[0]);
             setWarlords(json.Response[3921784328].activities[0].challengeObjectiveHashes[0]);
+            setVespers(json.Response[1080663862].activities[0].challengeObjectiveHashes[0]);
           });
         }
         fetchData();
@@ -114,6 +118,12 @@ function Dungeon() {
                        <p className='nightfallTitle'>Warlord's Ruin</p>
                        <p>Nestled deep in the mountains of the EDZ, Scorn lay claim to a Dark Age castle containing dangerous relics, and a blighted vengeance festers in the dirt.</p>
                        <img className='img-fluid w-500' src={dungeon_warlords} alt='Warlords Ruin art'></img>
+                       </div> : null }
+                       {vespers ?
+                       <div className='nightfall_info'>
+                       <p className='nightfallTitle'>Vesper's Host</p>
+                       <p>Defy the algorithm. Cut through its web.</p>
+                       <img className='img-fluid w-500' src={dungeon_vespers} alt='Vespers Host art'></img>
                        </div> : null }
                        </div>
                        <div>
