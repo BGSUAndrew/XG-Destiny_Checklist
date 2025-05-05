@@ -1,4 +1,4 @@
-import React, { useEffect, useState, version } from 'react'
+import React, { useEffect, useState } from 'react'
 import dungeon_shattered from '../images/dungeon_shattered.webp'
 import dungeon_pit from '../images/dungeon_pit_of_heresy.webp'
 import dungeon_prophecy from '../images/dungeon_prophecy.webp'
