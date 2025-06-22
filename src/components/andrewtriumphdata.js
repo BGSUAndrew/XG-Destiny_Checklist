@@ -98,6 +98,10 @@ class AndrewTriumphData extends Component {
     this.setState({moments2024CompletionValue: data.Response.characterRecords.data["2305843009263048442"].records[126238604].objectives[0].completionValue});
     this.setState({eternalProgress: data.Response.profileRecords.data.records[986322626].objectives[0].progress});
     this.setState({eternalCompletionValue: data.Response.profileRecords.data.records[986322626].objectives[0].completionValue});
+    this.setState({braveProgress: data.Response.profileRecords.data.records[1156427773].objectives[0].progress});
+    this.setState({braveCompletionValue: data.Response.profileRecords.data.records[1156427773].objectives[0].completionValue});
+    this.setState({thePantheonProgress: data.Response.profileRecords.data.records[3137935313].objectives[0].progress});
+    this.setState({thePantheonCompletionValue: data.Response.profileRecords.data.records[3137935313].objectives[0].completionValue});
   }
 
   render() {
@@ -181,10 +185,16 @@ class AndrewTriumphData extends Component {
     const moments2024CompletionValue = this.state.moments2024CompletionValue
     const eternalProgress = this.state.eternalProgress
     const eternalCompletionValue = this.state.eternalCompletionValue
+    const braveProgress = this.state.braveProgress
+    const braveCompletionValue = this.state.braveCompletionValue
+    const thePantheonProgress = this.state.thePantheonProgress
+    const thePantheonCompletionValue = this.state.thePantheonCompletionValue
 
     const button = this.state.visible ? "Hide player data" : "Show player data";
 
-    
+    function clicked() {
+        window.alert("clicked");
+    }
 
     return (
         <div>
@@ -197,20 +207,19 @@ class AndrewTriumphData extends Component {
     {this.state.visible ?
         <div className='container'>
                     <AndrewName></AndrewName>
-                    <div className='rituals card'>
+            <div className='rituals card'>
 
-            <h1>Triumphs</h1>
+            <h1>Obtainable Triumphs</h1>
             <p className='font-bold'>Current Triumph Score: {triumphScore}</p>
             <p className='font-bold'>Legacy Triumph Score: {legacyScore}</p>
             <p className='font-bold'>ETERNAL progress: {eternalProgress} / {eternalCompletionValue}</p>
             <p className='font-bold'>Moments of Triumph 2024 Progress: {moments2024Progress} / {moments2024CompletionValue}</p>
-            <p>Moments of Triumph 2023 Progress: {moments2023Progress} / {moments2023CompletionValue}</p>
-            <p>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p>
-            <p>Wishbearer Progress: {wishbearerProgress} / {wishbearerCompletion}</p>
+            {wrathbearerProgress >= 10 ? <p className='gold'>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p> : <p>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p> }
+            
             <p>Swordbearer Progress: {swordbearerProgress} / {swordbearerCompletion}</p>
-            <p>Haruspex Progress: {haruspexProgress} / {haruspexCompletion} </p>
+            
             <p>Ghoul Progress: {ghoulProgress} / {ghoulCompletion}</p>
-            <p>Aquanaut Progress: {aquanautProgress} /{aquanautCompletion}</p>
+
             <p>Scallywag Progress: {scallyWagProgress} / {scallyWagCompletion}</p>
             <p>Kingslayer Progress: {kingSlayerProgress} / {kingSlayerCompletion}</p>
             <p>Reveler Progress: {revelerProgress} / {revelerCompletion}</p>
@@ -241,6 +250,18 @@ class AndrewTriumphData extends Component {
             <p>Dream Warrior Progress: {dreamwarriorProgress} / {dreamwarriorCompletion}</p>
             <p>Virtual Fighter Progress: {virtualfighterProgress} / {virtualfighterCompletion}</p>
             <p>Queensguard Progress: {queensguardProgress} / {queensguardCompletion}</p>
+            </div>
+            <div className='rituals card'>
+            <h1>Legacy Triumphs</h1>
+            <p onClick={clicked}>Show legacy triumphs</p>
+            <section className='legacy_triumphs'>
+                {braveProgress >= 9 ? <p className='gold'>BRAVE Progress: {braveProgress} / {braveCompletionValue}</p> : <p>BRAVE Progress: {braveProgress} / {braveCompletionValue}</p>}
+                {thePantheonProgress == 10 ? <p className='gold'>The Pantheon Progress: {thePantheonProgress} / {thePantheonCompletionValue}</p> : <p>The Pantheon Progress: {thePantheonProgress} / {thePantheonCompletionValue}</p>}
+                {moments2023Progress >= 26 ? <p className='gold'>Moments of Triumph 2023 Progress: {moments2023Progress} / {moments2023CompletionValue}</p> : <p>Moments of Triumph 2023 Progress: {moments2023Progress} / {moments2023CompletionValue}</p>}
+                {wishbearerProgress >= 9 ? <p className='gold'>Wishbearer Progress: {wishbearerProgress} / {wishbearerCompletion}</p> : <p>Wishbearer Progress: {wishbearerProgress} / {wishbearerCompletion}</p> }
+                {harbingerProgress >= 10 ? <p className='gold'>Haruspex Progress: {haruspexProgress} / {haruspexCompletion} </p> : <p>Haruspex Progress: {haruspexProgress} / {haruspexCompletion} </p> }
+                {aquanautProgress >= 10 ? <p className='gold'>Aquanaut Progress: {aquanautProgress} /{aquanautCompletion}</p> : <p>Aquanaut Progress: {aquanautProgress} /{aquanautCompletion}</p>}
+            </section>
             </div>
         </div>
         : null }
