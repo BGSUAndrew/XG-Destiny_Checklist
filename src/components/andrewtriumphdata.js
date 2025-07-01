@@ -215,20 +215,17 @@ class AndrewTriumphData extends Component {
             <p className='font-bold'>ETERNAL progress: {eternalProgress} / {eternalCompletionValue}</p>
             <p className='font-bold'>Moments of Triumph 2024 Progress: {moments2024Progress} / {moments2024CompletionValue}</p>
             {wrathbearerProgress >= 10 ? <p className='gold'>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p> : <p>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p> }
-            
-            <p>Swordbearer Progress: {swordbearerProgress} / {swordbearerCompletion}</p>
-            
-            <p>Ghoul Progress: {ghoulProgress} / {ghoulCompletion}</p>
-
-            <p>Scallywag Progress: {scallyWagProgress} / {scallyWagCompletion}</p>
-            <p>Kingslayer Progress: {kingSlayerProgress} / {kingSlayerCompletion}</p>
-            <p>Reveler Progress: {revelerProgress} / {revelerCompletion}</p>
-            <p>Discerptor Progress: {discerptorProgress} / {discerptorCompletion}</p>
-            <p>Iron Lord Progress: {ironLordProgress} / {ironLordCompletion}</p>
-            <p>Gumshoe Progress: {gumshoeProgress} / {gumshoeCompletion}</p>
-            <p>Disciple-Slayer Progress: {discipleSlayerProgress} / {discipleSlayerCompletion}</p>
-            <p>Vidmaster Progress: {vidmasterProgress} / {vidmasterCompletion}</p>
-            <p>Deadeye Progress: {deadeyeProgress} / {deadeyeCompletion}</p>
+            {swordbearerProgress >= 18 ? <p className='gold'>Swordbearer Progress: {swordbearerProgress} / {swordbearerCompletion}</p> : <p>Swordbearer Progress: {swordbearerProgress} / {swordbearerCompletion}</p>}
+            {ghoulProgress >= 10 ? <p className='gold'>Ghoul Progress: {ghoulProgress} / {ghoulCompletion}</p> : <p>Ghoul Progress: {ghoulProgress} / {ghoulCompletion}</p>}
+            {kingSlayerProgress >= 21 ? <p className='gold'>Kingslayer Progress: {kingSlayerProgress} / {kingSlayerCompletion}</p> : <p>Kingslayer Progress: {kingSlayerProgress} / {kingSlayerCompletion}</p>}
+            {revelerProgress >= 4 ? <p className='gold'>Reveler Progress: {revelerProgress} / {revelerCompletion}</p> : <p>Reveler Progress: {revelerProgress} / {revelerCompletion}</p>}
+            {discerptorProgress >= 11 ? <p className='gold'>Discerptor Progress: {discerptorProgress} / {discerptorCompletion}</p> : <p>Discerptor Progress: {discerptorProgress} / {discerptorCompletion}</p>}
+            {ironLordProgress >= 12 ? <p className='gold'>Iron Lord Progress: {ironLordProgress} / {ironLordCompletion}</p> : <p>Iron Lord Progress: {ironLordProgress} / {ironLordCompletion}</p>}
+            {gumshoeProgress >= 9 ? <p className='gold'>Gumshoe Progress: {gumshoeProgress} / {gumshoeCompletion}</p> : <p>Gumshoe Progress: {gumshoeProgress} / {gumshoeCompletion}</p>}
+            {discipleSlayerProgress >= 19 ? <p className='gold'>Disciple-Slayer Progress: {discipleSlayerProgress} / {discipleSlayerCompletion}</p> : <p>Disciple-Slayer Progress: {discipleSlayerProgress} / {discipleSlayerCompletion}</p>}
+            {vidmasterProgress >= 10 ? <p className='gold'>Vidmaster Progress: {vidmasterProgress} / {vidmasterCompletion}</p> : <p>Vidmaster Progress:      {vidmasterProgress} / {vidmasterCompletion}</p>}
+            {deadeyeProgress >= 31 ? <p className='gold'>Deadeye Progress: {deadeyeProgress} / {deadeyeCompletion}</p> : <p>Deadeye Progress: {deadeyeProgress} / {deadeyeCompletion}</p>}
+ 
             <p>Flawless Progress: {flawlessProgress} / {flawlessCompletion}</p>
             <p>Conqueror Progress: {conquerorprogress} / {conquerorCompletion}</p>
             <p>Unbroken Progress: {unbrokenprogress} / {unbrokenCompletion}</p>
@@ -261,6 +258,7 @@ class AndrewTriumphData extends Component {
                 {wishbearerProgress >= 9 ? <p className='gold'>Wishbearer Progress: {wishbearerProgress} / {wishbearerCompletion}</p> : <p>Wishbearer Progress: {wishbearerProgress} / {wishbearerCompletion}</p> }
                 {harbingerProgress >= 10 ? <p className='gold'>Haruspex Progress: {haruspexProgress} / {haruspexCompletion} </p> : <p>Haruspex Progress: {haruspexProgress} / {haruspexCompletion} </p> }
                 {aquanautProgress >= 10 ? <p className='gold'>Aquanaut Progress: {aquanautProgress} /{aquanautCompletion}</p> : <p>Aquanaut Progress: {aquanautProgress} /{aquanautCompletion}</p>}
+                {scallyWagProgress >= 8 ? <p className='gold'>Scallywag Progress: {scallyWagProgress} / {scallyWagCompletion}</p> : <p>Scallywag Progress: {scallyWagProgress} / {scallyWagCompletion}</p>}
             </section>
             </div>
         </div>
