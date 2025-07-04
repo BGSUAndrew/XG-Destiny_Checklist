@@ -249,7 +249,6 @@ class AndrewTriumphData extends Component {
             </div>
             <div className='rituals card'>
             <h1>Legacy Triumphs</h1>
-            <p onClick={clicked}>Show legacy triumphs</p>
             <section className='legacy_triumphs'>
                 {braveProgress >= 9 ? <p className='gold'>BRAVE Progress: {braveProgress} / {braveCompletionValue}</p> : <p>BRAVE Progress: {braveProgress} / {braveCompletionValue}</p>}
                 {thePantheonProgress == 10 ? <p className='gold'>The Pantheon Progress: {thePantheonProgress} / {thePantheonCompletionValue}</p> : <p>The Pantheon Progress: {thePantheonProgress} / {thePantheonCompletionValue}</p>}
