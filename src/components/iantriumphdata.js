@@ -97,6 +97,11 @@ class IanTriumphData extends Component {
     this.setState({moments2024CompletionValue: data.Response.characterRecords.data["2305843009916944635"].records[126238604].objectives[0].completionValue});
     this.setState({eternalProgress: data.Response.profileRecords.data.records[986322626].objectives[0].progress});
     this.setState({eternalCompletionValue: data.Response.profileRecords.data.records[986322626].objectives[0].completionValue});
+    this.setState({braveProgress: data.Response.profileRecords.data.records[1156427773].objectives[0].progress});
+    this.setState({braveCompletionValue: data.Response.profileRecords.data.records[1156427773].objectives[0].completionValue});
+    this.setState({thePantheonProgress: data.Response.profileRecords.data.records[3137935313].objectives[0].progress});
+    this.setState({thePantheonCompletionValue: data.Response.profileRecords.data.records[3137935313].objectives[0].completionValue});
+    
   }
 
   render() {
@@ -180,7 +185,10 @@ class IanTriumphData extends Component {
     const moments2024CompletionValue = this.state.moments2024CompletionValue
     const eternalProgress = this.state.eternalProgress
     const eternalCompletionValue = this.state.eternalCompletionValue
-
+    const braveProgress = this.state.braveProgress
+    const braveCompletionValue = this.state.braveCompletionValue
+    const thePantheonProgress = this.state.thePantheonProgress
+    const thePantheonCompletionValue = this.state.thePantheonCompletionValue
     const button = this.state.visible ? "Hide player data" : "Show player data";
 
 
@@ -199,48 +207,56 @@ class IanTriumphData extends Component {
                     <IanName></IanName>
                     <div className='rituals card'>
 
-            <h1>Triumphs</h1>
+    <h1>Obtainable Triumphs</h1>
             <p className='font-bold'>Current Triumph Score: {triumphScore}</p>
             <p className='font-bold'>Legacy Triumph Score: {legacyScore}</p>
             <p className='font-bold'>ETERNAL progress: {eternalProgress} / {eternalCompletionValue}</p>
             <p className='font-bold'>Moments of Triumph 2024 Progress: {moments2024Progress} / {moments2024CompletionValue}</p>
-            <p>Moments of Triumph 2023 Progress: {moments2023Progress} / {moments2023CompletionValue}</p>
-            <p>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p>
-            <p>Wishbearer Progress: {wishbearerProgress} / {wishbearerCompletion}</p>
-            <p>Swordbearer Progress: {swordbearerProgress} / {swordbearerCompletion}</p>
-            <p>Haruspex Progress: {haruspexProgress} / {haruspexCompletion} </p>
-            <p>Ghoul Progress: {ghoulProgress} / {ghoulCompletion}</p>
-            <p>Aquanaut Progress: {aquanautProgress} /{aquanautCompletion}</p>
-            <p>Scallywag Progress: {scallyWagProgress} / {scallyWagCompletion}</p>
-            <p>Kingslayer Progress: {kingSlayerProgress} / {kingSlayerCompletion}</p>
-            <p>Reveler Progress: {revelerProgress} / {revelerCompletion}</p>
-            <p>Discerptor Progress: {discerptorProgress} / {discerptorCompletion}</p>
-            <p>Iron Lord Progress: {ironLordProgress} / {ironLordCompletion}</p>
-            <p>Gumshoe Progress: {gumshoeProgress} / {gumshoeCompletion}</p>
-            <p>Disciple-Slayer Progress: {discipleSlayerProgress} / {discipleSlayerCompletion}</p>
-            <p>Vidmaster Progress: {vidmasterProgress} / {vidmasterCompletion}</p>
-            <p>Deadeye Progress: {deadeyeProgress} / {deadeyeCompletion}</p>
-            <p>Flawless Progress: {flawlessProgress} / {flawlessCompletion}</p>
-            <p>Conqueror Progress: {conquerorprogress} / {conquerorCompletion}</p>
-            <p>Unbroken Progress: {unbrokenprogress} / {unbrokenCompletion}</p>
-            <p>Dredgen Progress: {dredgenprogress} / {dredgenCompletion}</p>
-            <p>Splintered Progress: {spliteredprogress} / {spliteredCompletion}</p>
-            <p>Fatebreaker Progress: {fatebreakerProgress} / {fatebreakerCompletion}</p>
-            <p>Descendant Progress: {descendantProgress} / {descendantCompletion}</p>
-            <p>Harbinger Progress: {harbingerProgress} / {harbingerCompletion}</p>
-            <p>Enlightened Progress: {enlightenedProgress} / {enlightenedCompletion}</p>
-            <p>Cursebreaker Progress: {cursebreakerProgress} / {cursebreakerCompletion}</p>
-            <p>Rivensbane Progress: {rivensbaneProgress} / {rivensbaneCompletion}</p>
-            <p>Reaper Progress: {reaperProgress} / {reaperCompletion}</p>
-            <p>Risen Progress: {risenProgress} / {risenCompletion}</p>
-            <p>Flamekeeper Progress: {flameKeeperProgress} / {flameKeeperCompletion}</p>
-            <p>Glorious Progress: {gloriousProgress} / {gloriousCompletion}</p>
-            <p>Ghost Writer Progress: {ghostWriterProgress} / {ghostWriterCompletion}</p>
-            <p>Wanted Progress: {wantedProgress} / {wantedCompletion}</p>
-            <p>Star Baker Progress: {starbakerProgress} / {starbakerCompletion}</p>
-            <p>Dream Warrior Progress: {dreamwarriorProgress} / {dreamwarriorCompletion}</p>
-            <p>Virtual Fighter Progress: {virtualfighterProgress} / {virtualfighterCompletion}</p>
-            <p>Queensguard Progress: {queensguardProgress} / {queensguardCompletion}</p>
+            {wrathbearerProgress >= 10 ? <p className='gold'>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p> : <p>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p> }
+            {swordbearerProgress >= 18 ? <p className='gold'>Swordbearer Progress: {swordbearerProgress} / {swordbearerCompletion}</p> : <p>Swordbearer Progress: {swordbearerProgress} / {swordbearerCompletion}</p>}
+            {ghoulProgress >= 10 ? <p className='gold'>Ghoul Progress: {ghoulProgress} / {ghoulCompletion}</p> : <p>Ghoul Progress: {ghoulProgress} / {ghoulCompletion}</p>}
+            {kingSlayerProgress >= 21 ? <p className='gold'>Kingslayer Progress: {kingSlayerProgress} / {kingSlayerCompletion}</p> : <p>Kingslayer Progress: {kingSlayerProgress} / {kingSlayerCompletion}</p>}
+            {revelerProgress >= 4 ? <p className='gold'>Reveler Progress: {revelerProgress} / {revelerCompletion}</p> : <p>Reveler Progress: {revelerProgress} / {revelerCompletion}</p>}
+            {discerptorProgress >= 11 ? <p className='gold'>Discerptor Progress: {discerptorProgress} / {discerptorCompletion}</p> : <p>Discerptor Progress: {discerptorProgress} / {discerptorCompletion}</p>}
+            {ironLordProgress >= 12 ? <p className='gold'>Iron Lord Progress: {ironLordProgress} / {ironLordCompletion}</p> : <p>Iron Lord Progress: {ironLordProgress} / {ironLordCompletion}</p>}
+            {gumshoeProgress >= 9 ? <p className='gold'>Gumshoe Progress: {gumshoeProgress} / {gumshoeCompletion}</p> : <p>Gumshoe Progress: {gumshoeProgress} / {gumshoeCompletion}</p>}
+            {discipleSlayerProgress >= 19 ? <p className='gold'>Disciple-Slayer Progress: {discipleSlayerProgress} / {discipleSlayerCompletion}</p> : <p>Disciple-Slayer Progress: {discipleSlayerProgress} / {discipleSlayerCompletion}</p>}
+            {vidmasterProgress >= 10 ? <p className='gold'>Vidmaster Progress: {vidmasterProgress} / {vidmasterCompletion}</p> : <p>Vidmaster Progress:      {vidmasterProgress} / {vidmasterCompletion}</p>}
+            {deadeyeProgress >= 31 ? <p className='gold'>Deadeye Progress: {deadeyeProgress} / {deadeyeCompletion}</p> : <p>Deadeye Progress: {deadeyeProgress} / {deadeyeCompletion}</p>}
+            {flawlessProgress >= 5 ? <p className='gold'>Flawless Progress: {flawlessProgress} / {flawlessCompletion}</p> : <p>Flawless Progress: {flawlessProgress} / {flawlessCompletion}</p>}
+            {conquerorprogress >= 4 ? <p className='gold'>Conqueror Progress: {conquerorprogress} / {conquerorCompletion}</p> : <p>Conqueror Progress: {conquerorprogress} / {conquerorCompletion}</p>}
+            {dredgenprogress >= 10 ? <p className='gold'>Dredgen Progress: {dredgenprogress} / {dredgenCompletion}</p> : <p>Dredgen Progress: {dredgenprogress} / {dredgenCompletion}</p>}
+            {spliteredprogress >= 11 ? <p className='gold'>Splintered Progress: {spliteredprogress} / {spliteredCompletion}</p> : <p>Splintered Progress: {spliteredprogress} / {spliteredCompletion}</p>}
+            {fatebreakerProgress >= 23 ? <p className='gold'>Fatebreaker Progress: {fatebreakerProgress} / {fatebreakerCompletion}</p> : <p>Fatebreaker Progress: {fatebreakerProgress} / {fatebreakerCompletion}</p>}
+            {descendantProgress >= 19 ? <p className='gold'>Descendant Progress: {descendantProgress} / {descendantCompletion}</p> : <p>Descendant Progress: {descendantProgress} / {descendantCompletion}</p>}
+            {harbingerProgress >= 10 ? <p className='gold'>Harbinger Progress: {harbingerProgress} / {harbingerCompletion}</p> : <p>Harbinger Progress: {harbingerProgress} / {harbingerCompletion}</p>}
+            {enlightenedProgress >= 16 ? <p className='gold'>Enlightened Progress: {enlightenedProgress} / {enlightenedCompletion}</p> : <p>Enlightened Progress: {enlightenedProgress} / {enlightenedCompletion}</p>}
+            {cursebreakerProgress >= 11 ? <p className='gold'>Cursebreaker Progress: {cursebreakerProgress} / {cursebreakerCompletion}</p> : <p>Cursebreaker Progress: {cursebreakerProgress} / {cursebreakerCompletion}</p>}
+            {rivensbaneProgress >= 11 ? <p className='gold'>Rivensbane Progress: {rivensbaneProgress} / {rivensbaneCompletion}</p> : <p>Rivensbane Progress: {rivensbaneProgress} / {rivensbaneCompletion}</p>}
+            {reaperProgress >= 10 ? <p className='gold'>Reaper Progress: {reaperProgress} / {reaperCompletion}</p> : <p>Reaper Progress: {reaperProgress} / {reaperCompletion}</p>}
+            {risenProgress >= 10 ? <p className='gold'>Risen Progress: {risenProgress} / {risenCompletion}</p> : <p>Risen Progress: {risenProgress} / {risenCompletion}</p>}
+            {flameKeeperProgress >= 14 ? <p className='gold'>Flamekeeper Progress: {flameKeeperProgress} / {flameKeeperCompletion}</p> : <p>Flamekeeper Progress: {flameKeeperProgress} / {flameKeeperCompletion}</p>}
+            {gloriousProgress >= 10 ? <p className='gold'>Glorious Progress: {gloriousProgress} / {gloriousCompletion}</p> : <p>Glorious Progress: {gloriousProgress} / {gloriousCompletion}</p>}
+            {ghostWriterProgress >= 2 ? <p className='gold'>Ghost Writer Progress: {ghostWriterProgress} / {ghostWriterCompletion}</p> : <p>Ghost Writer Progress: {ghostWriterProgress} / {ghostWriterCompletion}</p>}
+            {wantedProgress >= 10 ? <p className='gold'>Wanted Progress: {wantedProgress} / {wantedCompletion}</p> : <p>Wanted Progress: {wantedProgress} / {wantedCompletion}</p>}
+            {starbakerProgress >= 3 ? <p className='gold'>Star Baker Progress: {starbakerProgress} / {starbakerCompletion}</p> : <p>Star Baker Progress: {starbakerProgress} / {starbakerCompletion}</p>}
+            {dreamwarriorProgress >= 20 ? <p className='gold'>Dream Warrior Progress: {dreamwarriorProgress} / {dreamwarriorCompletion}</p> : <p>Dream Warrior Progress: {dreamwarriorProgress} / {dreamwarriorCompletion}</p>}
+            {virtualfighterProgress >= 9 ? <p className='gold'>Virtual Fighter Progress: {virtualfighterProgress} / {virtualfighterCompletion}</p>: <p>Virtual Fighter Progress: {virtualfighterProgress} / {virtualfighterCompletion}</p>}
+            </div>
+            <div className='rituals card'>
+            <h1>Legacy Triumphs</h1>
+            <section className='legacy_triumphs'>
+                {braveProgress >= 9 ? <p className='gold'>BRAVE Progress: {braveProgress} / {braveCompletionValue}</p> : <p>BRAVE Progress: {braveProgress} / {braveCompletionValue}</p>}
+                {thePantheonProgress == 10 ? <p className='gold'>The Pantheon Progress: {thePantheonProgress} / {thePantheonCompletionValue}</p> : <p>The Pantheon Progress: {thePantheonProgress} / {thePantheonCompletionValue}</p>}
+                {moments2023Progress >= 26 ? <p className='gold'>Moments of Triumph 2023 Progress: {moments2023Progress} / {moments2023CompletionValue}</p> : <p>Moments of Triumph 2023 Progress: {moments2023Progress} / {moments2023CompletionValue}</p>}
+                {wishbearerProgress >= 9 ? <p className='gold'>Wishbearer Progress: {wishbearerProgress} / {wishbearerCompletion}</p> : <p>Wishbearer Progress: {wishbearerProgress} / {wishbearerCompletion}</p> }
+                {harbingerProgress >= 10 ? <p className='gold'>Haruspex Progress: {haruspexProgress} / {haruspexCompletion} </p> : <p>Haruspex Progress: {haruspexProgress} / {haruspexCompletion} </p> }
+                {aquanautProgress >= 10 ? <p className='gold'>Aquanaut Progress: {aquanautProgress} /{aquanautCompletion}</p> : <p>Aquanaut Progress: {aquanautProgress} /{aquanautCompletion}</p>}
+                {scallyWagProgress >= 8 ? <p className='gold'>Scallywag Progress: {scallyWagProgress} / {scallyWagCompletion}</p> : <p>Scallywag Progress: {scallyWagProgress} / {scallyWagCompletion}</p>}
+                {unbrokenprogress >= 9 ? <p className='gold'>Unbroken Progress: {unbrokenprogress} / {unbrokenCompletion}</p> : <p>Unbroken Progress: {unbrokenprogress} / {unbrokenCompletion}</p>}
+                {queensguardProgress >= 12 ? <p className='gold'>Queensguard Progress: {queensguardProgress} / {queensguardCompletion}</p> : <p>Queensguard Progress: {queensguardProgress} / {queensguardCompletion}</p>}    
+            
+            </section>
         </div>
         </div>
         : null }
