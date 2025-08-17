@@ -1,5 +1,5 @@
 import React from 'react';
-import season_logo from '../images/Heresy_Logo_EN_NoAct.png';
+import season_logo from '../images/TEoF_Logo_EN.png'
 
 export default props => {
     return (
