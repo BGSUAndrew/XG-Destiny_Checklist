@@ -24,7 +24,6 @@ class App extends Component {
       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
       <Seasonal/>
             <h1>XG Weekly Destiny Checklist</h1>
-            <Key/>
       <div className='data_container'>
         <Menu/>
         <AndrewData /> 
