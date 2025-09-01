@@ -76,8 +76,8 @@ class AndrewTriumphData extends Component {
     this.setState({reaperCompletion: data.Response.profileRecords.data.records[3947410852].objectives[0].completionValue});
     this.setState({risenProgress: data.Response.profileRecords.data.records[1710217127].objectives[0].progress});
     this.setState({risenCompletion: data.Response.profileRecords.data.records[1710217127].objectives[0].completionValue});
-    this.setState({flameKeeperProgress: data.Response.profileRecords.data.records[1568969457].objectives[0].progress});
-    this.setState({flameKeeperCompletion: data.Response.profileRecords.data.records[1568969457].objectives[0].completionValue});
+    this.setState({flameKeeperProgress: data.Response.profileRecords.data.records[3056675381].objectives[0].progress});
+    this.setState({flameKeeperCompletion: data.Response.profileRecords.data.records[3056675381].objectives[0].completionValue});
     this.setState({gloriousProgress: data.Response.profileRecords.data.records[969142496].objectives[0].progress});
     this.setState({gloriousCompletion: data.Response.profileRecords.data.records[969142496].objectives[0].completionValue});
     this.setState({ghostWriterProgress: data.Response.profileRecords.data.records[2981294724].objectives[0].progress});
@@ -102,6 +102,15 @@ class AndrewTriumphData extends Component {
     this.setState({braveCompletionValue: data.Response.profileRecords.data.records[1156427773].objectives[0].completionValue});
     this.setState({thePantheonProgress: data.Response.profileRecords.data.records[3137935313].objectives[0].progress});
     this.setState({thePantheonCompletionValue: data.Response.profileRecords.data.records[3137935313].objectives[0].completionValue});
+    this.setState({heavyMetalProgress: data.Response.profileRecords.data.records[3499574820].objectives[0].progress});
+    this.setState({heavyMetalCompletionValue: data.Response.profileRecords.data.records[3499574820].objectives[0].completionValue});
+    this.setState({sharpshooterProgress: data.Response.profileRecords.data.records[3198225435].objectives[0].progress});
+    this.setState({sharpshooterCompletionValue: data.Response.profileRecords.data.records[3198225435].objectives[0].completionValue});
+    this.setState({fatedWeaponProgress: data.Response.profileRecords.data.records[3888842466].objectives[0].progress});
+    this.setState({fatedWeaponCompletionValue: data.Response.profileRecords.data.records[3888842466].objectives[0].completionValue});
+    this.setState({atemporalProgress: data.Response.profileRecords.data.records[1213046261].objectives[0].progress});
+    this.setState({atemporalCompletionValue: data.Response.profileRecords.data.records[1213046261].objectives[0].completionValue});
+
   }
 
   render() {
@@ -189,6 +198,14 @@ class AndrewTriumphData extends Component {
     const braveCompletionValue = this.state.braveCompletionValue
     const thePantheonProgress = this.state.thePantheonProgress
     const thePantheonCompletionValue = this.state.thePantheonCompletionValue
+    const heavyMetalProgress = this.state.heavyMetalProgress
+    const heavyMetalCompletionValue = this.state.heavyMetalCompletionValue
+    const sharpshooterProgress = this.state.sharpshooterProgress
+    const sharpshooterCompletionValue = this.state.sharpshooterCompletionValue
+    const fatedWeaponProgress = this.state.fatedWeaponProgress
+    const fatedWeaponCompletionValue = this.state.fatedWeaponCompletionValue
+    const atemporalProgress = this.state.atemporalProgress
+    const atemporalCompletionValue = this.state.atemporalCompletionValue
 
     const button = this.state.visible ? "Hide player data" : "Show player data";
 
@@ -214,8 +231,10 @@ class AndrewTriumphData extends Component {
             <h1>Obtainable Triumphs</h1>
             <p className='font-bold'>Current Triumph Score: {triumphScore}</p>
             <p className='font-bold'>Legacy Triumph Score: {legacyScore}</p>
-            <p className='font-bold'>ETERNAL progress: {eternalProgress} / {eternalCompletionValue}</p>
-            <p className='font-bold'>Moments of Triumph 2024 Progress: {moments2024Progress} / {moments2024CompletionValue}</p>
+            <p>Atemporal Progress: {atemporalProgress} / {atemporalCompletionValue}</p>
+            <p>Fated Weapon Progress: {fatedWeaponProgress} / {fatedWeaponCompletionValue}</p>
+            <p>Sharpshooter Progress: {sharpshooterProgress} / {sharpshooterCompletionValue} </p>
+            <p>Heavy Metal Progress: {heavyMetalProgress} / {heavyMetalCompletionValue}</p>
             {wrathbearerProgress >= 10 ? <p className='gold'>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p> : <p>Wrathbearer Progress: {wrathbearerProgress} / {wrathbearerCompletion}</p> }
             {swordbearerProgress >= 18 ? <p className='gold'>Swordbearer Progress: {swordbearerProgress} / {swordbearerCompletion}</p> : <p>Swordbearer Progress: {swordbearerProgress} / {swordbearerCompletion}</p>}
             {ghoulProgress >= 10 ? <p className='gold'>Ghoul Progress: {ghoulProgress} / {ghoulCompletion}</p> : <p>Ghoul Progress: {ghoulProgress} / {ghoulCompletion}</p>}
@@ -250,6 +269,8 @@ class AndrewTriumphData extends Component {
             <div className='rituals card'>
             <h1>Legacy Triumphs</h1>
             <section className='legacy_triumphs'>
+                <p>ETERNAL progress: {eternalProgress} / {eternalCompletionValue}</p>
+                <p>Moments of Triumph 2024 Progress: {moments2024Progress} / {moments2024CompletionValue}</p>
                 {braveProgress >= 9 ? <p className='gold'>BRAVE Progress: {braveProgress} / {braveCompletionValue}</p> : <p>BRAVE Progress: {braveProgress} / {braveCompletionValue}</p>}
                 {thePantheonProgress == 10 ? <p className='gold'>The Pantheon Progress: {thePantheonProgress} / {thePantheonCompletionValue}</p> : <p>The Pantheon Progress: {thePantheonProgress} / {thePantheonCompletionValue}</p>}
                 {moments2023Progress >= 26 ? <p className='gold'>Moments of Triumph 2023 Progress: {moments2023Progress} / {moments2023CompletionValue}</p> : <p>Moments of Triumph 2023 Progress: {moments2023Progress} / {moments2023CompletionValue}</p>}
