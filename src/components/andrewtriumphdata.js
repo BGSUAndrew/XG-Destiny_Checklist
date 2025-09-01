@@ -76,8 +76,8 @@ class AndrewTriumphData extends Component {
     this.setState({reaperCompletion: data.Response.profileRecords.data.records[3947410852].objectives[0].completionValue});
     this.setState({risenProgress: data.Response.profileRecords.data.records[1710217127].objectives[0].progress});
     this.setState({risenCompletion: data.Response.profileRecords.data.records[1710217127].objectives[0].completionValue});
-    this.setState({flameKeeperProgress: data.Response.profileRecords.data.records[1568969457].objectives[0].progress});
-    this.setState({flameKeeperCompletion: data.Response.profileRecords.data.records[1568969457].objectives[0].completionValue});
+    this.setState({flameKeeperProgress: data.Response.profileRecords.data.records[3056675381].objectives[0].progress});
+    this.setState({flameKeeperCompletion: data.Response.profileRecords.data.records[3056675381].objectives[0].completionValue});
     this.setState({gloriousProgress: data.Response.profileRecords.data.records[969142496].objectives[0].progress});
     this.setState({gloriousCompletion: data.Response.profileRecords.data.records[969142496].objectives[0].completionValue});
     this.setState({ghostWriterProgress: data.Response.profileRecords.data.records[2981294724].objectives[0].progress});
