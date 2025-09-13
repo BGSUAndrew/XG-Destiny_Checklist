@@ -1,5 +1,5 @@
 import React from 'react';
-import season_logo from '../images/TEoF_Logo_EN.png'
+import season_logo from '../images/D2_Ash_Iron_Logo_EN.png'
 
 export default props => {
     return (
