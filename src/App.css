@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
   /*background-image: radial-gradient(circle,#C02885,#3393AB);*/
-  background-image: radial-gradient(circle,#c6744ec7,#0f51614f), url('images/2025_Ash___Iron_Press_Kit_Activity_COMPRESSED_06.jpg');
+  background-image: radial-gradient(circle,#a53f32b7,#f59f3c90), url('images/D2_Renegades_Key_Art_16-9_Center.jpg');
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -170,7 +170,7 @@ html {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
+  padding-top: 25px;
   max-width: 200px;
 }
 
