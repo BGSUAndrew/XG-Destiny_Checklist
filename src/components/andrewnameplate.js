@@ -33,7 +33,7 @@ function AndrewName() {
             setFun(json.Response.profileCommendations.data.commendationNodeScoresByHash["1341823550"]);
             setMastery(json.Response.profileCommendations.data.commendationNodeScoresByHash["4180748446"]);
             setLeadership(json.Response.profileCommendations.data.commendationNodeScoresByHash["1390663518"]);
-            setSeasonPass(json.Response.characterProgressions.data["2305843009263048442"].progressions["3733477714"].level)
+            setSeasonPass(json.Response.characterProgressions.data["2305843009263048442"].progressions["115622061"].level)
           });
         }
         fetchData();
