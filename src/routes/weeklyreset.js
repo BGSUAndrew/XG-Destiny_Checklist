@@ -16,9 +16,11 @@ class WeeklyReset extends Component {
       <Seasonal />
             <h1 className='page_title'>Weekly Reset Info</h1>
             <div className='data_container'>
+                <section>
+                    <p className='font-bold'>Update coming for Vanguard Alerts</p>
+                </section>
             <section>
             <Raid />
-            <Dungeon />
             </section>
             <section>
             <Nightfall />
