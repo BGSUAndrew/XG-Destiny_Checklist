@@ -109,7 +109,14 @@ class JoeTriumphData extends Component {
     this.setState({fatedWeaponCompletionValue: data.Response.profileRecords.data.records[3888842466].objectives[0].completionValue});
     this.setState({atemporalProgress: data.Response.profileRecords.data.records[1213046261].objectives[0].progress});
     this.setState({atemporalCompletionValue: data.Response.profileRecords.data.records[1213046261].objectives[0].completionValue});
-    
+    this.setState({avantgardeProgress: data.Response.profileRecords.data.records[3641237715].objectives[0].progress});
+    this.setState({avantgardeCompletionValue: data.Response.profileRecords.data.records[3641237715].objectives[0].completionValue});
+    this.setState({undertakerProgress: data.Response.profileRecords.data.records[2263679223].objectives[0].progress});
+    this.setState({undertakerCompletionValue: data.Response.profileRecords.data.records[2263679223].objectives[0].completionValue});
+    this.setState({praxicProgress: data.Response.characterRecords.data["2305843009889894407"].records[3779882910].objectives[0].progress});
+    this.setState({praxicCompletionValue: data.Response.characterRecords.data["2305843009889894407"].records[3779882910].objectives[0].completionValue});
+    this.setState({renegadeProgress: data.Response.profileRecords.data.records[421213004].objectives[0].progress});
+    this.setState({renegadeCompletionValue: data.Response.profileRecords.data.records[421213004].objectives[0].completionValue});
   }
 
   render() {
@@ -205,6 +212,14 @@ class JoeTriumphData extends Component {
     const fatedWeaponCompletionValue = this.state.fatedWeaponCompletionValue
     const atemporalProgress = this.state.atemporalProgress
     const atemporalCompletionValue = this.state.atemporalCompletionValue
+    const avantgardeProgress = this.state.avantgardeProgress
+    const avantgardeCompletionValue = this.state.avantgardeCompletionValue
+    const undertakerProgress = this.state.undertakerProgress
+    const undertakerCompletionValue = this.state.undertakerCompletionValue
+    const praxicProgress = this.state.praxicProgress
+    const praxicCompletionValue = this.state.praxicCompletionValue
+    const renegadeProgress = this.state.renegadeProgress
+    const renegadeCompletionValue = this.state.renegadeCompletionValue
     const button = this.state.visible ? "Hide player data" : "Show player data";
 
 
@@ -226,6 +241,10 @@ class JoeTriumphData extends Component {
           <h1>Obtainable Triumphs</h1>
             <p className='font-bold'>Current Triumph Score: {triumphScore}</p>
             <p className='font-bold'>Legacy Triumph Score: {legacyScore}</p>
+            <p>Renegade Progress: {renegadeProgress} / {renegadeCompletionValue}</p>
+            <p>Undertaker Progress: {undertakerProgress}/{undertakerCompletionValue}</p>
+            <p>Praxic Progress: {praxicProgress}/{praxicCompletionValue}</p>
+            <p>Avant Garde Progress: {avantgardeProgress} / {avantgardeCompletionValue}</p>
             <p>Atemporal Progress: {atemporalProgress} / {atemporalCompletionValue}</p>
             <p>Fated Weapon Progress: {fatedWeaponProgress} / {fatedWeaponCompletionValue}</p>
             <p>Sharpshooter Progress: {sharpshooterProgress} / {sharpshooterCompletionValue} </p>
