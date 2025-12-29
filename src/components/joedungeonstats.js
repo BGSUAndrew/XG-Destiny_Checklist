@@ -11,7 +11,6 @@ function JoeDungeonStats() {
     const [deaths, setDeaths] = useState([]);
     const [button, setButton] = useState({visible: true});
 
-    
     const getDungeonName = (dungeonName) => {
         if (dungeonName === 2032534090) {
             return "The Shattered Throne"
@@ -31,8 +30,12 @@ function JoeDungeonStats() {
             return "Warlord's Ruin"
         } else if (dungeonName === 300092127) {
             return "Vesper's Host"
-        }  else {
+        } else if (dungeonName === 3834447244) {
             return "Sundered Doctrine"
+        } else if( dungeonName === 2727361621) {
+            return "Equilibrium"
+        } else {
+            return "Unknown"
         }
     }
 

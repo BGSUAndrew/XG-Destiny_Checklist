@@ -31,8 +31,12 @@ function AndrewDungeonStats() {
             return "Warlord's Ruin"
         } else if (dungeonName === 300092127) {
             return "Vesper's Host"
-        }  else {
+        } else if (dungeonName === 3834447244) {
             return "Sundered Doctrine"
+        } else if( dungeonName === 2727361621) {
+            return "Equilibrium"
+        } else {
+            return "Unknown"
         }
     }
 
