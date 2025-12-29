@@ -83,8 +83,8 @@ class IanTriumphData extends Component {
     this.setState({ghostWriterCompletion: data.Response.profileRecords.data.records[2981294724].objectives[0].completionValue});
     this.setState({wantedProgress: data.Response.profileRecords.data.records[2302993504].objectives[0].progress});
     this.setState({wantedCompletion: data.Response.profileRecords.data.records[2302993504].objectives[0].completionValue});
-    this.setState({starbakerProgress: data.Response.profileRecords.data.records[2702960691].objectives[0].progress});
-    this.setState({starbakerCompletion: data.Response.profileRecords.data.records[2702960691].objectives[0].completionValue});
+    this.setState({starbakerProgress: data.Response.profileRecords.data.records[2126152885].objectives[0].progress});
+    this.setState({starbakerCompletion: data.Response.profileRecords.data.records[2126152885].objectives[0].completionValue});
     this.setState({dreamwarriorProgress: data.Response.profileRecords.data.records[2889189256].objectives[0].progress});
     this.setState({dreamwarriorCompletion: data.Response.profileRecords.data.records[2889189256].objectives[0].completionValue});
     this.setState({virtualfighterProgress: data.Response.profileRecords.data.records[3906538939].objectives[0].progress});
