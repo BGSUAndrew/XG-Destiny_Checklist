@@ -121,7 +121,11 @@ class JoeTriumphData extends Component {
 
   render() {
     const triumphScore = this.state.triumphScore
+    var convertTriumphScore = parseInt(triumphScore)
+    var convertedTriumphScore = convertTriumphScore.toLocaleString('en-US');
     const legacyScore = this.state.legacyScore
+    var convertLegacyScore = parseInt(legacyScore)
+    var convertedLegacyScore = convertLegacyScore.toLocaleString('en-US');
     const aquanautProgress = this.state.aquanautProgress
     const aquanautCompletion = this.state.aquanautCompletion
     const scallyWagProgress = this.state.scallyWagProgress
@@ -239,8 +243,8 @@ class JoeTriumphData extends Component {
                     <div className='rituals card'>
 
           <h1>Obtainable Triumphs</h1>
-            <p className='font-bold'>Current Triumph Score: {triumphScore}</p>
-            <p className='font-bold'>Legacy Triumph Score: {legacyScore}</p>
+            <p className='font-bold'>Current Triumph Score: {convertedTriumphScore}</p>
+            <p className='font-bold'>Legacy Triumph Score: {convertedLegacyScore}</p>
             <p>Renegade Progress: {renegadeProgress} / {renegadeCompletionValue}</p>
             <p>Undertaker Progress: {undertakerProgress}/{undertakerCompletionValue}</p>
             <p>Praxic Progress: {praxicProgress}/{praxicCompletionValue}</p>
