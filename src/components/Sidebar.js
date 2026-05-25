@@ -12,9 +12,6 @@ export default props => {
       <Link to="/" className="menu-item">
         Home
       </Link>
-      <Link to ="/weeklyreset" className="menu-item">
-        Weekly Reset Information
-      </Link>
       <Link to ="/activityreport" className="menu-item">
         Activity Report
       </Link>

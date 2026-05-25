@@ -20,7 +20,6 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route exact path="/" index element={<App />} />
-      <Route path="weeklyreset" element={<WeeklyReset />} />
       <Route path="activityreport" element={<ActivityReport />} />
       <Route path="triumphs" element={<Triumphs />} />
       <Route path="commendations" element={<Commendations />} />
