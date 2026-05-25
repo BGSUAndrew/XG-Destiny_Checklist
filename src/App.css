@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
   /*background-image: radial-gradient(circle,#C02885,#3393AB);*/
-  background-image: radial-gradient(circle,#a53f32b7,#f59f3c90), url('images/D2_Renegades_Key_Art_16-9_Center.jpg');
+  background-image: radial-gradient(circle,#1c2135de,#2b3e5cdd), url('images/D2_MoT_Key_Art_3840x2160.jpg');
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -302,3 +302,9 @@ a.menu-item {
     display: none;
   }
 }
+
+/* This needs more refinement.
+@view-transition {
+  navigation: auto;
+}
+*/

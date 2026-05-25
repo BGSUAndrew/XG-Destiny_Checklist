@@ -6,9 +6,6 @@ import IanDungeonStats from '../components/iandungoendata';
 import JoeDungeonStats from '../components/joedungeonstats';
 
 function DungeonStats() {
-    const alertName = () => {
-        alert('Hello world');
-    };
 return (
     <div id="outer-container">
       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
@@ -22,7 +19,6 @@ return (
     </div>
 )
 }
-
 export default DungeonStats;
 
 
