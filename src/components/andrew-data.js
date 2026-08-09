@@ -4,6 +4,7 @@ import AndrewName from './andrewnameplate'
 function AndrewData() {
 
     const [powerLevel, setPowerLevel] = useState(null);
+    const [button, setButton] = useState({visible: true});
 
 
 
@@ -38,7 +39,14 @@ function AndrewData() {
         var skill = "Ultimate Difficulty"
     }
 return (
-    
+    <div>
+        <button onClick={() => {
+            setButton( prevState => 
+            ({visible: !prevState.visible}));
+        }} className='data_button'>
+            {button.visible ? 'Hide Player Data' : 'Show Player Data'}
+        </button>
+        {button.visible == true ? 
     <div className="container">
         <div className="card">
             <AndrewName />
@@ -51,7 +59,8 @@ return (
             <p>Customizing difficulty and modifers may change rewards.</p>
         </div>
     </div>
-
+        : false }
+    </div>
     
 )
 }
